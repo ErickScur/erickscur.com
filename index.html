@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Erick Scur — Staff Engineer, criador do 1% Programador</title>
+<meta name="description" content="Engenheiro de software em Cascavel (PR). Staff Engineer na Nestlé, cofundador do 1% Programador e da Acordi & Scur. Construo sistemas, e ensino a construir.">
+<link rel="canonical" href="https://erickscur.com/">
+<meta name="theme-color" content="#EEEAE1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13120E" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Erick Scur">
+<meta property="og:title" content="Erick Scur — eu construo sistemas, e ensino a construir">
+<meta property="og:description" content="Staff Engineer na Nestlé, cofundador do 1% Programador e da Acordi & Scur.">
+<meta property="og:url" content="https://erickscur.com/">
+<meta property="og:image" content="https://erickscur.com/assets/img/og/home.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Erick Scur. Três trilhos, engenharia, conteúdo e software house, convergindo num ponto.">
+<meta property="profile:first_name" content="Erick">
+<meta property="profile:last_name" content="Scur">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="assets/fonts/archivo-var-5.3.0.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/martian-mono-var-5.3.0.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/erick-scur-recorte.avif" as="image" type="image/avif" fetchpriority="high">
+<link rel="stylesheet" href="assets/css/site.css?v=2026.10.24">
+<!-- as ilustrações ficam abaixo da dobra: CSS sem bloquear a primeira pintura -->
+<link rel="preload" href="assets/css/covers.css?v=2026.10.24" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="assets/css/covers.css?v=2026.10.24"></noscript>
+<script>
+  (function () {
+    var d = document.documentElement;
+    d.classList.remove('no-js'); d.classList.add('js');
+    try { var t = localStorage.getItem('tema'); if (t === 'light' || t === 'dark') d.dataset.theme = t; } catch (e) {}
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('motion');
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Erick Scur",
+  "alternateName": "Scur",
+  "url": "https://erickscur.com/",
+  "image": "https://erickscur.com/assets/img/erick-scur-recorte.webp",
+  "jobTitle": "Staff Engineer",
+  "worksFor": { "@type": "Organization", "name": "Nestlé" },
+  "email": "mailto:contato@umporcentoprogramador.com.br",
+  "telephone": "+55 45 99856-7207",
+  "homeLocation": { "@type": "Place", "name": "Cascavel, PR, Brasil" },
+  "birthPlace": { "@type": "Place", "name": "Videira, SC, Brasil" },
+  "alumniOf": [
+    { "@type": "EducationalOrganization", "name": "Instituto Federal Catarinense" },
+    { "@type": "CollegeOrUniversity", "name": "Centro Universitário FAG" }
+  ],
+  "knowsAbout": ["Arquitetura orientada a eventos", "Microsserviços", "Node.js", "TypeScript", "Adobe Commerce", "Kafka", "IA aplicada", "Model Context Protocol"],
+  "sameAs": [
+    "https://www.instagram.com/erickscur/",
+    "https://www.linkedin.com/in/erick-scur/",
+    "https://github.com/ErickScur",
+    "https://www.tiktok.com/@umporcentoprogramador"
+  ]
+}
+</script>
+<script defer src="assets/vendor/gsap-3.15.0.min.js"></script>
+<script defer src="assets/vendor/ScrollTrigger-3.15.0.min.js"></script>
+<script defer src="assets/vendor/SplitText-3.15.0.min.js"></script>
+<script defer src="assets/vendor/DrawSVGPlugin-3.15.0.min.js"></script>
+<script defer src="assets/vendor/lenis-1.3.26.min.js"></script>
+<script defer src="assets/js/covers.js?v=2026.10.24"></script>
+<script defer src="assets/js/motion.js?v=2026.10.24"></script>
+<script defer src="assets/js/main.js?v=2026.10.24"></script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html" aria-label="Erick Scur, início">
+      <svg viewBox="0 0 30 18" aria-hidden="true"><path class="l1" d="M1 3h10c6 0 6 6 13 6" fill="none" stroke-width="2.2" stroke-linecap="round"/><path class="l2" d="M1 9h23" fill="none" stroke-width="2.2" stroke-linecap="round"/><path class="l3" d="M1 15h10c6 0 6-6 13-6" fill="none" stroke-width="2.2" stroke-linecap="round"/><circle class="dot" cx="26.5" cy="9" r="2.8"/></svg>
+      Scur
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#projetos">Projetos</a>
+      <a href="#carreira" class="nav-optional">Carreira</a>
+      <a href="#contato" class="nav-cta">Contato</a>
+      <button class="theme-toggle" type="button" aria-label="Alternar tema claro e escuro">
+        <svg class="ico ico-stroke sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        <svg class="ico ico-stroke moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- ============================================================ HERO -->
+  <section class="hero" aria-labelledby="nome">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="kicker" data-lane="eng"><span class="bar"></span>Engenheiro de software <span class="nowrap">· Cascavel, PR</span></p>
+        <h1 class="hero-name" id="nome">
+          <span class="line"><span>Erick</span></span>
+          <span class="line"><span>Scur<span class="dot">.</span></span></span>
+        </h1>
+        <p class="hero-lead">Eu construo sistemas. <em>E ensino a construir.</em></p>
+        <ul class="lives">
+          <li data-lane="eng"><a href="#carreira"><span class="badge"><svg class="ico ico-stroke" aria-hidden="true"><use href="#i-code"/></svg></span><span><b><!-- DADO: cargo-atual -->Staff Engineer</b> na Nestlé</span></a></li>
+          <li data-lane="cont"><a href="https://www.instagram.com/erickscur/"><span class="badge"><svg class="ico" aria-hidden="true"><use href="#logo-instagram"/></svg></span><span><b><!-- DADO: seguidores-instagram -->106 mil</b> no Instagram</span></a></li>
+          <li data-lane="sh"><a href="#projetos"><span class="badge"><svg class="ico ico-stroke" aria-hidden="true"><use href="#i-building"/></svg></span><span><b>Acordi &amp; Scur</b>, software house</span></a></li>
+        </ul>
+        <div class="hero-cta">
+          <a class="btn" data-lane="eng" href="#projetos">Ver projetos <svg class="ico ico-stroke" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+          <a class="btn btn--ghost" data-lane="cont" href="#contato">Falar comigo</a>
+        </div>
+      </div>
+
+      <figure class="hero-photo">
+        <div class="stage">
+          <span class="layer l-sh" aria-hidden="true"></span>
+          <span class="layer l-cont" aria-hidden="true"></span>
+          <span class="layer l-eng" aria-hidden="true"></span>
+          <div class="person">
+            <picture>
+              <source srcset="assets/img/erick-scur-recorte.avif" type="image/avif">
+              <img src="assets/img/erick-scur-recorte.webp" width="591" height="1000" alt="Erick Scur, de camisa preta e braços cruzados, sorrindo." fetchpriority="high" decoding="async">
+            </picture>
+          </div>
+          <span class="float float--ig"><svg class="ico" aria-hidden="true"><use href="#logo-instagram"/></svg><span><b><!-- DADO: seguidores-instagram -->106 mil</b> seguidores</span></span>
+          <span class="float float--mcp"><svg class="ico" aria-hidden="true"><use href="#logo-claude"/></svg><span><b>IA</b> aplicada a negócio</span></span>
+          <span class="float float--nestle"><svg class="ico ico--wordmark" role="img" aria-label="Nestlé"><use href="#logo-nestle"/></svg><span><b><!-- DADO: cargo-atual -->Staff</b> Engineer</span></span>
+        </div>
+      </figure>
+    </div>
+
+    <div class="marquee" role="region" aria-label="Tecnologias que eu uso">
+      <div class="marquee-track">
+        <ul class="marquee-set">
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-nodedotjs"/></svg>Node.js</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-typescript"/></svg>TypeScript</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-nestjs"/></svg>NestJS</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-apachekafka"/></svg>Kafka</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-rabbitmq"/></svg>RabbitMQ</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-postgresql"/></svg>PostgreSQL</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-mongodb"/></svg>MongoDB</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-redis"/></svg>Redis</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-docker"/></svg>Docker</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-terraform"/></svg>Terraform</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-azure"/></svg>Azure</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-aws"/></svg>AWS</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-magento"/></svg>Adobe Commerce</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-nextdotjs"/></svg>Next.js</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-prisma"/></svg>Prisma</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-python"/></svg>Python</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-fastapi"/></svg>FastAPI</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-claude"/></svg>Claude Code</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-openai"/></svg>OpenAI</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-stripe"/></svg>Stripe</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-electron"/></svg>Electron</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-ffmpeg"/></svg>ffmpeg</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-remotion"/></svg>Remotion</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-telegram"/></svg>Telegram</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-notion"/></svg>Notion</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-obsidian"/></svg>Obsidian</li>
+        </ul>
+        <ul class="marquee-set" aria-hidden="true">
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-nodedotjs"/></svg>Node.js</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-typescript"/></svg>TypeScript</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-nestjs"/></svg>NestJS</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-apachekafka"/></svg>Kafka</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-rabbitmq"/></svg>RabbitMQ</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-postgresql"/></svg>PostgreSQL</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-mongodb"/></svg>MongoDB</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-redis"/></svg>Redis</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-docker"/></svg>Docker</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-terraform"/></svg>Terraform</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-azure"/></svg>Azure</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-aws"/></svg>AWS</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-magento"/></svg>Adobe Commerce</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-nextdotjs"/></svg>Next.js</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-prisma"/></svg>Prisma</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-python"/></svg>Python</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-fastapi"/></svg>FastAPI</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-claude"/></svg>Claude Code</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-openai"/></svg>OpenAI</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-stripe"/></svg>Stripe</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-electron"/></svg>Electron</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-ffmpeg"/></svg>ffmpeg</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-remotion"/></svg>Remotion</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-telegram"/></svg>Telegram</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-notion"/></svg>Notion</li>
+          <li class="marquee-item"><svg class="ico" aria-hidden="true"><use href="#logo-obsidian"/></svg>Obsidian</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== TRÊS VIDAS -->
+  <section class="section lives-sec wrap" id="frentes" aria-labelledby="frentes-t">
+    <div class="sec-head">
+      <p class="kicker" data-lane="cont"><span class="bar"></span>O que eu faço</p>
+      <h2 id="frentes-t">Três frentes, o mesmo jeito de construir.</h2>
+      <p>Engenharia, conteúdo e software house. Cada uma tem a sua cor aqui no site. E quase todo projeto que importa junta mais de uma.</p>
+    </div>
+
+    <div class="stack">
+      <article class="life" data-lane="eng" style="--i: 0">
+        <span class="shade" aria-hidden="true"></span>
+        <svg class="life-art" aria-hidden="true"><use href="#logo-nodedotjs"/></svg>
+        <div class="life-top">
+          <span class="life-tag"><span class="n">01</span>Engenharia</span>
+          <span class="life-for">para CTO, tech lead e recrutador</span>
+        </div>
+        <div class="life-main">
+          <h3><!-- DADO: cargo-atual -->Staff Engineer na Nestlé <small>via NH Labs, remoto · na Nestlé desde 2023, Staff desde 2026</small></h3>
+          <p>Lidero tecnicamente a migração de uma plataforma de e‑commerce enterprise: redesenho do backend, microsserviços orientados a eventos e um time de devs sob a minha responsabilidade técnica.</p>
+          <a class="link-arrow" href="#carreira">Ver a carreira <svg class="ico ico-stroke" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+        </div>
+        <div class="life-side">
+          <div><p class="life-num"><!-- DADO: nestle-modulos -->13+</p><p class="life-num-l">módulos: carrinho, assinaturas, checkout, fidelidade…</p></div>
+          <div class="life-stats">
+            <div><b>milhões</b><span>de usuários</span></div>
+            <div><b>5+ anos</b><span>de backend em produção</span></div>
+          </div>
+        </div>
+        <ul class="life-logos">
+          <li><svg class="ico" aria-hidden="true"><use href="#logo-nodedotjs"/></svg>Node.js</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#logo-typescript"/></svg>TypeScript</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#logo-nestjs"/></svg>NestJS</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#logo-apachekafka"/></svg>Kafka</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#logo-rabbitmq"/></svg>RabbitMQ</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#logo-azure"/></svg>Azure</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#logo-terraform"/></svg>Terraform</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#logo-magento"/></svg>Adobe Commerce</li>
+          <li><svg class="ico ico--wordmark" aria-hidden="true"><use href="#logo-nestle"/></svg></li>
+        </ul>
+      </article>
+
+      <article class="life" data-lane="cont" style="--i: 1">
+        <span class="shade" aria-hidden="true"></span>
+        <svg class="life-art" aria-hidden="true"><use href="#logo-instagram"/></svg>
+        <div class="life-top">
+          <span class="life-tag"><span class="n">02</span>Conteúdo</span>
+          <span class="life-for">para marcas e parcerias</span>
+        </div>
+        <div class="life-main">
+          <h3>1% Programador <small>com o Pedro, meu sócio, desde 2023</small></h3>
+          <p>Programação e IA para quem quer trabalhar com isso de verdade. Curso full stack, e‑book de Claude Code, guias gratuitos e publis com empresas de tecnologia e IA.</p>
+          <a class="link-arrow" href="mailto:contato@umporcentoprogramador.com.br?subject=Parceria">Propor uma parceria <svg class="ico ico-stroke" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+        </div>
+        <div class="life-side">
+          <div><p class="life-num"><!-- DADO: seguidores-instagram -->106<small>mil</small></p><p class="life-num-l">seguidores no Instagram, @erickscur</p></div>
+          <div class="life-stats">
+            <div><b><!-- DADO: seguidores-tiktok -->18,6 mil</b><span>no TikTok</span></div>
+            <div><b><!-- DADO: leads -->14 mil</b><span>leads na base</span></div>
+            <div><b><!-- DADO: vendas-dev-de-verdade -->R$ 40 mil+</b><span>em vendas do curso</span></div>
+            <div><b>163</b><span>páginas no e‑book</span></div>
+          </div>
+        </div>
+        <ul class="life-logos">
+          <li><a href="https://www.instagram.com/erickscur/"><svg class="ico" aria-hidden="true"><use href="#logo-instagram"/></svg>Instagram<svg class="ico ico-stroke go" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+          <li><a href="https://www.tiktok.com/@umporcentoprogramador"><svg class="ico" aria-hidden="true"><use href="#logo-tiktok"/></svg>TikTok<svg class="ico ico-stroke go" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+          <li><a href="https://lp.devdeverdade.com.br/"><svg class="ico" aria-hidden="true"><use href="#logo-devdeverdade"/></svg>Dev de Verdade<svg class="ico ico-stroke go" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+          <li><a href="https://claude.umporcentoprogramador.com.br/?source=portfolio"><svg class="ico" aria-hidden="true"><use href="#logo-claude"/></svg>Fluente em Claude<svg class="ico ico-stroke go" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+          <li><a href="https://guias.umporcentoprogramador.com.br/"><svg class="ico" aria-hidden="true"><use href="#logo-umporcento"/></svg>Guias gratuitos<svg class="ico ico-stroke go" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+        </ul>
+      </article>
+
+      <article class="life life--sh" data-lane="sh" style="--i: 2">
+        <span class="shade" aria-hidden="true"></span>
+        <svg class="life-art" aria-hidden="true"><use href="#logo-acordiscur"/></svg>
+        <div class="life-top">
+          <span class="life-tag"><span class="n">03</span>Software house</span>
+          <span class="life-for">para quem precisa de um produto</span>
+        </div>
+        <div class="life-main">
+          <h3>Acordi &amp; Scur <small>produto sob encomenda, do diagnóstico ao deploy</small></h3>
+          <p>Já no ar: o <a href="https://juntos360.com.br">Juntos360</a>, gestão financeira e CRM que o consultor de investimentos opera conversando com uma IA, e o <a href="https://app.candidatus.com.br/">Candidatus</a>, copiloto de carreira.</p>
+          <a class="link-arrow" href="projetos/consultores.html">Ver o Juntos360 <svg class="ico ico-stroke" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </div>
+        <div class="life-side">
+          <div><p class="life-num life-num--word"><!-- DADO: tempo-mvp -->2<small> semanas</small></p><p class="life-num-l">tempo médio para entregar um MVP</p></div>
+          <div class="life-stats">
+            <div><b><!-- DADO: consultores-ferramentas-mcp -->120</b><span>ferramentas MCP no Juntos360</span></div>
+            <div><b>2</b><span>produtos no ar</span></div>
+          </div>
+        </div>
+        <ul class="life-logos">
+          <li><svg class="ico" aria-hidden="true"><use href="#logo-nextdotjs"/></svg>Next.js</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#logo-postgresql"/></svg>PostgreSQL</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#logo-prisma"/></svg>Prisma</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#logo-stripe"/></svg>Stripe</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#logo-openai"/></svg>OpenAI</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#logo-claude"/></svg>Claude</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ======================================================== PROJETOS -->
+  <section class="work night" id="projetos" aria-labelledby="projetos-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker" data-lane="sh"><span class="bar"></span>Projetos</p>
+        <h2 id="projetos-t">Onde as três frentes se cruzam.</h2>
+        <p>Cada um tem estudo de caso: o problema, o que eu decidi, o que mudou. Os privados aparecem só como arquitetura, sem código.</p>
+      </div>
+    </div>
+    <div class="work-pin">
+      <div class="work-track">
+        <a class="proj" data-lane="eng" href="projetos/nerso.html">
+          <div class="proj-cover" aria-hidden="true"><div class="cover cover--nerso" style="--lane: var(--eng)" role="img" aria-label="Ilustração do Nerso: no chat, o pedido para lembrar de revisar um PR consulta o TickTick, passa por um hook que pede confirmação antes de escrever e vira tarefa; ao lado, a memória sobe de confiança 0,6 para 0,8.">
+  <div class="nr-stage" aria-hidden="true">
+    <div class="nr-phone">
+      <div class="nr-head">
+        <svg class="nr-i nr-back" viewBox="0 0 24 24"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg>
+        <span class="nr-ava"><svg viewBox="0 0 24 24"><path d="M7.5 17V7l9 10V7"/></svg></span>
+        <span class="nr-who"><b>Nerso</b><i>bot · online</i></span>
+        <svg class="nr-i nr-more" viewBox="0 0 24 24"><path d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
+      </div>
+      <div class="nr-msgs">
+        <div class="nr-list">
+          <span class="nr-day">hoje</span>
+          <div class="nr-msg nr-out"><span>Lembra de revisar o PR amanhã às 9h</span><small>21:14<svg class="nr-tick" viewBox="0 0 18 10"><path d="M1 5.5 4 8.5 10 1.5"/><path class="nr-tick2" d="M7.5 7.5 8.5 8.5 14.5 1.5"/></svg></small></div>
+          <div class="nr-trace">
+            <span class="nr-typing"><i></i><i></i><i></i></span>
+            <span class="nr-step nr-tool">
+              <span class="nr-ico"><svg class="nr-spin" viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 1-8 8"/></svg><svg class="nr-ok" viewBox="0 0 24 24"><path d="m5.5 12.5 4 4 9-9"/></svg></span>
+              <span class="nr-swap"><span class="nr-busy">consultando TickTick…</span><span class="nr-done">TickTick · 2 listas lidas</span></span>
+            </span>
+            <span class="nr-step nr-hook">
+              <span class="nr-ico"><svg viewBox="0 0 24 24"><path d="M12 3.5 5 6.5v5c0 4.2 2.9 7.6 7 9 4.1-1.4 7-4.8 7-9v-5z"/><path d="M12 9v4M12 16h.01"/></svg></span>
+              <span>hook · confirmar escrita?</span>
+            </span>
+          </div>
+          <div class="nr-msg nr-in nr-ask">
+            <b>Criar tarefa?</b>
+            <span class="nr-task"><i></i><span>Revisar o PR<small>amanhã · 09:00</small></span></span>
+          </div>
+          <div class="nr-kbd">
+            <span class="nr-btn nr-yes">Sim<span class="nr-fill">Sim</span></span>
+            <span class="nr-btn">Não</span>
+          </div>
+          <div class="nr-msg nr-in nr-reply"><span>Tarefa criada para amanhã, 9h.</span><small>21:14</small></div>
+        </div>
+      </div>
+      <div class="nr-compose"><span>Mensagem</span><svg class="nr-i" viewBox="0 0 24 24"><rect x="9" y="3.5" width="6" height="11" rx="3"/><path d="M6 11.5a6 6 0 0 0 12 0M12 17.5v3"/></svg></div>
+    </div>
+
+    <div class="nr-side">
+      <div class="nr-card nr-voice">
+        <div class="nr-card-head"><span>Nerso Voz</span><em>mac</em></div>
+        <div class="nr-wave">
+          <span class="nr-mic"><svg class="nr-i" viewBox="0 0 24 24"><rect x="9" y="3.5" width="6" height="11" rx="3"/><path d="M6 11.5a6 6 0 0 0 12 0M12 17.5v3"/></svg></span>
+          <span class="nr-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="nr-time">0:03</span>
+        </div>
+      </div>
+      <div class="nr-card nr-mem">
+        <div class="nr-card-head"><span>memória</span><em>preferência</em></div>
+        <div class="nr-fact">Revisa PRs pela manhã</div>
+        <div class="nr-conf"><span>confiança</span><span class="nr-val"><s>0,6</s><svg viewBox="0 0 16 10"><path d="M1 5h13M10 1l4 4-4 4"/></svg><b>0,8</b></span></div>
+        <div class="nr-meter"><span class="nr-fillbar"></span><span class="nr-mark"></span></div>
+        <div class="nr-scale"><span>0</span><span class="nr-th">fato · 0,6</span><span>1</span></div>
+        <div class="nr-foot"><span class="nr-plus">+1</span>4ª ocorrência</div>
+      </div>
+    </div>
+  </div>
+</div></div>
+          <div class="proj-info">
+            <p class="proj-idx"><i></i><span>01</span><span>engenharia + conteúdo</span><span>2026</span></p>
+            <h3 style="view-transition-name: t-nerso">Nerso</h3>
+            <p>Meu assistente pessoal com IA. Lembra com nível de confiança, avisa antes do prazo e pede permissão antes de mexer em qualquer coisa.</p>
+            <ul class="chips"><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-claude"/></svg>Agent SDK</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-telegram"/></svg>Telegram</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-obsidian"/></svg>Obsidian</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-electron"/></svg>Electron</li></ul>
+            <span class="go">Ler o caso <svg class="ico ico-stroke" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+          </div>
+        </a>
+        <a class="proj" data-lane="cont" href="projetos/reels-pipeline.html">
+          <div class="proj-cover" aria-hidden="true"><div class="cover cover--reels-pipeline" style="--lane: var(--cont)" role="img" aria-label="Ilustração do Reels Pipeline: no roteiro, uma linha de comentário pede split screen e zoom na palavra limpa; ao lado, o Reel montado em 9:16 com tela em cima, apresentador embaixo e legenda palavra a palavra; embaixo, a linha do tempo da EDL com os cortes.">
+  <div class="rp-stage" aria-hidden="true">
+
+    <div class="rp-doc">
+      <div class="rp-bar"><span class="rp-file">roteiro-042.md</span><span class="rp-meta">cena 3 / 8</span></div>
+      <ol class="rp-lines">
+        <li class="rp-h"><i>12</i><span><b>##</b> Cena 3 · /clear</span></li>
+        <li><i>13</i><span>Quando a conversa pesa,</span></li>
+        <li><i>14</i><span>eu rodo <code>/clear</code> e a janela</span></li>
+        <li><i>15</i><span>fica limpa.</span></li>
+        <li class="rp-mk"><i>16</i><span><u>&lt;!--</u> <em>edit:</em> modelo=<b>split</b></span></li>
+        <li class="rp-mk"><i>17</i><span>&nbsp;&nbsp;zoom=tela@<b>"limpa"</b> x1.2 <u>--&gt;</u></span></li>
+        <li class="rp-dim"><i>18</i><span><b>##</b> Cena 4 · contexto</span></li>
+      </ol>
+      <span class="rp-hl"></span>
+    </div>
+
+    <div class="rp-edl">
+      <div class="rp-bar"><span class="rp-file">edl.json</span><span class="rp-meta">00:07.2 / 00:10.0</span></div>
+      <div class="rp-tracks">
+        <span class="rp-tl">V1</span>
+        <div class="rp-track rp-v1"><span style="--a:0;--b:22">tela A</span><span style="--a:22;--b:48">tela B</span><span style="--a:48;--b:100">tela A · zoom</span><i class="rp-cut" style="--a:22"></i><i class="rp-cut" style="--a:48"></i></div>
+        <span class="rp-tl">V2</span>
+        <div class="rp-track rp-v2"><span style="--a:0;--b:35">fala</span><span style="--a:35;--b:72">fala · take 2</span><span style="--a:72;--b:100">fala</span><i class="rp-cut" style="--a:35"></i><i class="rp-cut" style="--a:72"></i></div>
+        <span class="rp-tl">A1</span>
+        <div class="rp-track rp-a1">
+          <svg viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5h100"/><path class="rp-wv" d="M2 3.6v2.8M4 2.4v5.2M6 3v4M8 1.6v6.8M10 2.6v4.8M12 3.8v2.4M14 2.2v5.6M16 1.2v7.6M18 3v4M20 4v2M24 4.2v1.6M26 2.4v5.2M28 1.4v7.2M30 2.8v4.4M32 1.8v6.4M34 3.4v3.2M36 2v6M38 1v8M40 2.6v4.8M42 3.6v2.8M44 4.2v1.6M48 3.8v2.4M50 2.2v5.6M52 1.4v7.2M54 2.8v4.4M56 1.8v6.4M58 1.2v7.6M60 2.6v4.8M62 3.4v3.2M64 1.6v6.8M66 2.4v5.2M68 3v4M70 1.8v6.4M72 1v8M74 2.2v5.6M76 3.2v3.6M78 4v2M82 3.6v2.8M84 2.4v5.2M86 1.8v6.4M88 3v4M90 2.2v5.6M92 3.4v3.2M94 4v2M96 4.4v1.2"/></svg>
+          <span class="rp-word" style="--a:18"></span><span class="rp-word" style="--a:33"></span><span class="rp-word" style="--a:52"></span><span class="rp-word rp-key" style="--a:72"><em>@"limpa"</em></span>
+        </div>
+        <div class="rp-ph"><span></span></div>
+      </div>
+    </div>
+
+    <svg class="rp-wire" viewBox="0 0 100 75" preserveAspectRatio="none">
+      <path class="rp-wire-path" d="M51 34.2H58.5"/>
+    </svg>
+    <span class="rp-dot rp-dot-a"></span>
+    <span class="rp-dot rp-dot-b"></span>
+
+    <div class="rp-phone">
+      <div class="rp-half rp-top">
+        <div class="rp-scr">
+          <div class="rp-win">
+            <div class="rp-win-bar"><i></i><i></i><i></i></div>
+            <div class="rp-code">
+              <span class="rp-c rp-c-dim" style="--w:62"></span>
+              <span class="rp-c rp-c-dim" style="--w:44"></span>
+              <span class="rp-cmd"><b>›</b> /clear</span>
+              <span class="rp-out">conversa reiniciada</span>
+              <span class="rp-c" style="--w:70"></span>
+              <span class="rp-c" style="--w:52"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rp-half rp-bot">
+        <span class="rp-light"></span>
+        <svg class="rp-person" viewBox="0 0 100 60" preserveAspectRatio="xMidYMax meet"><path class="rp-rim" d="M44 9.5c5.6 0 9.6 4.9 9.6 11.2 0 4.4-1.9 8.2-4.8 10.2v4.4c11.6 1 21.2 7.6 21.2 24.7H17c0-17.1 9.6-23.7 21.2-24.7v-4.4c-2.9-2-4.8-5.8-4.8-10.2 0-6.3 4-11.2 9.6-11.2z"/><path class="rp-body" d="M44 9.5c5.6 0 9.6 4.9 9.6 11.2 0 4.4-1.9 8.2-4.8 10.2v4.4c11.6 1 21.2 7.6 21.2 24.7H17c0-17.1 9.6-23.7 21.2-24.7v-4.4c-2.9-2-4.8-5.8-4.8-10.2 0-6.3 4-11.2 9.6-11.2z"/><circle class="rp-lav" cx="47.5" cy="41" r="0.9"/></svg>
+      </div>
+      <span class="rp-seam"></span>
+      <div class="rp-cap">
+        <span class="rp-w">a<b>a</b></span> <span class="rp-w">janela<b>janela</b></span><br>
+        <span class="rp-w">fica<b>fica</b></span> <span class="rp-w rp-act">limpa<b>limpa</b></span>
+      </div>
+      <span class="rp-prog"><i></i></span>
+      <span class="rp-badge">1%</span>
+      <span class="rp-fmt">split</span>
+    </div>
+  </div>
+</div></div>
+          <div class="proj-info">
+            <p class="proj-idx"><i></i><span>02</span><span>conteúdo + engenharia</span><span>2026</span></p>
+            <h3 style="view-transition-name: t-reels">Reels Pipeline</h3>
+            <p>Os Reels do canal saem editados a partir do próprio roteiro. Uma marcação no texto vira split screen, legenda, zoom e logo.</p>
+            <ul class="chips"><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-remotion"/></svg>Remotion</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-ffmpeg"/></svg>ffmpeg</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-elevenlabs"/></svg>Scribe</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-typescript"/></svg>TypeScript</li></ul>
+            <span class="go">Ler o caso <svg class="ico ico-stroke" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+          </div>
+        </a>
+        <a class="proj" data-lane="sh" data-brand="juntos360" href="projetos/consultores.html">
+          <div class="proj-cover" aria-hidden="true"><div class="cover cover--consultores" style="--lane: #C9A24B" role="img" aria-label="Ilustração: painel do Juntos360 para um consultor de investimentos. O assistente de IA recebe o pedido de registrar um aporte de R$ 2.500, prepara a ferramenta registrar_aporte, pede confirmação antes de escrever e registra o aporte com auditoria; o patrimônio e a saúde financeira da cliente sobem.">
+  <div class="cc" aria-hidden="true">
+    <div class="cc-app">
+      <div class="cc-side">
+        <span class="cc-mark"><svg viewBox="40 140 432 232"><path d="M240 338L220 358H50V210H216L296 289L266 318M266 240L296 210H462V358H284L213 289L242 262"/><circle cx="168" cy="167" r="16"/><circle cx="346" cy="167" r="16"/></svg><b>Juntos360</b></span>
+        <ul class="cc-nav">
+          <li><svg viewBox="0 0 24 24"><path d="M5 7.5h13a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-10a2 2 0 0 1 2-2h10"/><path d="M15.5 13.5h1"/></svg><span>Carteira</span></li>
+          <li class="is-on"><svg viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.5"/><path d="M3 19c.8-3.2 3.2-5 6-5s5.2 1.8 6 5M15.5 5.2a3.3 3.3 0 0 1 0 6.6M18 14.5c1.6.7 2.6 2.2 3 4.5"/></svg><span>Clientes</span></li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5V12h8.5"/></svg><span>Orçamento</span></li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><path d="M12 12h.01"/></svg><span>Metas</span></li>
+          <li><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>Agenda</span></li>
+        </ul>
+      </div>
+      <div class="cc-main">
+        <div class="cc-bar"><span class="cc-av">AM</span><span class="cc-who"><b>Cliente A.M.</b><small>desde 2024 · 3 metas</small></span><span class="cc-tag">perfil moderado</span></div>
+        <div class="cc-grid">
+          <div class="cc-card cc-pat">
+            <i class="cc-hl"></i>
+            <span class="cc-lbl">patrimônio</span>
+            <strong class="cc-num" data-from="184300">R$ 186.800</strong>
+            <span class="cc-delta">+ R$ 2.500 hoje</span>
+            <svg class="cc-spark" viewBox="0 0 100 30" preserveAspectRatio="none"><path class="cc-sp-area" d="M0 25 12 23 24 24 36 19 48 20 60 15 72 16 84 11 100 5V30H0Z"/><path class="cc-sp-line" d="M0 25 12 23 24 24 36 19 48 20 60 15 72 16 84 11"/><path class="cc-sp-new" d="M84 11 100 5"/></svg>
+          </div>
+          <div class="cc-card cc-gauge">
+            <span class="cc-lbl">saúde financeira</span>
+            <svg viewBox="0 0 120 64"><path class="cc-g-track" d="M8 60a52 52 0 0 1 104 0" pathLength="100"/><path class="cc-g-fill" d="M8 60a52 52 0 0 1 104 0" pathLength="100" stroke-dasharray="74 100"/><path class="cc-g-gaps" d="M8 60a52 52 0 0 1 104 0" pathLength="100"/></svg>
+            <span class="cc-gval"><strong class="cc-gnum" data-from="70">74</strong><small>saudável</small></span>
+          </div>
+        </div>
+        <span class="cc-lbl cc-fh">movimentações</span>
+        <ol class="cc-feed">
+          <li class="is-new"><span class="cc-fi">+</span><span class="cc-ft">Aporte<small>hoje · via IA</small></span><b>R$ 2.500</b></li>
+          <li><span class="cc-fi">+</span><span class="cc-ft">Aporte<small>12 set</small></span><b>R$ 1.800</b></li>
+          <li><span class="cc-fi">+</span><span class="cc-ft">Aporte<small>14 ago</small></span><b>R$ 1.800</b></li>
+          <li><span class="cc-fi">+</span><span class="cc-ft">Aporte<small>15 jul</small></span><b>R$ 1.500</b></li>
+        </ol>
+      </div>
+    </div>
+    <div class="cc-chat"><div class="cc-panel"><div class="cc-in">
+      <div class="cc-head"><span class="cc-bot">IA</span><b>Assistente</b><span class="cc-via"><i class="cc-live"></i>via MCP</span><span class="cc-chip">120 tools</span></div>
+      <p class="cc-msg">Registrar aporte de R$&nbsp;2.500 para a cliente A.M.</p>
+      <div class="cc-tool">
+        <i class="cc-prog"></i>
+        <span class="cc-k">tool · escrita</span>
+        <span class="cc-st"><span class="cc-st-wait">pendente</span><span class="cc-st-ok">executada</span></span>
+        <code>registrar_aporte</code>
+        <span class="cc-args">valor: 2.500,00</span>
+      </div>
+      <div class="cc-confirm">
+        <i class="cc-ring"></i>
+        <b>Confirmar escrita?</b>
+        <span class="cc-sub">1 aporte · R$ 2.500,00 → A.M.</span>
+        <span class="cc-btns"><span class="cc-btn">Cancelar</span><span class="cc-btn is-pri">Confirmar</span></span>
+      </div>
+      <div class="cc-done"><svg viewBox="0 0 24 24"><path d="m6.5 12.5 3.5 3.5 7.5-8"/></svg><span>Aporte registrado · auditado</span><small>14:32</small></div>
+    </div></div></div>
+  </div>
+</div></div>
+          <div class="proj-info">
+            <p class="proj-idx"><i></i><span>03</span><span>software house + engenharia</span><span>2026</span></p>
+            <h3 style="view-transition-name: t-consultores">Juntos360</h3>
+            <p>Gestão financeira e CRM para consultores de investimento, num produto só. São 120 ferramentas para o consultor operar tudo conversando com uma IA, e cada escrita é confirmada.</p>
+            <ul class="chips"><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-nextdotjs"/></svg>Next.js</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-postgresql"/></svg>Postgres</li><li class="chip"><svg class="ico ico-stroke" aria-hidden="true"><use href="#i-spark"/></svg>MCP</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-stripe"/></svg>Stripe</li></ul>
+            <span class="go">Ler o caso <svg class="ico ico-stroke" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+          </div>
+        </a>
+        <a class="proj" data-lane="sh" data-brand="candidatus" href="projetos/candidatus.html">
+          <div class="proj-cover" aria-hidden="true"><div class="cover cover--candidatus" style="--lane: #5EC2D6" role="img" aria-label="Ilustração do motor de recomendação em cinco estágios: vagas de 22 fontes passam por filtros duros, que eliminam duas; cinco similaridades entram numa soma ponderada com pesos 0,45, 0,20, 0,15, 0,10 e 0,10; a diversificação MMR reordena a lista e a primeira vaga traz a explicação: cobre 8 de 10 habilidades, e a nota de 92% aparece decomposta pelos cinco pesos.">
+  <div class="cd" aria-hidden="true">
+    <div class="cd-win">
+      <ol class="cd-stages">
+        <li><b>1</b><span>filtros duros</span></li>
+        <li><b>2</b><span>similaridades</span></li>
+        <li><b>3</b><span>soma ponderada</span></li>
+        <li><b>4</b><span>diversificação</span></li>
+        <li><b>5</b><span>explicação</span><i class="cd-mark"></i></li>
+      </ol>
+      <div class="cd-cols">
+        <section class="cd-in">
+          <h4 class="cd-h">vagas <em>22 fontes</em></h4>
+          <ul class="cd-jobs">
+            <li><i>A</i><span><b>Dev Jr. Backend</b><small>Empresa A · remoto</small></span></li>
+            <li class="is-out"><i>B</i><span><b>Dados Jr.</b><small>Empresa B</small></span><em>presencial</em></li>
+            <li><i>C</i><span><b>Dev Front-end Jr.</b><small>Empresa C · híbrido</small></span></li>
+            <li><i>A</i><span><b>Dev Jr. Node</b><small>Empresa A · remoto</small></span></li>
+            <li class="is-out"><i>E</i><span><b>Dev Pleno</b><small>Empresa E</small></span><em>3+ anos</em></li>
+            <li><i>D</i><span><b>Estágio QA</b><small>Empresa D · remoto</small></span></li>
+          </ul>
+          <p class="cd-foot"><span>filtros duros</span><b>2 de 6 fora</b></p>
+        </section>
+        <section class="cd-w">
+          <h4 class="cd-h">pesos</h4>
+          <ul class="cd-bars">
+            <li style="--w:.45"><span>habilidades</span><b>0,45</b><i></i></li>
+            <li style="--w:.20"><span>nível</span><b>0,20</b><i></i></li>
+            <li style="--w:.15"><span>modalidade</span><b>0,15</b><i></i></li>
+            <li style="--w:.10"><span>salário</span><b>0,10</b><i></i></li>
+            <li style="--w:.10"><span>recência</span><b>0,10</b><i></i></li>
+          </ul>
+          <p class="cd-note">campo vazio na vaga? o peso dele vai para os outros</p>
+          <p class="cd-foot cd-sum"><span>Σ</span><b>1,00</b></p>
+        </section>
+        <section class="cd-out">
+          <h4 class="cd-h">para você <em>MMR</em></h4>
+          <ol class="cd-rank">
+            <li class="is-top"><b class="cd-n">01</b><span class="cd-r"><b>Dev Jr. Backend</b><small>Empresa A · remoto</small></span><strong data-v="92">92%</strong>
+              <i class="cd-skel"></i><span class="cd-why"><svg viewBox="0 0 24 24"><path d="m6.5 12.5 3.5 3.5 7.5-8"/></svg>cobre 8 de 10 habilidades</span></li>
+            <li><b class="cd-n">02</b><span class="cd-r"><b>Dev Front-end Jr.</b><small>Empresa C · híbrido</small></span><strong data-v="86">86%</strong></li>
+            <li><b class="cd-n">03</b><span class="cd-r"><b>Estágio QA</b><small>Empresa D · remoto</small></span><strong data-v="81">81%</strong></li>
+            <li class="is-dup"><b class="cd-n">—</b><span class="cd-r"><b>Dev Jr. Node</b><small class="cd-swap"><span>Empresa A · remoto</span><span>parecida com 01</span></small></span><strong data-v="90">90%</strong></li>
+          </ol>
+          <div class="cd-sumup">
+            <span class="cd-sh">como deu 92%</span>
+            <span class="cd-stack"><i style="--s:.40"></i><i style="--s:.20"></i><i style="--s:.15"></i><i style="--s:.07"></i><i style="--s:.10"></i></span>
+            <span class="cd-eq">0,40+0,20+0,15+0,07+0,10</span>
+          </div>
+          <p class="cd-foot"><span>sync incremental</span><b>6 h</b></p>
+        </section>
+      </div>
+    </div>
+  </div>
+</div></div>
+          <div class="proj-info">
+            <p class="proj-idx"><i></i><span>04</span><span>software house + engenharia</span><span>2025–hoje</span></p>
+            <h3 style="view-transition-name: t-candidatus">Candidatus</h3>
+            <p>Copiloto de carreira para o primeiro emprego em tecnologia. Recomendação de vagas em 5 estágios, cada um apoiado em pesquisa publicada. É o nosso TCC.</p>
+            <ul class="chips"><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-nextdotjs"/></svg>Next.js</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-python"/></svg>Python</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-fastapi"/></svg>FastAPI</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-openai"/></svg>OpenAI</li></ul>
+            <span class="go">Ler o caso <svg class="ico ico-stroke" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+          </div>
+        </a>
+        <a class="proj" data-lane="cont" href="projetos/maquina-1porcento.html">
+          <div class="proj-cover" aria-hidden="true"><div class="cover cover--maquina-1porcento" style="--lane: var(--cont)" role="img" aria-label="Ilustração da máquina do 1%: um Reel com link de origem leva ao guia gratuito, o lead entra no CRM, a venda passa pelo checkout, a nota fiscal é emitida e o acesso é liberado, sem etapa manual. Números ilustrativos.">
+  <div class="mq-stage" aria-hidden="true">
+    <div class="mq-rail">
+      <span class="mq-seg mq-s1"><i></i></span>
+      <span class="mq-seg mq-s2"><i></i></span>
+      <span class="mq-seg mq-s3"><i></i></span>
+      <svg class="mq-chev" style="--x:34;--y:19" viewBox="0 0 10 10"><path d="M3.5 2 6.5 5 3.5 8"/></svg>
+      <svg class="mq-chev" style="--x:66;--y:19" viewBox="0 0 10 10"><path d="M3.5 2 6.5 5 3.5 8"/></svg>
+      <svg class="mq-chev mq-down" style="--x:82;--y:36.5" viewBox="0 0 10 10"><path d="M3.5 2 6.5 5 3.5 8"/></svg>
+      <svg class="mq-chev mq-left" style="--x:66;--y:54" viewBox="0 0 10 10"><path d="M3.5 2 6.5 5 3.5 8"/></svg>
+      <svg class="mq-chev mq-left" style="--x:34;--y:54" viewBox="0 0 10 10"><path d="M3.5 2 6.5 5 3.5 8"/></svg>
+      <span class="mq-lbl" style="--x:34;--y:15.6">utm</span>
+      <span class="mq-lbl" style="--x:66;--y:15.6">lead</span>
+      <span class="mq-lbl mq-lbl-v" style="--x:84.6;--y:36.5">upsell</span>
+      <span class="mq-lbl" style="--x:66;--y:50.6">venda</span>
+      <span class="mq-lbl" style="--x:34;--y:50.6">tag</span>
+      <span class="mq-tok"><i></i></span>
+    </div>
+
+    <div class="mq-card mq-c1">
+      <div class="mq-hd"><span><b>01</b>reel</span><i class="mq-st"></i></div>
+      <div class="mq-bd">
+        <span class="mq-thumb"><svg viewBox="0 0 10 10"><path d="M3.5 2.5v5l4-2.5z"/></svg><i></i><i></i></span>
+        <span class="mq-col">
+          <span class="mq-t">Reel novo</span>
+          <code class="mq-chip">?source=reels</code>
+        </span>
+      </div>
+      <div class="mq-ft"><span>cliques</span><b class="mq-n"><i>3.871</i><i>3.872</i></b></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <div class="mq-card mq-c2">
+      <div class="mq-hd"><span><b>02</b>guia</span><i class="mq-st"></i></div>
+      <div class="mq-bd mq-form">
+        <span class="mq-t">Guia gratuito</span>
+        <span class="mq-field"><span>e-mail</span><em>Baixar</em></span>
+      </div>
+      <div class="mq-ft"><span>downloads</span><b class="mq-n"><i>9.540</i><i>9.541</i></b></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <div class="mq-card mq-c3">
+      <div class="mq-hd"><span><b>03</b>crm</span><i class="mq-st"></i></div>
+      <div class="mq-bd mq-crm">
+        <b class="mq-n mq-big"><i>14.207</i><i>14.208</i></b>
+        <span class="mq-plus">lead +1</span>
+      </div>
+      <div class="mq-ft"><span>origem</span><code>reels</code></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <div class="mq-card mq-c4">
+      <div class="mq-hd"><span><b>04</b>checkout</span><i class="mq-st"></i></div>
+      <div class="mq-bd mq-form">
+        <span class="mq-t">Curso <s>R$ 297</s></span>
+        <span class="mq-ok"><svg viewBox="0 0 24 24"><path d="m6 12.5 4 4 8-9"/></svg>aprovado</span>
+      </div>
+      <div class="mq-ft"><span>vendas</span><b class="mq-n"><i>412</i><i>413</i></b></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <div class="mq-card mq-c5">
+      <div class="mq-hd"><span><b>05</b>nfs-e</span><i class="mq-st"></i></div>
+      <div class="mq-bd">
+        <span class="mq-rcpt"><span class="mq-t">NFS-e emitida</span><i></i><i></i></span>
+      </div>
+      <div class="mq-ft"><span>nº</span><b class="mq-n"><i>000412</i><i>000413</i></b></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <div class="mq-card mq-c6">
+      <div class="mq-hd"><span><b>06</b>acesso</span><i class="mq-st"></i></div>
+      <div class="mq-bd mq-acc">
+        <span class="mq-lock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9.5" rx="2"/><path class="mq-shackle" d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg></span>
+        <span class="mq-t">Acesso liberado</span>
+      </div>
+      <div class="mq-ft"><span>alunos</span><b class="mq-n"><i>412</i><i>413</i></b></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <span class="mq-note">números ilustrativos · nada depende de alguém lembrar</span>
+  </div>
+</div></div>
+          <div class="proj-info">
+            <p class="proj-idx"><i></i><span>05</span><span>conteúdo + engenharia</span><span>2025–2026</span></p>
+            <h3 style="view-transition-name: t-maquina">A máquina do 1%</h3>
+            <p>Do Reel ao lead, do lead à venda, da venda à nota fiscal. Guias, CRM e automações que eu escrevi para o negócio não depender de planilha.</p>
+            <ul class="chips"><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-nestjs"/></svg>NestJS</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-nextdotjs"/></svg>Next.js</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-postgresql"/></svg>Postgres</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-railway"/></svg>Railway</li></ul>
+            <span class="go">Ler o caso <svg class="ico ico-stroke" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+          </div>
+        </a>
+      </div>
+      <div class="work-progress" aria-hidden="true"><i></i></div>
+    </div>
+    <div class="wrap work-foot">
+      <p>No GitHub público: <a href="https://github.com/ErickScur/clean-node-api">clean-node-api</a> (<!-- DADO: github-clean-node-api-commits -->271 commits de Clean Architecture e TDD, 2022) e <a href="https://github.com/ErickScur/FAG-orbita">Órbita</a>, um jogo 2D em Godot (2026).</p>
+    </div>
+  </section>
+
+  <!-- ========================================================== MÉTODO -->
+  <section class="section wrap" id="metodo" aria-labelledby="metodo-t">
+    <div class="method-grid">
+      <div class="method-aside">
+        <p class="kicker" data-lane="eng"><span class="bar"></span>Método</p>
+        <h2 id="metodo-t">Como eu trabalho com IA.</h2>
+        <p>IA aplicada a problema de negócio é a minha direção agora. Quatro regras que eu sigo, e onde cada uma está implementada.</p>
+        <div class="claude-badge"><svg class="ico" aria-hidden="true"><use href="#logo-claude"/></svg><div><b>Claude Code no centro</b><span>agentes, MCPs e automações</span></div></div>
+      </div>
+      <ol class="rules">
+        <li class="rule" data-lane="eng">
+          <span class="rule-ico"><svg class="ico ico-stroke" aria-hidden="true"><use href="#i-hook"/></svg></span>
+          <div><h3>Regra que importa vira código, não prompt.</h3><p>No Nerso, toda escrita destrutiva ou externa passa por um hook antes de executar. O modelo pode esquecer uma instrução. O hook não esquece.</p><span class="where"><svg class="ico" aria-hidden="true"><use href="#logo-nerso"/></svg>Nerso</span></div>
+        </li>
+        <li class="rule" data-lane="sh">
+          <span class="rule-ico"><svg class="ico ico-stroke" aria-hidden="true"><use href="#i-confirm"/></svg></span>
+          <div><h3>Toda escrita feita por IA pede confirmação.</h3><p>As 59 ferramentas de escrita do Juntos360 só executam depois que o consultor confirma. A mesma chamada repetida em 2 minutos devolve o resultado anterior.</p><span class="where"><svg class="ico" aria-hidden="true"><use href="#logo-acordiscur"/></svg>Juntos360</span></div>
+        </li>
+        <li class="rule" data-lane="cont">
+          <span class="rule-ico"><svg class="ico ico-stroke" aria-hidden="true"><use href="#i-gauge"/></svg></span>
+          <div><h3>Custo é métrica de produto.</h3><p>Duas otimizações no Nerso: registro mecânico vai para o modelo rápido (US$ 0,47 → 0,047 por turno) e a conversa retoma a sessão em vez de começar do zero (US$ 0,51 → 0,04). Cada turno tem teto de gasto e vai para um log de custo.</p><span class="where"><svg class="ico" aria-hidden="true"><use href="#logo-nerso"/></svg>Nerso</span></div>
+        </li>
+        <li class="rule" data-lane="eng">
+          <span class="rule-ico"><svg class="ico ico-stroke" aria-hidden="true"><use href="#i-gates"/></svg></span>
+          <div><h3>O agente escreve. Os gates decidem.</h3><p>O app de voz do Nerso saiu de um loop de agentes em paralelo. Nada entra sem passar por lint, typecheck, teste, build, smoke, mutação, regressão de voz e auditoria de privacidade.</p><span class="where"><svg class="ico" aria-hidden="true"><use href="#logo-nerso"/></svg>Nerso Voz</span></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ======================================================== CARREIRA -->
+  <section class="section career wrap" id="carreira" aria-labelledby="carreira-t">
+    <div class="sec-head">
+      <p class="kicker" data-lane="sh"><span class="bar"></span>Carreira</p>
+      <h2 id="carreira-t">De Videira à Nestlé, em 15 passos.</h2>
+      <p>Do curso técnico ao cargo atual, na ordem em que aconteceu. A cor diz em qual frente cada passo caiu.</p>
+    </div>
+    <div class="tl">
+      <div class="tl-aside" aria-hidden="true">
+        <div class="tl-year"><!-- ano montado pelo JS; sem JS fica 2018–2026 --><span>2018</span></div>
+        <div class="tl-now"><span class="swatch"></span><span class="lane-name">formação</span></div>
+        <ul class="tl-legend">
+          <li data-lane="eng"><i></i>engenharia</li>
+          <li data-lane="cont"><i></i>conteúdo</li>
+          <li data-lane="sh"><i></i>software house</li>
+          <li data-lane="edu"><i></i>formação</li>
+        </ul>
+      </div>
+      <div class="tl-list">
+        <span class="tl-spine" aria-hidden="true"><i></i></span>
+        <ol class="tl-items">
+          <li class="tl-item is-minor" data-lane="edu" data-year="2018">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card">
+              <div class="tl-head"><span class="tl-logo tl-logo--wide"><svg class="ico ico--wordmark" aria-hidden="true"><use href="#logo-ifc"/></svg></span><div class="tl-meta"><span class="tl-when">2018–2021</span><span class="tl-where">Instituto Federal Catarinense · Videira</span></div><span class="tl-pill">formação</span></div>
+              <h3>Técnico em Informática</h3>
+              <p>As primeiras linhas de C, Java e PHP. E a primeira vez que um programa meu resolveu um problema de alguém.</p>
+            </article>
+          </li>
+          <li class="tl-item is-key" data-lane="sh" data-year="2020">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card night">
+              <div class="tl-head"><span class="tl-logo"><svg class="ico" aria-hidden="true"><use href="#logo-scurti"/></svg></span><div class="tl-meta"><span class="tl-when">jun 2020</span><span class="tl-where">Scur T.I.</span></div><span class="tl-pill">software house</span></div>
+              <h3>Abro a minha primeira empresa</h3>
+              <p>Requisito, arquitetura, código e entrega, direto com o cliente. Aprendi cedo que software é negócio.</p>
+              <p class="tl-stat"><b>1ª</b><span>empresa própria</span></p>
+            </article>
+          </li>
+          <li class="tl-item is-minor" data-lane="eng" data-year="2020">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card">
+              <div class="tl-head"><span class="tl-logo tl-logo--wide"><svg class="ico ico--wordmark" aria-hidden="true"><use href="#logo-whap"/></svg></span><div class="tl-meta"><span class="tl-when">nov 2020</span><span class="tl-where">Whap Soluções Web · Videira</span></div><span class="tl-pill">engenharia</span></div>
+              <h3>Estágio full stack</h3>
+              <p>Atendimento, protótipo, front e back. Primeiro contato com Magento, que eu ia reencontrar em outra escala.</p>
+              <ul class="chips tl-facts"><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-php"/></svg>PHP</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-magento"/></svg>Magento</li></ul>
+            </article>
+          </li>
+          <li class="tl-item is-minor" data-lane="eng" data-year="2021">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card">
+              <div class="tl-head"><span class="tl-logo"><svg class="ico" aria-hidden="true"><use href="#logo-adv"/></svg></span><div class="tl-meta"><span class="tl-when">abr 2021</span><span class="tl-where">ADV Tecnologia</span></div><span class="tl-pill">engenharia</span></div>
+              <h3>Backend de help desk em tempo real</h3>
+              <p>Chat por WebSocket, dashboards de atendimento e kanban para equipes de suporte.</p>
+              <ul class="chips tl-facts"><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-nodedotjs"/></svg>Node.js</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-mongodb"/></svg>MongoDB</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-redis"/></svg>Redis</li></ul>
+            </article>
+          </li>
+          <li class="tl-item" data-lane="eng" data-year="2022">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card">
+              <div class="tl-head"><span class="tl-logo"><svg class="ico" aria-hidden="true"><use href="#logo-premiersoft"/></svg></span><div class="tl-meta"><span class="tl-when">mar 2022</span><span class="tl-where">Premiersoft · Blumenau</span></div><span class="tl-pill">engenharia</span></div>
+              <h3>Único backend de um marketplace automotivo</h3>
+              <p>Desenhei e construí o backend inteiro atendendo três squads de front ao mesmo tempo: Web, Android e iOS. E mantive o serviço de SMS dos Correios, com milhões de disparos.</p>
+              <ul class="chips tl-facts"><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-nestjs"/></svg>NestJS</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-postgresql"/></svg>PostgreSQL</li><li class="chip chip--wide"><svg class="ico ico--wordmark" aria-hidden="true"><use href="#logo-correios"/></svg><span class="visually-hidden">Correios</span></li></ul>
+            </article>
+          </li>
+          <li class="tl-item is-key" data-lane="cont" data-year="2023">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card night">
+              <div class="tl-head"><span class="tl-logo"><svg class="ico" aria-hidden="true"><use href="#logo-umporcento"/></svg></span><div class="tl-meta"><span class="tl-when">jan 2023</span><span class="tl-where">1% Programador</span></div><span class="tl-pill">conteúdo</span></div>
+              <h3>Cofundo o 1% Programador</h3>
+              <p>Com o Pedro, meu sócio. Programação e IA sem enrolação, para quem quer trabalhar com isso.</p>
+              <ul class="chips tl-facts"><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-instagram"/></svg>Instagram</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-tiktok"/></svg>TikTok</li></ul>
+              <p class="tl-stat"><b>106 mil</b><span>no Instagram hoje</span></p>
+            </article>
+          </li>
+          <li class="tl-item is-key" data-lane="eng" data-year="2023">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card night">
+              <div class="tl-head"><span class="tl-logo tl-logo--wide"><svg class="ico ico--wordmark" aria-hidden="true"><use href="#logo-nestle"/></svg></span><div class="tl-meta"><span class="tl-when">fev 2023</span><span class="tl-where">Nestlé · via NH Labs</span></div><span class="tl-pill">engenharia</span></div>
+              <h3>Backend sênior na Nestlé</h3>
+              <p>Remoto, na migração de uma plataforma de e‑commerce enterprise. Microsserviços orientados a eventos, Adobe Commerce, Terraform e CI/CD no Azure.</p>
+              <ul class="chips tl-facts"><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-apachekafka"/></svg>Kafka</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-rabbitmq"/></svg>RabbitMQ</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-azure"/></svg>Azure</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-magento"/></svg>Adobe Commerce</li></ul>
+              <p class="tl-stat"><b>milhões</b><span>de usuários</span></p>
+            </article>
+          </li>
+          <li class="tl-item is-minor" data-lane="edu" data-year="2023">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card">
+              <div class="tl-head"><span class="tl-logo tl-logo--wide"><svg class="ico ico--wordmark" aria-hidden="true"><use href="#logo-fag"/></svg></span><div class="tl-meta"><span class="tl-when">jul 2023</span><span class="tl-where">Centro Universitário FAG · Cascavel</span></div><span class="tl-pill">formação</span></div>
+              <h3>Engenharia de Software</h3>
+              <p>Bacharelado com formatura prevista para <!-- DADO: formatura -->julho de 2027.</p>
+            </article>
+          </li>
+          <li class="tl-item" data-lane="cont" data-year="2025">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card">
+              <div class="tl-head"><span class="tl-logo"><svg class="ico" aria-hidden="true"><use href="#logo-devdeverdade"/></svg></span><div class="tl-meta"><span class="tl-when"><!-- DADO: lancamento-dev-de-verdade -->2025</span><span class="tl-where">Dev de Verdade</span></div><span class="tl-pill">conteúdo</span></div>
+              <h3>Lanço o curso full stack</h3>
+              <p><!-- DADO: vendas-dev-de-verdade -->Mais de R$ 40 mil em vendas, com a operação automatizada: venda aprovada vira nota fiscal e acesso. <a href="https://lp.devdeverdade.com.br/">Conhecer o curso</a>.</p>
+            </article>
+          </li>
+          <li class="tl-item" data-lane="sh" data-year="2025">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card">
+              <div class="tl-head"><span class="tl-logo"><svg class="ico" aria-hidden="true"><use href="#logo-candidatus"/></svg></span><div class="tl-meta"><span class="tl-when">jun 2025</span><span class="tl-where">Candidatus</span></div><span class="tl-pill">software house</span></div>
+              <h3>Começa o Candidatus</h3>
+              <p>SaaS de carreira com IA, feito com o Pedro e <a href="https://app.candidatus.com.br/">já no ar</a>. O motor de recomendação de vagas é o nosso TCC.</p>
+              <ul class="chips tl-facts"><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-python"/></svg>Python</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-nextdotjs"/></svg>Next.js</li></ul>
+            </article>
+          </li>
+          <li class="tl-item" data-lane="cont" data-year="2026">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card">
+              <div class="tl-head"><span class="tl-logo"><svg class="ico" aria-hidden="true"><use href="#logo-claude"/></svg></span><div class="tl-meta"><span class="tl-when">abr 2026</span><span class="tl-where">1% Programador</span></div><span class="tl-pill">conteúdo</span></div>
+              <h3>E-book, guias gratuitos e CRM próprio</h3>
+              <p><a href="https://claude.umporcentoprogramador.com.br/?source=portfolio">Fluente em Claude</a>, um e-book de 163 páginas sobre Claude Code. <a href="https://guias.umporcentoprogramador.com.br/">Dez guias gratuitos</a>. E um CRM que eu escrevi para os <!-- DADO: leads -->14 mil leads.</p>
+            </article>
+          </li>
+          <li class="tl-item" data-lane="eng" data-year="2026">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card">
+              <div class="tl-head"><span class="tl-logo"><svg class="ico" aria-hidden="true"><use href="#logo-nerso"/></svg></span><div class="tl-meta"><span class="tl-when">abr 2026</span><span class="tl-where">Projeto pessoal</span></div><span class="tl-pill">engenharia</span></div>
+              <h3>Nerso, primeiro commit</h3>
+              <p>Meu assistente pessoal com IA. Hoje tem sete rotinas, memória com nível de confiança e um app de voz no Mac.</p>
+              <ul class="chips tl-facts"><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-claude"/></svg>Agent SDK</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-telegram"/></svg>Telegram</li></ul>
+            </article>
+          </li>
+          <li class="tl-item is-key" data-lane="sh" data-year="2026">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card night">
+              <div class="tl-head"><span class="tl-logo"><svg class="ico" aria-hidden="true"><use href="#logo-acordiscur"/></svg></span><div class="tl-meta"><span class="tl-when">jun 2026</span><span class="tl-where">Acordi &amp; Scur</span></div><span class="tl-pill">software house</span></div>
+              <h3>Juntos360</h3>
+              <p>Diagnóstico técnico pago, depois reescrita do zero: o <a href="https://juntos360.com.br">Juntos360</a>, com 120 ferramentas MCP. V1 entregue, V2 em desenvolvimento.</p>
+              <p class="tl-stat"><b>120</b><span>ferramentas MCP</span></p>
+            </article>
+          </li>
+          <li class="tl-item is-key" data-lane="eng" data-year="2026">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card night">
+              <div class="tl-head"><span class="tl-logo tl-logo--wide"><svg class="ico ico--wordmark" aria-hidden="true"><use href="#logo-nestle"/></svg></span><div class="tl-meta"><span class="tl-when"><!-- DADO: promocao-staff -->jul 2026</span><span class="tl-where">Nestlé · via NH Labs</span></div><span class="tl-pill">engenharia</span></div>
+              <h3>Staff Engineer</h3>
+              <p>Responsável técnico pela migração e por um time de devs. 13+ módulos: carrinho, assinaturas, checkout, integrações financeiras, fidelidade.</p>
+              <p class="tl-stat"><b><!-- DADO: nestle-modulos -->13+</b><span>módulos sob a minha liderança técnica</span></p>
+            </article>
+          </li>
+          <li class="tl-item" data-lane="cont" data-year="2026">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <article class="tl-card">
+              <div class="tl-head"><span class="tl-logo"><svg class="ico" aria-hidden="true"><use href="#logo-remotion"/></svg></span><div class="tl-meta"><span class="tl-when">out 2026</span><span class="tl-where">1% Programador</span></div><span class="tl-pill">conteúdo</span></div>
+              <h3>Os Reels passam a ser montados pelo pipeline</h3>
+              <p>O roteiro vira o vídeo editado, e eu reviso. A edição deixou de ser o gargalo do canal.</p>
+              <ul class="chips tl-facts"><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-remotion"/></svg>Remotion</li><li class="chip"><svg class="ico" aria-hidden="true"><use href="#logo-ffmpeg"/></svg>ffmpeg</li></ul>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= CONTATO -->
+  <section class="contact" id="contato" aria-labelledby="contato-t">
+    <div class="wrap contact-grid">
+      <h2 id="contato-t">Bora conversar?</h2>
+      <div class="contact-photo"><picture><source srcset="assets/img/erick-scur-recorte.avif" type="image/avif"><img src="assets/img/erick-scur-recorte.webp" width="591" height="1000" alt="" loading="lazy" decoding="async"></picture></div>
+      <a class="mail-big" href="mailto:contato@umporcentoprogramador.com.br"><!-- DADO: email -->contato<wbr>@umporcentoprogramador<wbr>.com.br<svg class="ico ico-stroke" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+      <ul class="routes">
+        <li><a class="route" href="https://wa.me/5545998567207"><svg class="ico" aria-hidden="true"><use href="#logo-whatsapp"/></svg><b>WhatsApp</b><p><!-- DADO: whatsapp -->(45) 99856-7207. O jeito mais rápido de falar comigo.</p></a></li>
+        <li><a class="route" href="https://www.linkedin.com/in/erick-scur/"><svg class="ico ico-stroke" aria-hidden="true"><use href="#i-briefcase"/></svg><b>Vaga ou arquitetura</b><p>Conversa técnica ou vaga: me chama no LinkedIn ou por e‑mail. Quem responde sou eu.</p></a></li>
+        <li><a class="route" href="mailto:contato@umporcentoprogramador.com.br?subject=Parceria"><svg class="ico ico-stroke" aria-hidden="true"><use href="#i-megaphone"/></svg><b>Publi e parceria</b><p>Com o 1% Programador: manda um e‑mail com o assunto “Parceria” e o que você tem em mente.</p></a></li>
+        <li><a class="route" href="mailto:contato@umporcentoprogramador.com.br?subject=Projeto"><svg class="ico ico-stroke" aria-hidden="true"><use href="#i-building"/></svg><b>Projeto ou produto</b><p>Com a Acordi &amp; Scur: e‑mail com o assunto “Projeto”. A gente começa por um diagnóstico.</p></a></li>
+      </ul>
+      <ul class="socials">
+        <li><a href="https://wa.me/5545998567207"><svg class="ico" aria-hidden="true"><use href="#logo-whatsapp"/></svg>WhatsApp</a></li>
+        <li><a href="https://www.instagram.com/erickscur/"><svg class="ico" aria-hidden="true"><use href="#logo-instagram"/></svg><!-- DADO: instagram -->@erickscur</a></li>
+        <li><a href="https://www.linkedin.com/in/erick-scur/"><svg class="ico" aria-hidden="true"><use href="#logo-linkedin"/></svg><!-- DADO: linkedin -->LinkedIn</a></li>
+        <li><a href="https://github.com/ErickScur"><svg class="ico" aria-hidden="true"><use href="#logo-github"/></svg>GitHub</a></li>
+        <li><a href="https://www.tiktok.com/@umporcentoprogramador"><svg class="ico" aria-hidden="true"><use href="#logo-tiktok"/></svg><!-- DADO: tiktok -->@umporcentoprogramador</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer on-eng label">
+  <div class="wrap">
+    <span>© 2026 Erick Scur · erickscur.com · atualizado em <!-- DADO: data-atualizacao -->2026-10</span>
+    <span>HTML, CSS e JavaScript puros. Sem framework, sem build.</span>
+    <a href="#conteudo">voltar ao topo ↑</a>
+  </div>
+</footer>
+<!-- SPRITE:inicio (cópia de assets/img/sprite.svg; regrave com python3 scripts/inline-sprite.py) -->
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true"><symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15.5M13.5 6l6 6-6 6"/></symbol><symbol id="i-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 17.5l11-11M8.5 6.5h9v9"/></symbol><symbol id="i-arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15.5M6 13.5l6 6 6-6"/></symbol><symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7.5l7.3 5.3a2 2 0 0 0 2.4 0l7.3-5.3"/></symbol><symbol id="i-hook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 2.75v5.5c0 4.6-3.1 8.2-7.5 9.75-4.4-1.55-7.5-5.15-7.5-9.75v-5.5z"/><circle cx="14.25" cy="7.25" r="1.25"/><path d="M14.25 8.5v5a2.75 2.75 0 0 1-5.5 0v-2l2 1.75"/></symbol><symbol id="i-confirm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3.5" width="10" height="8" rx="2"/><path d="M6 7.5h4M8 11.5v2.5a2 2 0 0 0 2 2h1"/><circle cx="16" cy="16" r="5"/><path d="M14 16.1l1.4 1.4 2.6-2.75"/></symbol><symbol id="i-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 17a8.5 8.5 0 0 1 17 0"/><path d="M12 17l3.75-4.5"/><circle cx="12" cy="17" r="1.25"/><path d="M6.5 17h-.01M17.5 17h-.01M7.75 11.25l.75.75M12 9.5v1"/><path d="M3.5 20.5h17"/></symbol><symbol id="i-gates" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h17.5M17.5 9l3 3-3 3"/><path d="M6 4.5v4M6 15.5v4M10.5 4.5v4M10.5 15.5v4M15 4.5v4M15 15.5v4"/></symbol><symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 5l-3 14"/></symbol><symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="12.5" height="12" rx="2"/><path d="M15.5 10.25l4.4-2.6a.75.75 0 0 1 1.1.65v7.4a.75.75 0 0 1-1.1.65l-4.4-2.6"/><circle cx="7" cy="10" r=".5"/></symbol><symbol id="i-funnel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 5.5a1 1 0 0 1 1-1h15a1 1 0 0 1 .8 1.6L14 13.5v5.25l-4 1.75v-7L3.7 6.1a1 1 0 0 1-.2-.6z"/></symbol><symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-6.5L7 20.5V17H6a2 2 0 0 1-2-2z"/><path d="M8 8.5h8M8 12h5"/></symbol><symbol id="i-memory" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6.5V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"/><rect x="4" y="7" width="13" height="14" rx="2"/><circle cx="8" cy="11" r="1.25"/><circle cx="13" cy="13.5" r="1.25"/><circle cx="8.5" cy="17" r="1.25"/><path d="M9.15 11.6l2.7 1.3M11.9 14.15l-2.35 2.2"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/><rect x="13.5" y="13.5" width="3" height="3" rx=".75"/></symbol><symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h7.5M13.5 12.5H21M10.5 11.5h3v2.5h-3z"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10a1.5 1.5 0 0 1 1.5-1.5H8l7.5-4v15L8 15.5H5.5A1.5 1.5 0 0 1 4 14z"/><path d="M8 15.5l1.25 4.25M18.5 8.5a4.5 4.5 0 0 1 0 7"/></symbol><symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20.5V5a1.5 1.5 0 0 1 1.5-1.5h7A1.5 1.5 0 0 1 15 5v15.5M15 10h3.5a1.5 1.5 0 0 1 1.5 1.5v9M3 20.5h18"/><path d="M8.5 7.5h2.5M8.5 11h2.5M8.5 14.5h2.5M17.5 14h-.01M17.5 17h-.01"/></symbol><symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4.5c.55 4.6 2.4 6.45 7 7-4.6.55-6.45 2.4-7 7-.55-4.6-2.4-6.45-7-7 4.6-.55 6.45-2.4 7-7z"/><path d="M18.5 3v3.5M16.75 4.75h3.5"/></symbol><symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5.2v13.6a1 1 0 0 0 1.5.86l11-6.8a1 1 0 0 0 0-1.72l-11-6.8A1 1 0 0 0 8 5.2z"/></symbol><symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.75-6.5-11a6.5 6.5 0 0 1 13 0c0 5.25-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 3v1.5M12 19.5V21M3 12h1.5M19.5 12H21M5.64 5.64l1.06 1.06M17.3 17.3l1.06 1.06M5.64 18.36l1.06-1.06M17.3 6.7l1.06-1.06"/></symbol><symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.25A8 8 0 0 1 9.75 4.5a8 8 0 1 0 9.75 9.75z"/></symbol><symbol id="logo-acordiscur" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63 0h12.75A5.63 5.63 0 0 1 24 5.63v12.75A5.63 5.63 0 0 1 18.38 24H5.63A5.63 5.63 0 0 1 0 18.38V5.63A5.63 5.63 0 0 1 5.63 0m0 1.5A4.13 4.13 0 0 0 1.5 5.63v12.75a4.13 4.13 0 0 0 4.13 4.12h12.75a4.13 4.13 0 0 0 4.12-4.12V5.63a4.13 4.13 0 0 0-4.12-4.13ZM3 14.27l2.24-4.54h1.49l2.24 4.54H7.51l-.35-.72H4.73l-.34.72Zm2.18-1.7h1.53l-.41-.93-.07-.18-.1-.24-.1-.24-.05-.17h-.05l-.12.28-.12.31-.1.24Zm6.9 1.79q-.9 0-1.5-.16-.59-.17-.88-.47t-.29-.72.26-.7.67-.4v-.02q-.33-.1-.55-.36t-.22-.6q0-.38.29-.67t.85-.45 1.38-.17q.8 0 1.38.16t.89.44.3.64v.15h-1.21l-.01-.07q0-.15-.15-.25t-.43-.16-.66-.05q-.33 0-.58.04-.26.03-.43.11t-.27.18-.09.25q0 .18.1.28t.28.16q.18.04.37.04h.93v.78h-1.06q-.2 0-.39.06-.18.05-.28.17-.11.11-.11.3 0 .22.15.35.16.14.48.21t.8.07.8-.08q.3-.09.42-.23.13-.14.13-.33v-1.3h2.13v.78h-.92v.5q0 .46-.27.81-.26.34-.83.52t-1.48.18m6.46 0q-.55 0-1.03-.06-.48-.07-.84-.24t-.57-.46-.21-.75v-.08h1.33v.06l-.01.06q0 .2.15.32t.44.16.65.05l.32-.02q.15 0 .31-.03.15-.02.27-.06.12-.05.2-.12.07-.07.07-.18 0-.13-.16-.22-.15-.08-.4-.13-.26-.05-.59-.09l-.66-.1q-.35-.05-.67-.15t-.59-.25q-.25-.16-.4-.4-.15-.26-.15-.62t.18-.62.5-.44.79-.25.98-.09.98.09.75.25.49.43.17.6v.08h-1.3v-.04q0-.14-.12-.25t-.35-.17-.56-.07q-.38 0-.64.05-.25.05-.37.13t-.11.2q0 .12.15.2t.4.12l.59.1.66.08q.35.06.67.15t.58.24.41.4.15.6q0 .54-.31.88-.32.34-.87.5-.56.14-1.28.14"/></symbol><symbol id="logo-adv" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63 0h12.75A5.63 5.63 0 0 1 24 5.63v12.75A5.63 5.63 0 0 1 18.38 24H5.63A5.63 5.63 0 0 1 0 18.38V5.63A5.63 5.63 0 0 1 5.63 0m0 1.5A4.13 4.13 0 0 0 1.5 5.63v12.75a4.13 4.13 0 0 0 4.13 4.12h12.75a4.13 4.13 0 0 0 4.12-4.12V5.63a4.13 4.13 0 0 0-4.12-4.13ZM3 14.27l2.24-4.54h1.49l2.23 4.54H7.51l-.35-.72H4.73l-.34.72Zm2.18-1.7h1.53l-.41-.93-.07-.18-.1-.24-.1-.24-.05-.17h-.05l-.12.28-.12.31-.1.24Zm4.38 1.7V9.73h2.54q.84 0 1.45.26.6.26.93.77t.33 1.24-.33 1.24-.93.77-1.45.26Zm1.35-1h1.11q.32 0 .57-.08.26-.08.45-.23.18-.16.28-.38.1-.23.1-.5v-.15q0-.3-.1-.51t-.28-.38q-.2-.15-.45-.23t-.57-.08h-1.11Zm6.48 1-2.2-4.54h1.5l.99 2.21q.07.13.14.32l.15.38.13.34h.05l.12-.33.15-.37.15-.34 1-2.21H21l-2.19 4.54Z"/></symbol><symbol id="logo-anthropic" viewBox="0 0 34.05 24" fill="currentColor"><path d="M24.55 0h-5.21l9.5 24h5.2ZM9.5 0 0 24h5.31l1.94-5.04h9.94L19.13 24h5.32l-9.5-24Zm-.53 14.5 3.25-8.43 3.25 8.43Z"/></symbol><symbol id="logo-apachekafka" viewBox="0 0 14.65 24" fill="currentColor"><path d="M5 2.1a1.4 1.4 0 0 0-2 0l-.4 1q0 .7.4 1.1t1 .5 1-.5q.4-.4.5-1t-.5-1m-1 20q.7 0 1-.4t.5-1q0-.8-.5-1.1a1 1 0 0 0-1-.4 1 1 0 0 0-1 .4 1.5 1.5 0 0 0 0 2q.4.5 1 .5m7.9-4.5q.6 0 .9-.6V17l.1-1-.7-1-1-.1q-.6.1-1 .7a1.5 1.5 0 0 0 .6 2q.5.3 1 .1m-6.3-7.3A2 2 0 0 0 4 9.9a2 2 0 0 0-1.5.6 2 2 0 0 0 0 3 2 2 0 0 0 3 0 2 2 0 0 0 0-3M4.7 8A4 4 0 0 1 7 9.4l1.5-.8a3 3 0 0 1-.1-1.8 3 3 0 0 1 1.5-2 3 3 0 0 1 2.3-.3q1.2.3 2 1.5.5 1.2.2 2.4a3 3 0 0 1-1.4 2h-.2a3 3 0 0 1-2.2.3 3 3 0 0 1-1.5-1l-1.4.9a4 4 0 0 1 0 2.8l1.4.9q.6-.7 1.5-1a3 3 0 0 1 2.4.3 3 3 0 0 1 1.4 2 3 3 0 0 1-.3 2.4 3 3 0 0 1-1.9 1.5A3 3 0 0 1 10 19a3 3 0 0 1-1.5-1.9 3 3 0 0 1 0-1.8l-1.4-.8-.3.3A4 4 0 0 1 4.7 16v1.7a3 3 0 0 1 1.5.9 3 3 0 0 1 0 4.4A3 3 0 0 1 4 24a3 3 0 0 1-2.2-1 3 3 0 0 1-1-2.2q0-1.4 1-2.2a3 3 0 0 1 1.6-.9V16a4 4 0 0 1-2.2-1.1A4 4 0 0 1 0 12a4 4 0 0 1 1.2-2.9A4 4 0 0 1 3.4 8V6.3a3 3 0 0 1-1.6-.9 3 3 0 0 1-1-2.2q0-1.4 1-2.3A3 3 0 0 1 4 0q1.3 0 2.2 1a3 3 0 0 1 0 4.4 3 3 0 0 1-1.6.9Zm8-1.1-.8-.7a1 1 0 0 0-1.1.1 1.5 1.5 0 0 0-.5 2q.3.6.8.7t1.1-.1l.7-1z"/></symbol><symbol id="logo-aws" viewBox="0 0 40.14 24" fill="currentColor"><path d="M11.3 8.7q0 .8.2 1.2l.4 1v.3l-.2.4-.8.5-.4.2-.4-.2-.4-.7-.4-.7q-1.6 1.8-4 1.8a4 4 0 0 1-2.6-1 3 3 0 0 1-1-2.5q0-1.7 1.2-2.8t3.2-1h1.5l1.5.4v-1q0-1.5-.6-2.1t-2.2-.6L4.9 2l-2 .7h-.2q-.2 0-.2-.4V1.2L3 .9Q3.6.5 4.6.3l2-.3q2.5 0 3.6 1.1 1 1 1 3.3zm-5.4 2 1.4-.2q.7-.3 1.2-.9.4-.3.5-.8V7.1l-2.5-.3q-1.3 0-2 .5T4 8.8t.5 1.4q.5.6 1.4.6m10.7 1.4-.5-.1-.3-.6-3.1-10.3-.1-.5q0-.3.3-.4h1.3q.4 0 .5.2.2.1.3.5l2.2 8.8L19.3 1q.1-.4.3-.5l.5-.2h1q.4 0 .6.2t.3.5l2 9 2.4-9 .2-.5.6-.2h1.2q.3 0 .3.4v.2l-.1.3-3.2 10.4q-.1.4-.3.5l-.5.1h-1.1l-.6-.1-.2-.6L20.6 3l-2 8.6-.3.6-.5.1Zm17.2.4a9 9 0 0 1-3.6-.8q-.4-.2-.4-.4l-.1-.4v-.7q0-.4.3-.4h.2l.4.2a7 7 0 0 0 3 .6q1.3 0 2-.4t.7-1.3q0-.5-.4-1-.4-.3-1.3-.6l-2-.6q-1.5-.5-2.1-1.4a3 3 0 0 1-.7-1.9q0-.8.4-1.5.3-.6 1-1t1.3-.8 1.7-.2h.9l.9.2.7.2.6.3.4.3.1.4v.7q0 .4-.3.4l-.5-.2q-1.1-.5-2.6-.5-1.1 0-1.7.4-.7.3-.7 1.2 0 .5.4 1T34 5l1.9.6q1.4.5 2 1.3t.7 1.9q0 .9-.4 1.5-.3.7-1 1.2t-1.4.8z"/><path fill-rule="evenodd" d="M36.3 19c-4.4 3.3-10.8 5-16.3 5A29 29 0 0 1 .2 16.4c-.4-.3 0-.8.4-.6a40 40 0 0 0 19.9 5.3q7.6 0 15.1-3c.8-.4 1.4.4.7 1m1.8-2.2c-.6-.7-3.7-.3-5.1-.1q-.7 0-.1-.6c2.5-1.8 6.6-1.3 7-.7.6.6 0 4.7-2.4 6.7q-.7.4-.5-.2c.5-1.4 1.7-4.3 1.1-5"/></symbol><symbol id="logo-azure" viewBox="0 0 25.47 24" fill="currentColor"><path d="m18.04.64-.22-.3-.3-.21-.35-.11-.2-.02h-8.4l.2.02.18.04.33.17.26.25.1.16.08.18L17 22.42l.06.27v.29l-.08.27-.14.25-.2.21-.23.16-.26.1-.28.03h8.4l.28-.03.26-.1.24-.16.2-.21.07-.12.1-.27.04-.27-.02-.29-.04-.14L18.11.81ZM0 22.7v.15l.04.27.1.27.08.12.1.1.21.2.25.12.27.07 6.01.01.2-.02.18-.04.17-.07.3-.21.22-.3.07-.18 1.45-4.3 4.48 4.18 1.76-.1.08-.04.04-.06v-.14l-2.42-7.17h-2.81l1.4-4.16L8.74 1.2l-.04-.08-.07-.06L7.3.95.06 22.4Z"/></symbol><symbol id="logo-candidatus" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63 0h12.75A5.63 5.63 0 0 1 24 5.63v12.75A5.63 5.63 0 0 1 18.38 24H5.63A5.63 5.63 0 0 1 0 18.38V5.63A5.63 5.63 0 0 1 5.63 0m0 1.5A4.13 4.13 0 0 0 1.5 5.63v12.75a4.13 4.13 0 0 0 4.13 4.12h12.75a4.13 4.13 0 0 0 4.12-4.12V5.63a4.13 4.13 0 0 0-4.12-4.13Zm6.63 16.14q-2.3 0-3.81-.64-1.53-.64-2.28-1.9-.77-1.25-.77-3.1 0-2.7 1.76-4.18 1.75-1.46 5.11-1.46 1.88 0 3.3.56 1.41.57 2.21 1.58t.8 2.42h-3.14q0-.68-.4-1.16t-1.13-.74-1.7-.27q-1.13 0-1.91.38-.79.39-1.18 1.07-.4.68-.4 1.59v.4q0 .9.4 1.6.4.69 1.17 1.07t1.88.39q1.05 0 1.8-.25t1.15-.72.4-1.15h3.08q0 1.35-.77 2.37t-2.2 1.58-3.37.56"/></symbol><symbol id="logo-claude" viewBox="0 0 23.99 24" fill="currentColor"><path d="m4.7 15.96 4.72-2.65.08-.23-.08-.13H9.2l-.79-.05-2.7-.07-2.33-.1-2.27-.12-.57-.12-.53-.7.05-.36.48-.32.69.06 1.52.1 2.27.16 1.66.1 2.44.25h.4l.05-.15-.14-.1-.1-.1-2.36-1.6-2.55-1.68-1.33-.97-.72-.5L2 6.22l-.16-1 .66-.73.88.06.22.06.9.69 1.9 1.48L8.9 8.6l.36.3.14-.1.02-.07-.16-.28L7.9 6.01l-1.44-2.5L5.8 2.5l-.17-.62c-.06-.26-.1-.47-.1-.73L6.28.13 6.69 0l1 .13.42.37.61 1.41 1 2.23 1.56 3.03.46.9.24.83.09.26h.16V9l.13-1.7.23-2.1.23-2.7.08-.76.38-.9.74-.5.59.28.48.69-.07.44-.28 1.85-.56 2.9-.37 1.95h.21l.25-.25.98-1.3 1.65-2.07.73-.81.85-.9.55-.44h1.03l.76 1.13-.34 1.16-1.06 1.35-.88 1.14-1.27 1.7-.79 1.36.08.11.18-.02 2.86-.6 1.54-.28 1.84-.32.83.4.1.39-.34.8-1.96.49-2.3.46-3.45.81-.04.03.05.07 1.55.14.66.04h1.62l3.02.22.79.52.47.64-.08.49-1.21.62-1.64-.4-3.83-.9-1.3-.33h-.19v.1l1.1 1.08 2 1.8 2.5 2.34.13.57-.32.46-.34-.05-2.2-1.66-.85-.74-1.93-1.62h-.13v.17l.45.65 2.34 3.52.12 1.08-.17.35-.6.21-.67-.12-1.37-1.92-1.42-2.17-1.14-1.94-.14.08-.67 7.25-.32.37-.73.28-.6-.46-.33-.75.32-1.47.4-1.93.3-1.53.3-1.9.16-.63v-.04l-.15.02-1.43 1.96-2.18 2.95-1.72 1.84-.42.17-.71-.37.06-.66.4-.6 2.39-3.03 1.44-1.88.93-1.09v-.16h-.06l-6.34 4.12L3 18.7l-.49-.46.06-.75.23-.24 1.91-1.31Z"/></symbol><symbol id="logo-correios" viewBox="0 0 117.06 24" fill="currentColor"><path fill-rule="evenodd" d="M8.3 24h-1q-1.4 0-2.1-1l-5-6.5L0 16l.2-.6 5-6.4a3 3 0 0 1 2.1-1h11.1l-6.3 7.9-4.6 5.8Zm3.9-8-4.7 5.8q-.4.4-.4 1 0 1.1 1.5 1.3h9.8ZM25.3 2.3 24.5 0h1q1.3 0 2.1 1l5 6.4.2.6-.1.5-5.1 6.5a3 3 0 0 1-2.1 1H14.4l6.3-8ZM20.7 8l4.6-5.7q.3-.4.4-1.1c0-.5-.5-1.2-1.5-1.2h-9.8Z"/><path d="M25.6 2.2q.3-.4.3-.9Q25.8.1 24.5 0h-.3q1.2.1 1.3 1.3 0 .5-.3.9L20.7 8l-6.3 8ZM7.3 21.8q-.3.4-.3.8Q7 24 8.3 24h.3q-1.2-.1-1.3-1.4 0-.5.3-.8l4.6-5.8 6.2-8Zm67.1-10.5-1.6.2q-1.3.4-2 1.3c-.8 1-.8 2.3-.8 2.3V24h2.4l.3-.2v-8.4l.3-1 1-.4h.9q.3 0 .4-.2l1.2-2.1a5 5 0 0 0-2-.3m-7 0q-.9 0-1.6.2-1.2.4-2 1.3c-.8 1-.7 2.3-.7 2.3V24h2.3q.3 0 .3-.2v-8.4l.3-1 1-.4h.9q.3 0 .4-.2l1.3-2.1zM47 20.7l-.4-.2h-.2a5.3 5.3 0 0 1-8.1-4.5 5.3 5.3 0 0 1 8-4.6l.3.1q.3 0 .4-.2l1.4-1.7a8 8 0 1 0 0 12.9Zm35.5-7.1a4 4 0 0 1 3.7 2.7H79a4 4 0 0 1 3.7-2.7m0-2.5a6.5 6.5 0 0 0-6.4 6.4 6.5 6.5 0 0 0 6.4 6.5h.2q2 .1 4-1.2l.3-.2-1.4-1.7-.4-.2h-.2c-.3.3-1.4.7-2.5.7a4 4 0 0 1-3.7-2.6h9.9q.2 0 .2-.3v-1a6.4 6.4 0 0 0-6.4-6.4M90.8 24q-.2 0-.2-.3v-12l.2-.2H93q.3 0 .3.3v12l-.3.2ZM55.4 13.5a3.9 3.9 0 1 0 0 7.8 3.9 3.9 0 1 0 0-7.8m0 10.5a6.5 6.5 0 1 1 0-13 6.5 6.5 0 0 1 0 13M101 13.6a3.9 3.9 0 1 0 0 7.7 4 4 0 0 0 3.8-3.8 4 4 0 0 0-3.8-3.9m0 10.3a6.5 6.5 0 1 1 0-12.9 6.5 6.5 0 0 1 0 13m13.8-7.5L113 16q-1.6-.2-2-.8a1 1 0 0 1 .2-1.3c.9-.6 2.1-.3 2.8 0l.6.3.3.1.4-.2 1.3-1.7-.2-.2-.5-.3c-.4-.2-1.6-.9-3.3-.9h-.2c-3.7 0-4.3 2.7-4.3 3.7q.1 2.1 1.9 3c.9.6 2.5.9 3.4 1.1q.6.3.9.8v.4q.1.8-1 1.3t-3.2-.8l-.2-.2h-.2l-.4.2-1.2 1.7.6.5a6 6 0 0 0 3.7 1.2c3.7 0 4.6-2.5 4.6-4s-1-2.8-2.3-3.4"/></symbol><symbol id="logo-devdeverdade" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63 0h12.75A5.63 5.63 0 0 1 24 5.63v12.75A5.63 5.63 0 0 1 18.38 24H5.63A5.63 5.63 0 0 1 0 18.38V5.63A5.63 5.63 0 0 1 5.63 0m0 1.5A4.13 4.13 0 0 0 1.5 5.63v12.75a4.13 4.13 0 0 0 4.13 4.12h12.75a4.13 4.13 0 0 0 4.12-4.12V5.63a4.13 4.13 0 0 0-4.12-4.13ZM3 15.58V8.42h4q1.33 0 2.28.42t1.47 1.21.52 1.95-.52 1.95-1.47 1.22q-.95.4-2.28.4ZM5.12 14h1.76q.49 0 .89-.13t.7-.37.46-.6q.15-.35.15-.8v-.23q0-.45-.15-.8-.17-.35-.46-.59t-.7-.36q-.4-.14-.9-.14H5.13Zm10.2 1.57-3.45-7.16h2.35l1.56 3.48q.1.2.22.5l.24.6.2.54h.08l.19-.51.23-.59q.12-.3.24-.54l1.58-3.48H21l-3.44 7.16Z"/></symbol><symbol id="logo-docker" viewBox="0 0 33.45 24" fill="currentColor"><path d="M19.5 10.7h3l.2-.2V7.8l-.3-.2h-3l-.2.2v2.7q0 .2.3.2m-4.1-7.5h3l.2-.3V.3l-.3-.3h-3l-.2.3v2.6q0 .2.3.2m0 3.8h3l.2-.2V4l-.3-.2h-3l-.2.2v2.7q0 .2.3.2m-4.1 0h3l.2-.2V4l-.3-.2h-3L11 4v2.7q0 .2.3.2M7.2 7h3l.2-.2V4l-.3-.2h-3L7 4v2.7q0 .2.3.2m8.2 3.8h3l.2-.2V7.8l-.3-.2h-3l-.2.2v2.7q0 .2.3.2m-4.1 0h3l.2-.2V7.8l-.3-.2h-2.9l-.3.2v2.7zm-4.1 0h3l.2-.2V7.8l-.3-.2h-3l-.2.2v2.7q0 .2.3.2m-4.1 0h3l.2-.2V7.8L6 7.6H3.1l-.3.2v2.7zm30-1.6c0-.1-1-.7-2.7-.7H29A5 5 0 0 0 26.6 5l-.5-.3-.3.5q-.6.9-.8 2a5 5 0 0 0 .5 3.7c-.8.4-2.1.6-2.4.6H1a1 1 0 0 0-1.1 1 16 16 0 0 0 1 5.7 8 8 0 0 0 3.3 4.3 15 15 0 0 0 7.4 1.6q2 0 4-.4a17 17 0 0 0 5.4-2q2-1.1 3.6-2.9a20 20 0 0 0 3.6-6.1h.3c1.9 0 3-.8 3.7-1.4q.7-.6 1-1.5l.2-.4Z"/></symbol><symbol id="logo-electron" viewBox="0 0 22.15 24" fill="currentColor"><path d="M11 0a1.5 1.5 0 1 0 1.5 2.3c2.2 1.2 3.8 5.4 3.8 10.3q0 3-.8 5.8a.3.3 0 0 0 .2.4.3.3 0 0 0 .4-.2q.8-2.8.8-6c0-5.2-1.7-9.7-4.3-11Q12.4 0 11.1 0m0 .6a.9.9 0 1 1 0 1.8.9.9 0 1 1 0-1.8M5.6 5Q2.5 5 1.2 7q-1 2 .5 4.8a.3.3 0 0 0 .6-.3Q.8 8.9 1.8 7.2 3.2 5 7.7 5.8a.3.3 0 0 0 .1-.6zm11 0a.3.3 0 0 0 0 .6q2.9 0 3.8 1.6 1.2 2.3-1.7 5.9v.4a.3.3 0 0 0 .5 0c2-2.4 2.7-4.9 1.8-6.6q-1.2-1.8-4.4-2m-2.7.4Q11 5.9 8 7.6C3.6 10.2.6 14 .8 16.9a1.5 1.5 0 1 0 .7-.2c-.2-2.5 2.7-6.1 7-8.6A20 20 0 0 1 14 5.9a.3.3 0 0 0 0-.7m-3 6.3a1.1 1.1 0 1 0 .2 0m-7.5 1.8-.2.1a.3.3 0 0 0 0 .5q1.9 2.1 4.8 3.8c4.4 2.5 9 3.3 11.5 1.8l.9.3a1.5 1.5 0 1 0-1.3-.8c-2.3 1.2-6.7.5-10.8-1.9a20 20 0 0 1-4.7-3.6zm-2 4a.9.9 0 1 1 0 1.8.9.9 0 1 1 0-1.8m19 0a.9.9 0 1 1 0 1.8l-.6-.3a1 1 0 0 1 .6-1.5m-14 1.3a.3.3 0 0 0-.3.5Q7.9 23.9 11 24q2.1 0 3.8-2.7a.3.3 0 0 0-.1-.5.3.3 0 0 0-.5.1q-1.4 2.4-3.2 2.5-2.6-.1-4.2-4.5z"/></symbol><symbol id="logo-elevenlabs" viewBox="0 0 14.8 24" fill="currentColor"><path d="M0 0v24h4.93V0Zm9.86 0v24h4.93V0Z"/></symbol><symbol id="logo-express" viewBox="0 0 41.37 24" fill="currentColor"><path d="M41.36 23.35a2.64 2.64 0 0 1-3.26-1.24l-5.95-8.22-.86-1.15-6.9 9.38a2.53 2.53 0 0 1-3.1 1.22l8.88-11.92L21.9.65a2.75 2.75 0 0 1 3.28 1.14l6.16 8.33 6.2-8.3A2.5 2.5 0 0 1 40.62.69l-3.2 4.25-4.35 5.66a1.15 1.15 0 0 0 0 1.72l8.27 11.05ZM0 11.27l.73-3.58C2.72.62 10.83-2.3 16.4 2.06c3.27 2.56 4.08 6.2 3.92 10.3H1.92c-.3 7.3 4.98 11.72 11.73 9.46a7 7 0 0 0 4.45-4.95c.36-1.15.94-1.35 2.02-1.02a9.3 9.3 0 0 1-4.46 6.82 10.8 10.8 0 0 1-12.6-1.6 11.3 11.3 0 0 1-2.82-6.65c0-.4-.13-.79-.23-1.15zm1.95-.5h16.63c-.1-5.3-3.44-9.05-7.9-9.09-4.97-.07-8.53 3.61-8.75 9.07Z"/></symbol><symbol id="logo-fag" viewBox="0 0 95.95 24" fill="currentColor"><path fill-rule="evenodd" d="M31.3 5.4c-5.8-3.8-5.9 7.1 0 3.2v1.6c-7.8 3.3-8-9.4 0-6.3Zm1 5.1v-7h4.2v1.3h-2.6v1.5h2.6v1.2h-2.6v1.8h2.6v1.2Zm5.4 0v-7h1.5c.6 1 3.5 4.3 3.7 5.4-.2-1 0-4.3 0-5.3h1.3v7h-1.4c-.6-1-3.6-4.4-3.8-5.4.2.9 0 4.4 0 5.3zM48 4.8v5.7h-1.5V4.8h-1.7V3.6h4.9v1.2Zm4 1.7c.9 0 1.7.1 1.7-.9s-.8-.9-1.7-.9Zm3.5 4h-1.7L52 7.3v3.2h-1.5v-7c1 .1 3.3-.1 4 .6 1.2.8.7 3.2-.9 3.3zm4-1.1c3 0 2.9-4.7 0-4.7-2.8 0-2.9 4.8 0 4.7m3.8-2.3c0 4.8-7.5 4.7-7.5 0s7.5-4.8 7.5 0m-31.6 6.2c-.2 2.5 1 7.5-3 7.2-4.2.3-2.9-4.6-3-7.2H27c.3 1.4-.9 6 1.5 5.9 2.5.1 1.3-4.5 1.6-5.9Zm1.2 7v-7h1.6c.6 1 3.4 4.3 3.7 5.3-.2-1-.1-4.3-.1-5.3h1.4v7H38c-.6-.9-3.5-4.3-3.8-5.4.2 1 .1 4.4.1 5.4Zm7.9 0v-7h1.5v7Zm4.5 0-2.5-7h1.6l1.7 5.7c0-1 1.3-4.7 1.6-5.7h1.7l-2.6 7Zm4.5 0v-7H54v1.3h-2.6V16H54v1.3h-2.6V19H54v1.3Zm6.8-4c.9 0 1.7 0 1.7-.9s-.8-1-1.7-1Zm3.5 4h-1.7L56.6 17v3.3H55v-7c1 0 3.3-.2 4 .5 1.2.9.7 3.2-.9 3.3Zm.2-.9.8-1c.8 2 4 .2 1.4-1a5 5 0 0 1-1.8-1.2c-1.6-2.4 2.6-4.2 4-2.1l-.9.8c-.3-.8-2-.8-2 .2.3 1.3 3.4 1.4 3.2 3.2 0 2.4-3.7 3-4.7 1.1m5.6.9v-7h1.5v7Zm5.4-5.7v5.7h-1.5v-5.7h-1.7v-1.3H73v1.3Zm6.5-3.7-1.5 1.8h-.7l1-1.8Zm-.5 6.7c-.2-.7-1-2.4-1-3.2 0 .8-.7 2.5-1 3.2ZM73 20.3l2.6-7h1.7l2.7 7h-1.7l-.5-1.5H75l-.5 1.5Zm9-4c.9 0 1.7 0 1.7-.9s-.8-1-1.7-1Zm3.5 4h-1.7L81.9 17v3.3h-1.5v-7c1 0 3.3-.2 4 .5 1.2.9.7 3.2-1 3.3Zm.6 0v-7h1.5v7Zm6.2-1.1c2.9 0 2.9-4.8 0-4.7-2.8 0-2.9 4.8 0 4.7m3.7-2.4c0 4.8-7.4 4.8-7.4 0s7.5-4.8 7.4 0M0 0v24h22.5V0Zm18.1 20.6H4.4V20h12.8v-1c-.8.6-2.2 0-2.1-1-.2-1.5 2-2 2.7-.8l-.5.2c-.4-1-1.3-.3-1.2.5q0 .8.6 1a.5.5 0 0 0 .5-.6h-.3v-.5h1.2zM6.5 17.8v.4H5.4v1.4h-.9v-3h2.2v.3H5.3v.9zm2.7 1.8c.3-.5.7-3.2 1.6-3 .8-.2 1.3 2.5 1.6 3h-1.1L11 19h-1l-.3.6zM4.5 11c0 3.2 10.6 3 13.7 1.4-2.5 2.2-15.6 3.2-13.7-1.4m0-3.2c0 3.2 10.6 3 13.7 1.4C15.7 11.6 2.6 12.5 4.5 8m-.3-2c0-1.4 3.2-2.5 7.2-2.5q1.6 0 3 .2c-17.7-.6-6 6.9 3.8 2.8-1.2 2.5-14 2.4-14-.6m6.3 11.6-.4 1.2h.8z"/></symbol><symbol id="logo-fastapi" viewBox="0 0 24.08 24" fill="currentColor"><path d="M12.04 0A12 12 0 0 0 0 12c0 6.63 5.39 12 12.04 12s12.04-5.37 12.04-12-5.4-12-12.04-12m-.83 5.43h7.57l-7.6 5.35h5.2L5.3 18.56z"/></symbol><symbol id="logo-ffmpeg" viewBox="0 0 25.22 24" fill="currentColor"><path d="M22.82 18.21V6.22l-.55-.51L9.5 18.85l-1.36-.06L25.22.99 24.87 0 12.34 1.05 6.29 8v-.25l4.94-5.66-1.45-.8-9.57.8v3l2 .48h.2l-.58.7V17.4l1.92-.38L14.84 4.88l.87-.05L0 21.92l10.16.86 1.42-.8 7.17-7.09v2.26L12.74 23l11.83 1 .37-.99V19.7l-3.46-.19q.68-.63 1.34-1.29"/></symbol><symbol id="logo-github" viewBox="0 0 24.61 24" fill="currentColor"><path d="M12.3 0a12.3 12.3 0 0 0-3.89 23.98c.62.11.84-.27.84-.6l-.01-2.08c-3.42.74-4.15-1.66-4.15-1.66-.56-1.42-1.36-1.8-1.36-1.8-1.12-.76.08-.74.08-.74 1.24.08 1.89 1.26 1.89 1.26 1.1 1.89 2.88 1.34 3.58 1.03.11-.8.43-1.34.78-1.65-2.73-.3-5.6-1.36-5.6-6.08 0-1.34.47-2.44 1.26-3.3a4.4 4.4 0 0 1 .1-3.26s1.04-.33 3.4 1.26a12 12 0 0 1 6.14 0c2.34-1.59 3.37-1.26 3.37-1.26a4.5 4.5 0 0 1 .13 3.26 4.8 4.8 0 0 1 1.26 3.3c0 4.73-2.88 5.77-5.62 6.07.43.37.83 1.13.83 2.28l-.01 3.37c0 .32.21.7.84.58a12.3 12.3 0 0 0 8.45-11.66A12.3 12.3 0 0 0 12.3 0"/></symbol><symbol id="logo-godotengine" viewBox="0 0 25.45 24" fill="currentColor"><path d="M10.14 0c-1.17.26-2.32.62-3.4 1.16q.04 1.42.22 2.8c-.42.26-.86.5-1.25.8-.4.31-.8.6-1.17.96Q3.46 5.01 2.28 4.4A17 17 0 0 0 0 7.4q.73 1.16 1.54 2.2h.01v6.74h.04l4.13.4c.22.03.39.2.4.42l.13 1.82 3.6.26.25-1.69a.44.44 0 0 1 .44-.37h4.36c.22 0 .41.16.44.37l.25 1.69 3.6-.26.13-1.82a.44.44 0 0 1 .4-.42l4.13-.4h.04V9.62h.02q.8-1.05 1.54-2.23a17 17 0 0 0-2.28-2.99q-1.19.6-2.27 1.32-.55-.52-1.16-.95c-.4-.32-.83-.55-1.25-.82q.18-1.37.21-2.79A15 15 0 0 0 15.31 0c-.46.78-.89 1.63-1.26 2.45q-.66-.1-1.32-.1h-.02q-.66 0-1.32.1c-.37-.82-.8-1.67-1.26-2.45ZM6.87 9.87a2.49 2.49 0 1 1 0 4.98 2.49 2.49 0 0 1 0-4.98m11.71 0a2.49 2.49 0 1 1 0 4.98 2.49 2.49 0 0 1 0-4.98m-11.47.98a1.65 1.65 0 1 0 0 3.31 1.65 1.65 0 0 0 0-3.3m11.23 0a1.65 1.65 0 1 0 0 3.3 1.65 1.65 0 0 0 0-3.3m-5.62.48c.45 0 .8.33.8.73v2.3c0 .4-.35.72-.8.72-.44 0-.8-.32-.8-.72v-2.3c0-.4.36-.73.8-.73m-11.17 5.9v.93c0 3.92 4.98 5.8 11.17 5.83h.01c6.18-.02 11.16-1.9 11.16-5.83v-.93l-3.7.36-.13 1.84a.45.45 0 0 1-.42.41l-4.43.31a.45.45 0 0 1-.44-.38l-.25-1.7h-3.6l-.24 1.7a.44.44 0 0 1-.48.38l-4.4-.31a.45.45 0 0 1-.41-.41l-.13-1.84z"/></symbol><symbol id="logo-googlecalendar" viewBox="0 0 24 24" fill="currentColor"><path d="M18.32 5.68H24v12.64h-5.68ZM5.68 24h12.64v-5.68H5.68ZM18.32 5.68V0H1.9A1.9 1.9 0 0 0 0 1.9v16.42h5.68V5.68Zm-7.21 6.25v-.06q.4-.21.69-.62.28-.4.28-.98 0-.57-.3-1.02a2 2 0 0 0-.84-.72 3 3 0 0 0-1.2-.26q-.9 0-1.47.47a2.4 2.4 0 0 0-.8 1.08l1.09.45q.12-.37.41-.63t.77-.26q.5 0 .81.27a1 1 0 0 1 .33.7q0 .5-.36.78t-.9.28h-.56v1.09h.64q.6 0 1.02.32.4.33.4.85 0 .49-.38.83-.39.33-.93.32-.52 0-.9-.3-.37-.31-.52-.89l-1.1.45q.28.93.98 1.4.72.48 1.54.48a3 3 0 0 0 1.3-.29q.57-.3.9-.8.32-.5.32-1.14 0-.65-.34-1.1a2 2 0 0 0-.88-.7M13.2 10l.6.92 1.19-.87v5.74h1.19V8.45h-.83Zm8.9-10h-3.3v5.18H24V1.9A1.9 1.9 0 0 0 22.1 0m-3.28 23.5 4.68-4.68h-4.68ZM0 22.1C0 23.16.85 24 1.9 24h3.28v-5.18H0Z"/></symbol><symbol id="logo-ifc" viewBox="0 0 17.81 24" fill="currentColor"><path d="M6.97.26h4.13a.5.5 0 0 1 .51.51V4.9a.5.5 0 0 1-.51.52H6.97a.5.5 0 0 1-.52-.52V.77a.5.5 0 0 1 .52-.51m6.2 0h4.12a.5.5 0 0 1 .52.51V4.9a.5.5 0 0 1-.52.52h-4.13a.5.5 0 0 1-.51-.52V.77a.5.5 0 0 1 .51-.51M.77 6.46H4.9a.5.5 0 0 1 .52.5v4.14a.5.5 0 0 1-.52.51H.77a.5.5 0 0 1-.51-.51V6.97a.5.5 0 0 1 .51-.52m6.2 0h4.13a.5.5 0 0 1 .51.52v4.13a.5.5 0 0 1-.51.51H6.97a.5.5 0 0 1-.52-.51V6.97a.5.5 0 0 1 .52-.52m-6.2 6.2H4.9a.5.5 0 0 1 .52.51v4.13a.5.5 0 0 1-.52.52H.77a.5.5 0 0 1-.51-.52v-4.13a.5.5 0 0 1 .51-.51m6.2 0h4.13a.5.5 0 0 1 .51.51v4.13a.5.5 0 0 1-.51.52H6.97a.5.5 0 0 1-.52-.52v-4.13a.5.5 0 0 1 .52-.51m6.2 0h4.12a.5.5 0 0 1 .52.51v4.13a.5.5 0 0 1-.52.52h-4.13a.5.5 0 0 1-.51-.52v-4.13a.5.5 0 0 1 .51-.51M.77 18.84H4.9a.5.5 0 0 1 .52.51v4.13a.5.5 0 0 1-.52.52H.77a.5.5 0 0 1-.51-.52v-4.13a.5.5 0 0 1 .51-.51m6.2 0h4.13a.5.5 0 0 1 .51.51v4.13a.5.5 0 0 1-.51.52H6.97a.5.5 0 0 1-.52-.52v-4.13a.5.5 0 0 1 .52-.51M0 2.84a2.84 2.84 0 1 0 5.68 0 2.84 2.84 0 1 0-5.68 0"/></symbol><symbol id="logo-instagram" viewBox="0 0 24 24" fill="currentColor"><path d="M7.03.08a9 9 0 0 0-2.91.57A6 6 0 0 0 2 2.04 6 6 0 0 0 .62 4.16c-.3.77-.5 1.64-.56 2.92A85 85 0 0 0 0 12.02c0 3.26.02 3.67.08 4.95s.27 2.15.57 2.91c.3.79.72 1.46 1.39 2.12a6 6 0 0 0 2.12 1.38c.77.3 1.64.5 2.92.56 1.27.05 1.69.06 4.94.06s3.67-.02 4.95-.08a9 9 0 0 0 2.91-.57c.79-.3 1.46-.72 2.12-1.38a6 6 0 0 0 1.38-2.13c.3-.77.5-1.64.56-2.92.05-1.28.06-1.68.06-4.94s-.02-3.67-.08-4.95a9 9 0 0 0-.57-2.91A6 6 0 0 0 21.97 2 6 6 0 0 0 19.84.62c-.77-.3-1.64-.5-2.92-.56A86 86 0 0 0 11.98 0C8.72 0 8.3.02 7.03.08m.14 21.7a7 7 0 0 1-2.23-.41 4 4 0 0 1-1.38-.9 4 4 0 0 1-.9-1.37 7 7 0 0 1-.42-2.23 85 85 0 0 1-.08-4.85c0-3.2 0-3.58.06-4.85.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38a4 4 0 0 1 1.38-.9 7 7 0 0 1 2.22-.42c1.27-.06 1.65-.07 4.85-.07 3.2-.01 3.58 0 4.85.06 1.17.05 1.8.24 2.23.4.56.22.96.48 1.38.9s.68.82.9 1.38c.17.42.36 1.05.42 2.22.06 1.27.07 1.65.08 4.85s0 3.59-.06 4.85a7 7 0 0 1-.41 2.23c-.22.56-.48.96-.9 1.38a4 4 0 0 1-1.38.9c-.42.17-1.05.36-2.22.42a85 85 0 0 1-4.85.08c-3.2 0-3.58 0-4.85-.06m9.78-16.2a1.44 1.44 0 1 0 1.44-1.44 1.44 1.44 0 0 0-1.44 1.45M5.84 12a6.16 6.16 0 1 0 12.32 0 6.16 6.16 0 0 0-12.32 0M8 12a4 4 0 1 1 4 4 4 4 0 0 1-4-4"/></symbol><symbol id="logo-laravel" viewBox="0 0 23.32 24" fill="currentColor"><path d="m23.3 5.43.01.1v5.15q0 .21-.19.33L18.8 13.5v4.93a.4.4 0 0 1-.19.33L9.6 23.95l-.07.03H9.5a.4.4 0 0 1-.2 0h-.03l-.06-.03-9.02-5.2a.4.4 0 0 1-.19-.32V2.97l.01-.1.02-.03.02-.05.02-.04.04-.04.03-.03.05-.03 4.5-2.6a.4.4 0 0 1 .38 0l4.52 2.6.04.03.04.03.03.04.02.04.03.05.01.04.02.1v9.65l3.76-2.17V5.43l.02-.03.03-.06.02-.03.03-.05.04-.03.04-.03 4.52-2.6a.4.4 0 0 1 .37 0l4.51 2.6.05.03.03.03.04.05.02.03.02.06zm-.74 5.03V6.18l-1.58.9-2.18 1.26v4.29Zm-4.51 7.75v-4.28l-2.15 1.22-6.12 3.5v4.32ZM.75 3.62v14.6l8.27 4.75v-4.32L4.7 16.2l-.04-.03-.04-.03-.03-.04-.03-.04-.02-.04-.02-.05v-.05l-.01-.04V5.78L2.33 4.54ZM4.89.81 1.13 2.97l3.76 2.17 3.75-2.17Zm1.95 13.5 2.18-1.25V3.62l-1.58.91L5.26 5.8v9.43ZM18.42 3.38l-3.76 2.16 3.76 2.16 3.76-2.16Zm-.37 4.97L15.87 7.1l-1.58-.91v4.28l2.18 1.26 1.58.9ZM9.4 18l5.51-3.15 2.76-1.57-3.76-2.17-4.32 2.5-3.94 2.26Z"/></symbol><symbol id="logo-linkedin" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.67 24h18.66c1.48 0 2.67-1.2 2.67-2.67V2.67C24 1.19 22.8 0 21.33 0H2.67A2.67 2.67 0 0 0 0 2.67v18.66C0 22.81 1.2 24 2.67 24m18-3.33H17.1V14.6c0-1.66-.64-2.6-1.95-2.6-1.44 0-2.18.98-2.18 2.6v6.07H9.54V9.1h3.44v1.56s1.02-1.9 3.48-1.9 4.2 1.5 4.2 4.59ZM5.45 7.6a2.1 2.1 0 0 1-2.12-2.13c0-1.18.95-2.14 2.12-2.14a2.13 2.13 0 0 1 0 4.27M3.68 20.67h3.58V9.1H3.68Z"/></symbol><symbol id="logo-magento" viewBox="0 0 20.79 24" fill="currentColor"><path d="M10.4 0 0 6v12l2.97 1.71-.02-11.99 7.43-4.3 7.43 4.3v11.99l2.97-1.7V5.98Zm1.48 19.71-1.49.86-1.49-.85v-12L5.93 9.43v12L10.4 24l4.46-2.57v-12l-2.97-1.7Z"/></symbol><symbol id="logo-mongodb" viewBox="0 0 10.79 24" fill="currentColor"><path d="M10.58 9.56C9.32 3.97 6.33 2.13 6.01 1.44c-.28-.4-.53-.95-.73-1.44-.04.5-.06.69-.53 1.18C4.03 1.75.31 4.87.01 11.2c-.28 5.92 4.27 9.44 4.9 9.89l.06.05A74 74 0 0 1 5.3 24h.48q.18-1.55.51-3.07c.42-.3.6-.46.85-.7a11.3 11.3 0 0 0 3.64-8.46 13 13 0 0 0-.2-2.22m-5.33 8.2s0-8.3.27-8.29c.22 0 .5 10.7.5 10.7-.39-.05-.77-1.77-.77-2.41"/></symbol><symbol id="logo-mysql" viewBox="0 0 35.35 24" fill="currentColor"><path d="M24.2 2.4h-.4v.1l.3.4.2.5q.2-.2.2-.5v-.2zM8.5 22H7.1l-.4-6.5-2 6.5H3.5l-2-6.5-.4 6.5H0q.1-4.4.6-8.2h1.7l2 6 2-6h1.6q.5 4.5.6 8.2m6-6q-1 4.5-2.3 6.5-1 1.6-2.3 1.6l-.8-.2v-.7h.5q.6 0 1-.3.4-.4.4-1l-.3-1.3L9.2 16h1.3l1.1 3.4q.4 1.2.3 1.7.9-2.4 1.2-5.1Zm18 6h-3.8v-8.2H30V21h2.6Zm-4.8.2-1.5-.8.4-.4q1-1 1-3.3 0-4-3.3-4-1.5 0-2.4 1-1 1.1-1 3.3t.9 3.2 2.3.9q.6 0 1.1-.2l2 1.2zm-4.9-1.9a5 5 0 0 1-.5-2.5q0-3.1 1.9-3.1 1 0 1.4.7.5.8.5 2.6 0 3-1.8 3-1 0-1.5-.7m-2.4-.6q0 1-.8 1.7-.7.7-2 .7-1.2 0-2.3-.8l.3-.7q1 .5 1.8.5.7 0 1.1-.3a1 1 0 0 0 .5-1q0-.7-1-1.2l-1.7-1q-1-.6-1-1.7 0-1 .8-1.6a3 3 0 0 1 1.8-.6q1 0 2 .6l-.3.7-1.6-.3q-.6 0-1 .3l-.3.8q0 .7 1 1.2l1.7 1q1 .6 1 1.7M34.2 11q-1.2 0-1.9.3-.4 0-.4.2l.2.3q.1.4.5.6l.6.5 1.2.6.6.5.3.2-.1-.3-.3-.3-1-1c-.3-.2-1-.5-1.2-.9l.7-.2 1-.1.5-.1v-.1l-.5-.6-1.7-1.2-1-.5-.4-.2-.4-.8-.8-1.7-.5-1.1a10 10 0 0 0-3.8-3.7L24.5 1h-.7l-.5-.4c-.5-.3-2-1.1-2.4 0-.2.5.4 1.2.6 1.5l.5.7.2.6.5 1.3.4.6.2.3-.2.8a4 4 0 0 0 .3 3.3c.1.2.5.8 1 .6s.4-.8.5-1.3v-.3l.5.9q.5.8 1.2 1.3l.8.6-.3-.2-.5-.6-1.1-1.8-.4-1-.2-.3-.5.7q-.3.6-.2 1.5-.5-.2-.6-.7-.5-1.2-.1-2.6c0-.2.4-.9.2-1.1q0-.3-.3-.4l-.4-.7-.6-1.7L22 2l-.5-.8V.6h.7q.6.2 1 .6l.4.3h1.2q.8.3 1.4.8a9 9 0 0 1 3 3.3l.4.7.6 1.4.7 1.4 1 .4.7.3 1 .6q.5.2.7.6"/></symbol><symbol id="logo-nerso" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63 0h12.75A5.63 5.63 0 0 1 24 5.63v12.75A5.63 5.63 0 0 1 18.38 24H5.63A5.63 5.63 0 0 1 0 18.38V5.63A5.63 5.63 0 0 1 5.63 0m0 1.5A4.13 4.13 0 0 0 1.5 5.63v12.75a4.13 4.13 0 0 0 4.13 4.12h12.75a4.13 4.13 0 0 0 4.12-4.12V5.63a4.13 4.13 0 0 0-4.12-4.13ZM5.5 17.45V6.55h2.9l5.65 5.1q.15.12.37.33l.47.46q.25.23.44.44h.14l-.02-.7V6.54h3.04v10.9h-2.84l-5.51-4.97-.8-.75-.67-.66h-.12l.02.67v5.71Z"/></symbol><symbol id="logo-nestjs" viewBox="0 0 24.1 24" fill="currentColor"><path d="M14.2 0h-.5q.5.4.6.9V1c0 .6-.1.6-.2 1q-.3.6 0 1.2l.1.1c-.2-1.5 1-1.8 1.3-2.3q0-.6-.6-.9zm2 .4v.3l-.1.2V1l-.1.1v.1h-.1l-.1.2-.1.1-.1.1-.5.3-.2.2h-.1l-.1.2v.2h-.1l-.1.2v1.1l-1.4-.5-.7-.2H12q-.5-.2-1.1-.2H7.8l-.8.2-.3.1-.3.1-.2.1-.2.1-.2.1-.2.1-.2.1-.1.1L5 4v.1h-.2v.1h-.1v.1l-.2.1v.1h-.1l-.1.1-.1.2L4 5l-.7.6-.8.4-.4.1-.7.2h-.3l-.2.1-.1.1-.2.1-.1.1-.1.1-.1.1-.1.2-.1.1v.2l-.1.1v.9l.1.1.1.2h.1l.2.2.3.2H1v.1l.1.3v.1h.1v.2l.2.1v.1l.2.1.1.1.2.1H2l.1.1h.1v.8q.2.2.7-.7v1.1q.1.1.7-.8a7.2 7.2 0 0 1 8.9 6.3c-.1-.7-1-1-1.3-1q-.3.8-1 1.5v-1.3a4 4 0 0 1-.8 1.6 2 2 0 0 1-1.6-.7v-.9q.3-.5 0-.7l-.1-.1h-.4l-.2-.1h-.5v.1l-.2.1c-1.5 1-.6 3.2.4 3.8l-.9.2 1.9.8h1.5a6 6 0 0 0 5.5-5v.7l.1.2v1.4l-.1.2v.4l-.1.1-.1.2v.2l-.1.2-.1.2-.1.2a6 6 0 0 1-1.8 2.1l-.1.1-.2.1h.9l.1-.1h.2l1.8-.7a10 10 0 0 1-3.8 3.2q1 0 2.1-.4a10 10 0 0 0 5.9-4.7 10 10 0 0 1-1.7 4l1.7-1.3a10 10 0 0 0 2.6-5.3q.3 1.4.2 3c4.5-6.3.3-12.8-1.4-14.5V5l-.1.4-.1.4-.2.4-.1.4-.5.7-.3.3-.2.1-.1.2-.4.2-.4.2-.3.2-.9.2h-1.5l-.5-.1h.4l.9-.3.7-.4.7-.5.6-.6v-.1l.2-.3.3-.8.1-.4v-.4l.1-.4v-.7l-.2-.5v-.4l-.3-.3-.2-.4-.2-.3-.3-.4-.2-.1-.8-.6h-.2z"/></symbol><symbol id="logo-nestle" viewBox="0 0 88.95 24" fill="currentColor"><path d="M15.3.9q-.3.3-.3 1v14.3h-.1L6.7 1.7l-1-1A3 3 0 0 0 4.2.3H1.6Q.7.3.4.8 0 1.2 0 2v20.2q0 .7.4 1 .3.6 1.2.6H3q.9 0 1.3-.5.3-.4.3-1.1V7.5h.1l8.4 14.9a3 3 0 0 0 2.3 1.3H18q1 0 1.3-.5t.3-1.1V3.9h32.8q.5 0 .8-.3t.3-.8V1.4q0-.5-.3-.8l-.8-.2H16.5q-.9 0-1.2.5m14.3 5.4c-5.4 0-8.5 4.2-8.5 8.7 0 4.8 3.3 9 8.5 9q4.3 0 6.7-2.7a5 5 0 0 0 1.2-2.5l-.2-.5q-.2-.3-.7-.3h-2.5q-.7 0-1 .6-1.1 1.6-3.5 1.6a4 4 0 0 1-4-3.7h11q.7 0 1-.4.4-.3.4-1.3A9 9 0 0 0 36 9a8 8 0 0 0-6.4-2.7m16.8 0c-4.3 0-7 2-7 5.3a4 4 0 0 0 1 2.8 7 7 0 0 0 3.6 1.9l3.6.9q1.7.3 1.9 1.4c0 1.3-1.4 1.8-3 1.8q-1 0-2-.5l-1.1-.9-.7-.8-.9-.2h-2q-.4 0-.7.3t-.2.7q0 1 .8 2.1a9 9 0 0 0 6.8 2.9c3.2 0 7.5-1.3 7.5-5.5q0-1.6-.9-2.8-1-1.4-3.6-2l-3.5-1q-2.2-.3-2.2-1.5 0-1.5 2.6-1.6 1.7-.1 2.7 1c.5.5.4.7.8 1h2.8q.4.1.6-.1l.2-.8q0-1.3-1.5-2.6a9 9 0 0 0-5.6-1.8m9.8.6h-.9q-.5 0-.7.2-.3.3-.3.8V9q0 .6.3.8t.7.3h.9v7.8q0 2.9 1.6 4.3c1 1 2.1 1.5 4.3 1.5h1.3q.5 0 .8-.3t.3-.8v-1.4q0-.5-.3-.8l-.8-.2h-.2q-1.2 0-1.8-.6t-.7-2v-7.5h2.8q.5 0 .8-.3t.3-.8V8q0-.6-.3-.9l-.8-.2h-2.8V1.8q0-.6-.3-1a1 1 0 0 0-1-.4h-1.8q-.8 0-1 .4-.4.4-.4 1Zm9.6 15.4q0 .6.3 1t1 .4h2q.6 0 1-.5.3-.3.3-1V1.9q0-.6-.3-1a1 1 0 0 0-1-.4h-2q-.7 0-1 .4t-.3 1ZM25.7 13c.2-1.9 1.7-3.3 4-3.3 2.1 0 3.6 1.4 3.8 3.3Zm61.7-9q.5 0 .8-.3t.3-.8V1.4q0-.8-.3-1.1t-.8-.3h-1L74 1.4q-.4 0-.6.3t-.2.6v.9l.1.5q.3.3.7.3Zm-7 2.4C75 6.3 72 10.5 72 15c0 4.8 3.2 9 8.5 9 2.6 0 5.2-1 6.7-2.7a5 5 0 0 0 1.1-2.5l-.1-.5q-.2-.3-.7-.3H85q-.7 0-1.1.6-1 1.6-3.4 1.6a4 4 0 0 1-4-3.7h11q.7 0 1-.4.5-.3.5-1.3A9 9 0 0 0 87 9a8 8 0 0 0-6.5-2.7m-4 6.8c.3-1.9 1.7-3.3 4-3.3s3.7 1.4 4 3.3Z"/></symbol><symbol id="logo-nextdotjs" viewBox="0 0 24 24" fill="currentColor"><path d="M18.67 21.98a12 12 0 1 1 1.27-.98L9.21 7.2H7.2v9.6h1.61V9.25Zm-3.34-8.53 1.6 2.06V7.2h-1.6Z"/></symbol><symbol id="logo-nhlabs" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63 0h12.75A5.63 5.63 0 0 1 24 5.63v12.75A5.63 5.63 0 0 1 18.38 24H5.63A5.63 5.63 0 0 1 0 18.38V5.63A5.63 5.63 0 0 1 5.63 0m0 1.5A4.13 4.13 0 0 0 1.5 5.63v12.75a4.13 4.13 0 0 0 4.13 4.12h12.75a4.13 4.13 0 0 0 4.12-4.12V5.63a4.13 4.13 0 0 0-4.12-4.13ZM3 15.44V8.56h1.83l3.56 3.21.24.22.3.29.27.28h.1l-.02-.45-.01-.49V8.56h1.93v6.88H9.4L5.94 12.3l-.5-.47L5 11.4h-.08v.42q.02.29.02.63v2.98Zm9.8 0V8.56h2.04v2.56h4.12V8.56H21v6.88h-2.04v-2.68h-4.12v2.68Z"/></symbol><symbol id="logo-nodedotjs" viewBox="0 0 21.29 24" fill="currentColor"><path d="M10.64 24q-.49 0-.92-.25l-2.94-1.73c-.44-.25-.22-.34-.08-.39.59-.2.7-.25 1.33-.6q.1-.05.22.02l2.25 1.34q.15.06.28 0l8.8-5.08a.3.3 0 0 0 .12-.24V6.92q0-.16-.13-.24l-8.8-5.07a.3.3 0 0 0-.26 0L1.7 6.68a.3.3 0 0 0-.13.24v10.15q0 .16.14.24l2.4 1.39c1.31.65 2.11-.12 2.11-.9v-10c0-.14.12-.26.26-.26H7.6c.14 0 .26.12.26.26v10c0 1.74-.95 2.74-2.6 2.74-.51 0-.91 0-2.03-.55l-2.3-1.32a1.9 1.9 0 0 1-.93-1.6V6.91c0-.66.35-1.27.92-1.6L9.72.24c.55-.32 1.3-.32 1.84 0l8.8 5.08c.57.33.92.94.92 1.6v10.15c0 .66-.35 1.27-.92 1.6l-8.8 5.08q-.43.25-.92.25m7.1-10c0-1.9-1.28-2.41-3.99-2.77-2.73-.36-3-.55-3-1.19 0-.52.23-1.23 2.25-1.23 1.81 0 2.48.39 2.75 1.6.02.12.13.2.25.2h1.14q.11 0 .18-.07a.3.3 0 0 0 .07-.2c-.18-2.1-1.57-3.08-4.39-3.08-2.5 0-4 1.06-4 2.84 0 1.92 1.49 2.45 3.9 2.7 2.87.27 3.1.7 3.1 1.26 0 .98-.8 1.4-2.65 1.4-2.32 0-2.83-.58-3-1.74a.25.25 0 0 0-.26-.21H8.95a.25.25 0 0 0-.25.25c0 1.48.8 3.25 4.65 3.25 2.8 0 4.4-1.1 4.4-3.02"/></symbol><symbol id="logo-notion" viewBox="0 0 23.03 24" fill="currentColor"><path d="M3.97 4.2c.75.61 1.03.57 2.43.47l13.21-.79c.28 0 .05-.28-.04-.33l-2.2-1.58a2.6 2.6 0 0 0-2.05-.6l-12.8.92c-.47.05-.56.28-.37.47Zm.8 3.09v13.9c0 .75.37 1.03 1.2.98l14.53-.84c.84-.04.93-.56.93-1.17V6.36c0-.61-.23-.94-.74-.9l-15.18.9c-.56.04-.75.32-.75.93m14.33.74c.1.42 0 .84-.42.9l-.7.13v10.26q-.92.5-1.64.52c-.74 0-.93-.24-1.49-.93l-4.58-7.19v6.95l1.45.33s0 .84-1.17.84l-3.22.19c-.1-.19 0-.66.33-.75l.84-.23v-9.2l-1.17-.09c-.1-.42.14-1.03.8-1.07l3.45-.24 4.77 7.28V9.3l-1.22-.14c-.1-.51.28-.88.75-.93Zm-17.65-7 13.3-.98c1.64-.14 2.06-.04 3.09.7l4.25 3c.7.5.93.64.93 1.2v16.38c0 1.03-.37 1.64-1.68 1.73l-15.46.93c-.98.05-1.44-.1-1.96-.75L.8 19.18c-.56-.74-.79-1.3-.79-1.96V2.67c0-.84.37-1.54 1.45-1.64"/></symbol><symbol id="logo-obsidian" viewBox="0 0 18.65 24" fill="currentColor"><path d="M16.68 18.54a68.97 68.96 0 0 0 1.85-2.96.8.8 0 0 0-.06-.9c-.51-.68-1.5-2.07-2.04-3.36-.55-1.32-.64-3.37-.64-4.38a1.7 1.7 0 0 0-.36-1.05l-3.2-4.06-.07.54c-.1.5-.31 1-.54 1.5l-.44.92-.31.62c-.52 1.07-1 2.23-1.14 3.6a9 9 0 0 0 .82 4.47l.38.05a6.4 6.4 0 0 1 3.33 1.5 9 9 0 0 1 2.42 3.5ZM5.52 22.57l.22.02c.78.02 2.1.1 3.16.29.87.16 2.6.64 4 1.05 1.1.32 2.2-.54 2.36-1.66a9 9 0 0 1 .73-2.58h-.01a9 9 0 0 0-2.42-3.84 5.3 5.3 0 0 0-2.77-1.26 9 9 0 0 0-3.84.45 9.3 9.3 0 0 1-1.43 7.53M2.85 9.94q-.03.15-.1.29l-2.6 5.83a1.6 1.6 0 0 0 .31 1.77l4.12 4.24c2.1-3.1 1.8-6.02.84-8.3a13 13 0 0 0-2.55-3.83ZM6.64 14c.62-.18 1.6-.47 2.75-.53a10 10 0 0 1-.72-4.58c.15-1.55.7-2.85 1.23-3.95l.33-.67.42-.86q.34-.7.46-1.27a2 2 0 0 0-.01-1.04q-.13-.48-.68-1.06A1.6 1.6 0 0 0 8.94.4L4 4.86a1.6 1.6 0 0 0-.51.96l-.43 2.83A14 14 0 0 1 6.64 14"/></symbol><symbol id="logo-openai" viewBox="0 0 23.68 24" fill="currentColor"><path d="M22.12 9.82a6 6 0 0 0-.52-4.91 6.05 6.05 0 0 0-6.5-2.9A6.06 6.06 0 0 0 4.81 4.18a6 6 0 0 0-4 2.9 6.05 6.05 0 0 0 .74 7.1 6 6 0 0 0 .51 4.9 6.05 6.05 0 0 0 6.52 2.9 6 6 0 0 0 4.5 2.02 6.1 6.1 0 0 0 5.78-4.2 6 6 0 0 0 4-2.9 6.1 6.1 0 0 0-.75-7.08m-9.02 12.6a4.5 4.5 0 0 1-2.88-1.03l.14-.08 4.78-2.76a.8.8 0 0 0 .4-.68v-6.74l2.01 1.17.04.05v5.58a4.5 4.5 0 0 1-4.5 4.5M3.45 18.3a4.5 4.5 0 0 1-.54-3.01l.14.09 4.79 2.75a.8.8 0 0 0 .78 0l5.84-3.37v2.34l-.03.06-4.84 2.79a4.5 4.5 0 0 1-6.14-1.65M2.18 7.9a4.5 4.5 0 0 1 2.36-1.98v5.68a.8.8 0 0 0 .4.68l5.8 3.35-2.01 1.17h-.08L3.82 14a4.5 4.5 0 0 1-1.64-6.14Zm16.6 3.85-5.84-3.39 2.02-1.16h.07l4.83 2.8a4.5 4.5 0 0 1-.68 8.1v-5.68a.8.8 0 0 0-.4-.67m2-3.02-.14-.09-4.77-2.78a.8.8 0 0 0-.79 0L9.25 9.23V6.9l.02-.06 4.83-2.8a4.5 4.5 0 0 1 6.68 4.67ZM8.14 12.86 6.12 11.7l-.03-.06V6.07a4.5 4.5 0 0 1 7.37-3.45l-.14.08-4.78 2.76a.8.8 0 0 0-.4.68Zm1.1-2.36 2.6-1.5 2.61 1.5v3l-2.6 1.5-2.6-1.5Z"/></symbol><symbol id="logo-php" viewBox="0 0 45.63 24" fill="currentColor"><path d="M13.33 8.6h-1.8l-.98 5.02h1.6q1.58 0 2.36-.6t1.04-1.99q.27-1.34-.23-1.89t-2-.55M22.83 0C10.21 0 0 5.37 0 12s10.21 12 22.81 12 22.81-5.37 22.81-12S35.41 0 22.82 0m-6.2 14.16q-.76.73-1.75 1.05-.96.3-2.44.31h-2.25l-.62 3.2H6.94L9.28 6.69h5.04q2.27 0 3.31 1.2 1.05 1.19.63 3.33a5 5 0 0 1-.58 1.6q-.4.74-1.07 1.34m7.65 1.36 1.04-5.32q.18-.9-.13-1.23-.3-.34-1.3-.34h-2.08l-1.34 6.9h-2.6L20.18 3.5h2.6l-.62 3.2h2.32q2.19 0 3.01.76.84.76.5 2.47l-1.09 5.6Zm14.45-4.3a5 5 0 0 1-.58 1.6q-.42.74-1.07 1.34a5 5 0 0 1-1.74 1.05q-.96.3-2.45.31h-2.24l-.62 3.2h-2.62L29.73 6.7h5.03q2.27 0 3.32 1.19 1.04 1.2.63 3.33m-4.94-2.63h-1.79L31 13.62h1.6q1.58 0 2.35-.6.78-.6 1.05-1.99.27-1.34-.24-1.89-.5-.55-1.99-.55"/></symbol><symbol id="logo-postgresql" viewBox="0 0 23.17 24" fill="currentColor"><path d="M23.1 14.7q-.2-.4-1-.2-2.4.3-2.6 0a24 24 0 0 0 3.1-6.9c.3-1 .8-3.5.1-4.7l-.1-.2A7 7 0 0 0 17 0a10 10 0 0 0-3.1.5l-.5-.1-1.3-.1A5 5 0 0 0 9 1c-.9-.3-4.8-1.6-7.2.1Q-.1 2.6 0 6.3c0 .8.5 3.3 1.3 5.8q.6 2.2 1.4 3.5.8 1.5 1.7 1.8.7.5 1.8-.7l2-2.2 1.4.4-.3.3c-.3.4-.4.5-1.5.7-.3 0-1 .3-1.1.8v.4c.3.4 1 .6 1.1.6q2 .4 3.4-.7c0 2.2 0 4.4.3 5.1S12.3 24 14 24l.8-.1q2.6-.5 2.9-2.9l.5-4.1v-.1h.8c.8 0 2-.1 2.5-.4.7-.3 1.8-1 1.6-1.7M2 12A32 32 0 0 1 .8 6.3Q.6 3 2.3 1.8c1.8-1.3 4.8-.5 6.1-.1-2 2-2 5.5-2 5.7v3.4a4 4 0 0 0 1 3l.2.2-2 2.2q-.8.9-1 .5-.6-.2-1.2-1.3Q2.6 14 2 11.9m6 5-.5-.1.5-.2c1.3-.2 1.5-.4 2-1l.3-.4v-.1q.3-.2.5 0l.4.4v.4c-1 1.3-2.3 1.3-3.3 1m2.1-4v.2l-.3 1q-1.1 0-1.9-.8a3 3 0 0 1-.7-2.5V7.5c.3-.2 1.7-1 2.7-.7q.6.1.8.9c.6 2.7 0 3.8-.3 4.7zm7.4 4.6v.5l-.2.5-.1 1-.2 1q-.2 2-2.4 2.6c-1.5.3-1.8-.5-2-1.2l-.1-.3-.2-2.5c0-.6 0-2-.3-2.7v-1.2a1 1 0 0 0-.8-1h-.7q0-.4.3-1l.2-.6c.5-1 1-2.2.4-5.2Q10.9 6 9.1 6l-1.7.6h-.2c0-1 .4-3.1 1.7-4.4l.3-.3h.2a4 4 0 0 1 2.8-.9l1.1.1a7 7 0 0 1 4 2.4 8 8 0 0 1 1.5 2.4q-2-.2-2.7.8c-1 1.4.6 4.2 1.3 5.5l.3.6q.3.8.8 1.2l.2.3c-.4 0-1.2.3-1.1 1.7v.8q-.2.3-.2.8m1-1.7q0-1 .5-1h.3q.8.7 3 .2a4 4 0 0 1-2.7 1q-1 0-1.2-.2m.6-9.2-.1 1-.2 1.1.1 1.4q.3 1.4-.2 2.7l-.2-.4-.3-.6c-.6-1.1-2-3.7-1.3-4.8q.7-.6 2.2-.4m.2 7H19q.9-2 .4-3.5V7.8l.2-1.6A8 8 0 0 0 17.9 3a8 8 0 0 0-2.7-2q.8-.3 2-.2Q20.3.8 22 3l.1.1c.7 1.4-.3 6.3-3 10.6m-8.8-6.1q0 .3-.6.4h-.1L9 7.6v-.3h.7q.5 0 .6.3m8-.4-.2.3-.4.3h-.1q-.5-.1-.6-.4t.6-.3z"/></symbol><symbol id="logo-premiersoft" viewBox="0 0 28.19 24" fill="currentColor"><path d="M25.35 11.58q0-1.4-.42-2.68l1.5-1.71h-2.27A8.75 8.75 0 0 0 10.9 4.95l-.26.22v-3.7l-4.4 2.16v9.68l.56.36 6.38-2.88a3.52 3.52 0 1 1 1.87 3.94l-6.58 2.98-.8 3.39-1.42.7V24l4.4-2.14V18l.25.22a8.75 8.75 0 0 0 14.46-6.63m-19 8.35.73-3.03 9.49-4.3c.41-.18.6-.66.4-1.07a.8.8 0 0 0-1.07-.41l-9.5 4.3-2.74-1.46L0 15.6l3.66 1.94-.96 4.04zm21.18-12.2-1.2 1.48q.27 1.14.28 2.37a10.05 10.05 0 0 1-14.7 8.88v1.72a11.58 11.58 0 0 0 15.6-14.45m-2.72-1.9 1.9.07A11.6 11.6 0 0 0 11.91.99v1.72A10 10 0 0 1 24.8 5.85"/></symbol><symbol id="logo-prisma" viewBox="0 0 19.88 24" fill="currentColor"><path d="M19.74 18.28 11.5.76A1.33 1.33 0 0 0 9.17.63L.2 15.13c-.27.45-.27 1 .02 1.45l4.38 6.78a1.4 1.4 0 0 0 1.58.58l12.7-3.75q.6-.2.87-.76c.17-.36.17-.78 0-1.15m-1.85.76L7.12 22.22a.45.45 0 0 1-.58-.52L10.4 3.27c.08-.35.55-.4.7-.08l7.13 15.13a.5.5 0 0 1-.32.72"/></symbol><symbol id="logo-python" viewBox="0 0 24.12 24" fill="currentColor"><path d="m14.3.2 1 .2.6.2.6.3.5.4.3.3.3.3.1.4.1.3V9l-.1.6-.2.4-.3.4-.3.3-.3.3-.4.2-.3.1-.3.1h-.3l-.3.1H8.1l-.5.2-.5.3-.5.2-.3.3-.3.4-.2.4-.1.3-.1.4v.3l-.1.3v3.2H2.7l-.3-.2-.3-.2-.4-.2-.3-.4-.4-.4-.3-.6-.3-.8-.2-.9-.1-1L0 12v-1.2l.2-1 .3-1 .3-.7.3-.5.4-.5.5-.3.4-.2.4-.2.3-.1h9v-.9H6.2V2l.2-.4.1-.2.3-.3.3-.2.4-.2.4-.2.5-.2H9l.7-.2H11l1-.1h1.2ZM8 2.2l-.2.3-.1.4v.4l.3.4.3.2h.9l.3-.2.2-.4.1-.4v-.4l-.3-.3-.3-.3h-.9Zm13.1 4h.6l.4.3.3.2.4.4.3.5.3.5.3.8.2.9.2 1v2.5l-.2 1-.2.9-.4.7-.3.5-.4.5-.4.3-.5.3-.4.1-.3.1h-9v.9h6V22l-.1.4-.2.2-.3.3-.3.2-.4.2-.4.2-.5.2H15l-.6.2H13l-.8.1h-1.3l-1-.2-1-.2-.7-.2-.6-.3-.5-.4-.3-.3-.2-.3-.2-.4-.1-.3V15l.1-.6.2-.4.3-.4.3-.3.3-.3.4-.2.3-.1.4-.1h.3l.2-.1H16l.6-.2.5-.2.4-.3.3-.3.3-.4.2-.4.1-.3.1-.4.1-.3V6.1h2.2Zm-6.5 14.2-.2.3v.8l.2.3.4.3h.8l.3-.3.2-.3.1-.4v-.4l-.3-.3-.3-.3H15Z"/></symbol><symbol id="logo-rabbitmq" viewBox="0 0 24 24" fill="currentColor"><path d="M23.03 9.6h-7.68a.96.96 0 0 1-.96-.96V.96a.96.96 0 0 0-.96-.95h-2.87a.96.96 0 0 0-.96.95v7.68a.96.96 0 0 1-.97.96H5.76a.96.96 0 0 1-.96-.96V.96A.96.96 0 0 0 3.84 0H.96A.96.96 0 0 0 0 .96v22.08a.96.96 0 0 0 .96.96h22.07a.96.96 0 0 0 .96-.96V10.58a.96.96 0 0 0-.96-.98m-3.86 8.15a1.44 1.44 0 0 1-1.44 1.45h-1.92a1.44 1.44 0 0 1-1.44-1.45v-1.91a1.44 1.44 0 0 1 1.44-1.45h1.92a1.44 1.44 0 0 1 1.44 1.45Z"/></symbol><symbol id="logo-railway" viewBox="0 0 24 24" fill="currentColor"><path d="M.11 10.27A13 13 0 0 0 0 11.48h18.23l-.23-.35c-3.12-4.02-4.8-3.67-7.2-3.78-.8-.03-1.34-.04-4.52-.04H.92C.7 7.96.46 8.57.36 9.06H9.7v1.22zm18.26 2.43H.01q.03.48.1.96h16.95c.75 0 1.18-.43 1.31-.96M1.05 16.98s2.81 6.9 10.93 7.02a12 12 0 0 0 10.93-7.02zM12 0A12 12 0 0 0 1.53 6.1h4.75c3.71 0 3.85.02 4.57.05l.45.01c1.56.06 3.49.22 5 1.37.82.62 2 1.99 2.71 2.96.65.9.84 1.94.4 2.94a2.5 2.5 0 0 1-2.36 1.46H.4s.1.41.25.88H23.4a12 12 0 0 0 .61-3.76A12.03 12.03 0 0 0 11.99 0"/></symbol><symbol id="logo-react" viewBox="0 0 26.95 24" fill="currentColor"><path d="M16 12a2.5 2.5 0 0 1-2.5 2.5A2.5 2.5 0 0 1 11 12a2.5 2.5 0 0 1 2.5-2.5A2.5 2.5 0 0 1 16 12m3-12q-2.4 0-5.5 3Q10.4 0 8 0q-.7 0-1.3.3c-1.5 1-1.9 3.7-1 7.2Q.2 9.1 0 12c-.2 2.9 2.2 3.5 5.7 4.5-.8 3.5-.5 6.3 1 7.2q.6.3 1.3.3 2.4 0 5.5-3 3.1 3 5.5 3 .7 0 1.2-.3c1.6-1 2-3.7 1.1-7.2 3.4-1 5.6-2.7 5.6-4.5s-2.2-3.5-5.6-4.5c.8-3.5.4-6.3-1.1-7.2Q19.6 0 19 0m0 1.2.6.2q1 .8.8 4.1l-.3 1.7-3.5-.6-2.2-2.8Q17 1.2 19 1.2m-11 0q1.8.1 4.6 2.6-1.2 1.2-2.3 2.8-1.9.2-3.5.6l-.3-1.7c-.2-2 .1-3.7.8-4.1zm5.5 3.5L15 6.4h-3q.7-1 1.5-1.7m0 3H16a30 30 0 0 1 2.4 4.3L16 16.3a29 29 0 0 1-5 0l-1.3-2.1L8.5 12A28 28 0 0 1 11 7.7zm-4.1.2-1.5 2.6-.8-2.2zm8.2 0 2.2.4-.7 2.2zm3.4.8 1.5.5q3.1 1.5 3.2 2.8 0 1.8-3.2 2.8l-1.5.5-1.2-3.3zm-15 0q.4 1.6 1.2 3.3-.8 1.7-1.2 3.3l-1.6-.5Q1.3 13.3 1.2 12q.2-1.8 3.2-2.8zm13 4.8q.5 1 .8 2.2l-2.2.4zm-11 0 1.5 2.6-2.2-.4zm12.2 3.4.3 1.6c.3 2 0 3.7-.8 4.1q-.2.2-.6.2-1.8-.1-4.6-2.6l2.2-2.7q1.9-.2 3.5-.6M7 16.9q1.6.4 3.4.6l2.3 2.7Q9.8 22.8 8 22.8q-.4 0-.6-.2-1.1-.8-.8-4.1 0-.8.3-1.6m5 .7H15q-.7 1-1.5 1.7z"/></symbol><symbol id="logo-redis" viewBox="0 0 26.01 24" fill="currentColor"><path d="M24.61 13.24c-1.8 2.27-3.74 4.86-7.63 4.86-3.47 0-4.76-3.06-4.85-5.55a4.7 4.7 0 0 0 4.57 2.85c4.46-.14 7.52-4.17 7.52-7.84 0-4.4-3.28-7.56-8.96-7.56-4.07 0-9.1 1.55-12.42 4-.03 2.51 1.37 5.79 1.87 5.43 2.87-2.07 5.15-3.4 7.36-4.06C8.8 9.01.96 17.47 0 18.97.1 20.32 1.8 24 2.63 24c.25 0 .46-.14.72-.4a109 109 0 0 0 6-7.33c.24 3.37 1.9 7.48 6.52 7.48 4.14 0 8.24-2.99 10.1-9.72.23-.82-.78-1.47-1.36-.79M19.9 7.81c0 2.12-2.09 3.16-4 3.16a5 5 0 0 1-2.42-.61c1.14-1.73 2.27-3.5 3.48-5.39 2.14.36 2.94 1.55 2.94 2.84"/></symbol><symbol id="logo-remotion" viewBox="0 0 23.24 24" fill="currentColor"><path d="M5.24 0A4 4 0 0 0 3.2.62a4 4 0 0 0-1.66 2.05L1.2 3.74a32 32 0 0 0-1.19 9.94 34 34 0 0 0 1.03 7.37A4.05 4.05 0 0 0 5.16 24a26 26 0 0 0 9.82-3 23 23 0 0 0 4.11-2.85 21 21 0 0 0 3.29-3.59 4 4 0 0 0 .86-2.51 4 4 0 0 0-.85-2.5 21 21 0 0 0-3.21-3.58 24 24 0 0 0-8.62-4.86C9.16.64 7.42.24 5.94.04a5 5 0 0 0-.7-.04"/></symbol><symbol id="logo-scurti" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63 0h12.75A5.63 5.63 0 0 1 24 5.63v12.75A5.63 5.63 0 0 1 18.38 24H5.63A5.63 5.63 0 0 1 0 18.38V5.63A5.63 5.63 0 0 1 5.63 0m0 1.5A4.13 4.13 0 0 0 1.5 5.63v12.75a4.13 4.13 0 0 0 4.13 4.12h12.75a4.13 4.13 0 0 0 4.12-4.12V5.63a4.13 4.13 0 0 0-4.12-4.13Zm1.8 14.43q-.92 0-1.72-.11t-1.41-.4-.95-.77Q3 14.17 3 13.4v-.12h2.22l-.01.09v.1q0 .33.25.53.26.19.73.27t1.08.09q.26 0 .53-.03t.53-.06.45-.11.32-.19.13-.29q0-.23-.26-.37-.25-.14-.68-.23t-.98-.14l-1.1-.16q-.58-.09-1.12-.25-.54-.17-.97-.43-.44-.26-.7-.68-.24-.42-.24-1.02t.3-1.05q.3-.43.86-.72.55-.28 1.3-.42t1.64-.14 1.62.14q.75.14 1.27.42.53.29.81.71.29.43.29 1v.15H9.08v-.08q0-.23-.2-.41t-.58-.3q-.38-.11-.92-.11-.64 0-1.07.08-.42.08-.62.22t-.2.31q0 .23.26.36t.69.2.96.15q.54.06 1.11.16.58.09 1.11.24t.97.41.69.66.25.98q0 .92-.53 1.49-.52.56-1.45.81-.92.26-2.12.26m8.04-.14v-5.77h-3.3v-1.8H21v1.81h-3.28v5.77Z"/></symbol><symbol id="logo-stripe" viewBox="0 0 17.14 24" fill="currentColor"><path d="M10.54 9.15c-2.17-.8-3.35-1.43-3.35-2.4 0-.84.68-1.31 1.9-1.31 2.22 0 4.51.85 6.09 1.63l.89-5.5C14.82.97 12.27 0 8.73 0c-2.5 0-4.58.65-6.06 1.87A6.7 6.7 0 0 0 .32 7.22c0 4.04 2.47 5.76 6.48 7.22 2.58.92 3.44 1.57 3.44 2.58 0 .98-.84 1.55-2.35 1.55-1.88 0-4.97-.93-6.99-2.11L0 22a18 18 0 0 0 8.28 2c2.64 0 4.84-.62 6.33-1.81 1.66-1.3 2.52-3.24 2.52-5.73 0-4.13-2.52-5.86-6.6-7.31Z"/></symbol><symbol id="logo-telegram" viewBox="0 0 24 24" fill="currentColor"><path d="M11.94 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0Zm4.97 7.22c.1 0 .32.03.46.14a.5.5 0 0 1 .17.33c.02.1.04.3.02.47-.18 1.9-.96 6.5-1.36 8.63-.17.9-.5 1.2-.82 1.23-.7.06-1.22-.46-1.9-.9-1.05-.7-1.65-1.13-2.68-1.8-1.18-.78-.41-1.21.26-1.91.18-.19 3.25-2.98 3.3-3.23.02-.04.02-.15-.05-.22-.07-.06-.17-.04-.25-.02q-.15.03-5.06 3.35-.72.5-1.3.48a9 9 0 0 1-1.86-.44c-.76-.25-1.35-.38-1.3-.8q.04-.32.9-.66a556 556 0 0 1 6.99-3.01c3.33-1.39 4.02-1.63 4.48-1.64"/></symbol><symbol id="logo-terraform" viewBox="0 0 21.12 24" fill="currentColor"><path d="M0 0v7.58l6.56 3.79V3.79Zm21.12 4.23-6.56 3.79v7.57l6.56-3.78Zm-13.84 0v7.57l6.56 3.8V8.01Zm0 8.4v7.58L13.84 24v-7.58Z"/></symbol><symbol id="logo-ticktick" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12.01 12.01 0 0 0 0 24c6.62 0 12-5.38 12-12h-2.7a9.31 9.31 0 0 1-18.6 0A9.3 9.3 0 0 1 12 2.7Zm7.4 2.58-7.5 9.37-3.51-2.87-2 2.44 4.74 3.88a1.57 1.57 0 0 0 2.23-.23l8.5-10.62Z"/></symbol><symbol id="logo-tiktok" viewBox="0 0 20.86 24" fill="currentColor"><path d="M10.95.02 14.86 0a6.2 6.2 0 0 0 1.75 4.17 7 7 0 0 0 4.24 1.79v4.03a10.7 10.7 0 0 1-5.82-1.9q.01 4.38-.02 8.75a7.6 7.6 0 0 1-1.35 3.94 7.5 7.5 0 0 1-5.9 3.21A7.54 7.54 0 0 1 2.6 10.8a7.4 7.4 0 0 1 6.14-1.72c.02 1.48-.04 2.96-.04 4.44a3.5 3.5 0 0 0-3.02.37 3.5 3.5 0 0 0-1.36 1.75c-.2.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87a3.4 3.4 0 0 0 2.77-1.61c.2-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36q0-6.04.02-12.07"/></symbol><symbol id="logo-typescript" viewBox="0 0 24 24" fill="currentColor"><path d="M1.13 0C.5 0 0 .5 0 1.13v21.75C0 23.5.5 24 1.13 24h21.75c.62 0 1.12-.5 1.12-1.12V1.13C24 .5 23.5 0 22.88 0Zm17.36 9.75q.91 0 1.63.11a6 6 0 0 1 1.3.34v2.46a4 4 0 0 0-.64-.36 5 5 0 0 0-.72-.26 6 6 0 0 0-1.42-.2q-.45 0-.82.08a2 2 0 0 0-.63.25q-.25.15-.39.37a1 1 0 0 0-.14.49q0 .3.16.53.15.23.44.44.28.21.7.41.4.21.92.42.71.3 1.27.63t.96.75.61.96q.22.54.22 1.25 0 .99-.38 1.66a3 3 0 0 1-1 1.08 4 4 0 0 1-1.5.6q-.84.18-1.78.18a10 10 0 0 1-1.84-.17 6 6 0 0 1-1.52-.49v-2.63a5 5 0 0 0 3.24 1.2q.5 0 .87-.09.38-.09.63-.25.24-.15.37-.38a1 1 0 0 0-.08-1.09 2 2 0 0 0-.53-.5 6 6 0 0 0-.8-.44l-1.02-.44a5 5 0 0 1-2.05-1.4 3 3 0 0 1-.68-2q0-.93.37-1.6.37-.65 1-1.08a5 5 0 0 1 1.48-.63 8 8 0 0 1 1.77-.2m-15.12.19h9.57v2.16H9.5v9.65H6.79V12.1H3.38Z"/></symbol><symbol id="logo-umporcento" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63 0h12.75A5.63 5.63 0 0 1 24 5.63v12.75A5.63 5.63 0 0 1 18.38 24H5.63A5.63 5.63 0 0 1 0 18.38V5.63A5.63 5.63 0 0 1 5.63 0m0 1.5A4.13 4.13 0 0 0 1.5 5.63v12.75a4.13 4.13 0 0 0 4.13 4.12h12.75a4.13 4.13 0 0 0 4.12-4.12V5.63a4.13 4.13 0 0 0-4.12-4.13ZM3 15.65V14.1h2.35v-3.58H3V9.44q.62-.04 1.25-.19t1.23-.38 1.1-.53h.72v5.76h2.16v1.55Zm9.17 0 5.7-7.29h1.15l-5.7 7.29Zm.21-3.63q-.76 0-1.25-.23t-.72-.67-.23-.99q0-.57.23-.99t.72-.67 1.25-.24q.78 0 1.27.24.5.24.72.67.23.42.23 1 0 .54-.23.97-.22.44-.72.68-.49.23-1.27.23m0-.81q.52 0 .72-.29t.2-.7v-.18q0-.28-.08-.5-.1-.23-.3-.36t-.54-.13q-.5 0-.71.29t-.2.7v.18q0 .42.2.7.21.29.71.29m6.4 4.56q-.76 0-1.25-.24-.48-.24-.72-.66-.24-.44-.24-1t.24-.98.73-.67q.48-.25 1.25-.25t1.25.25.73.66q.23.43.23 1 0 .55-.23.98t-.73.67q-.48.24-1.26.24m0-.82q.51 0 .71-.29t.2-.7v-.18q0-.27-.08-.5t-.28-.35q-.2-.13-.55-.13-.5 0-.7.28t-.2.7v.18q0 .41.2.7t.7.29"/></symbol><symbol id="logo-whap" viewBox="0 0 82.59 24" fill="currentColor"><path d="M3.11 9.43 0 12.39l9.12 11.45h.54l4.36-3.81-5.37-7.1 9.11-7.86-3.9-4.6ZM26.1.08l-.08 18.46.16 5.07.3.39H36l.46-.47 6.86-18.07.39.54.07 17.92h9.59L62.72.55 62.56 0h-6.62l-.47.4-5.84 16.27-.7 1.02-.4-17.53L40.05 0l-6.7 16.9-.78.63V.39l-.3-.39Zm39.35 18.54-.63.78 3.2 4.05.77.47L82.6 12.4l-.16-.7L73.3.55l-.6.15-4.13 3.74 5.38 7.01Z"/></symbol><symbol id="logo-whatsapp" viewBox="0 0 23.89 24" fill="currentColor"><path d="M17.41 14.38c-.3-.15-1.75-.86-2.03-.96s-.47-.15-.67.15-.76.96-.94 1.16-.34.22-.64.07-1.25-.46-2.39-1.47a9 9 0 0 1-1.65-2.06c-.18-.3-.02-.46.13-.6.13-.14.3-.35.44-.53.15-.17.2-.3.3-.5s.05-.36-.02-.51l-.92-2.21c-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37S5.95 7.8 5.95 9.25s1.06 2.88 1.21 3.08 2.1 3.2 5.08 4.48q1.05.44 1.7.63c.7.22 1.35.2 1.86.12.58-.09 1.76-.72 2.01-1.42s.25-1.29.17-1.41-.27-.2-.57-.35M12 21.78a10 10 0 0 1-5.03-1.37l-.36-.22-3.74.99 1-3.65-.24-.38A10 10 0 0 1 2.1 11.9a9.9 9.9 0 0 1 16.87-6.98 9.8 9.8 0 0 1 2.9 7 9.9 9.9 0 0 1-9.89 9.88M20.4 3.5A11.8 11.8 0 0 0 11.99 0 11.9 11.9 0 0 0 1.7 17.84L0 24l6.3-1.65a12 12 0 0 0 5.7 1.44A11.9 11.9 0 0 0 23.9 11.9a11.8 11.8 0 0 0-3.5-8.4"/></symbol><symbol id="logo-zod" viewBox="0 0 30.25 24" fill="currentColor"><path d="m24.05 0 6.2 6.46L15.77 22.7 14.6 24 0 6.4 6.44 0ZM2.08 6.55l8.74-5.04H7.06l-5.02 5Zm15.27-5.04L4.2 9.1l2.7 3.25L20.54 4.5l-.25-.44L23.87 2l-.46-.48Zm9.48 3.57L10.4 14.56h6.43v-.5h4.62L28.2 6.5ZM17.85 18.1h-6.17l2.97 3.58Z"/></symbol></svg>
+<!-- SPRITE:fim -->
+</body>
+</html>

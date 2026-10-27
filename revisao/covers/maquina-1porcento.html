@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cover — A máquina do 1%</title>
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="../../assets/css/covers/maquina-1porcento.css">
+<style>
+  body { padding: 40px 24px 80px; }
+  .demo { display: grid; gap: 48px; justify-items: start; max-width: 760px; margin: 0 auto; }
+  .demo h1 { font-size: var(--step-2); }
+  .demo > p { font: 400 var(--step--1)/1.5 var(--font-mono); font-stretch: 87.5%; color: var(--ink-3); }
+  .demo figure { display: grid; gap: 12px; }
+  .demo figcaption { font: 400 var(--step--2)/1 var(--font-mono); font-stretch: 87.5%; color: var(--ink-3); }
+  .w720 { width: min(720px, 100%); }
+  .w340 { width: 340px; }
+  .replay { font: 500 var(--step--1)/1 var(--font-mono); font-stretch: 87.5%; padding: 10px 14px; border: 1px solid var(--rule-strong); border-radius: var(--radius-s); }
+</style>
+</head>
+<body>
+<main class="demo">
+  <h1>Cover — A máquina do 1%</h1>
+  <p>Demo isolada. A animação roda ao carregar (exceto com movimento reduzido). <code>?t=2.5</code> congela no segundo 2,5; <code>?nojs</code> mostra o estado estático.</p>
+  <button class="replay" type="button">Rodar de novo</button>
+  <figure class="w720">
+    <div class="cover cover--maquina-1porcento" style="--lane: var(--cont)" role="img" aria-label="Ilustração da máquina do 1%: um Reel com link de origem leva ao guia gratuito, o lead entra no CRM, a venda passa pelo checkout, a nota fiscal é emitida e o acesso é liberado, sem etapa manual. Números ilustrativos.">
+  <div class="mq-stage" aria-hidden="true">
+    <div class="mq-rail">
+      <span class="mq-seg mq-s1"><i></i></span>
+      <span class="mq-seg mq-s2"><i></i></span>
+      <span class="mq-seg mq-s3"><i></i></span>
+      <svg class="mq-chev" style="--x:34;--y:19" viewBox="0 0 10 10"><path d="M3.5 2 6.5 5 3.5 8"/></svg>
+      <svg class="mq-chev" style="--x:66;--y:19" viewBox="0 0 10 10"><path d="M3.5 2 6.5 5 3.5 8"/></svg>
+      <svg class="mq-chev mq-down" style="--x:82;--y:36.5" viewBox="0 0 10 10"><path d="M3.5 2 6.5 5 3.5 8"/></svg>
+      <svg class="mq-chev mq-left" style="--x:66;--y:54" viewBox="0 0 10 10"><path d="M3.5 2 6.5 5 3.5 8"/></svg>
+      <svg class="mq-chev mq-left" style="--x:34;--y:54" viewBox="0 0 10 10"><path d="M3.5 2 6.5 5 3.5 8"/></svg>
+      <span class="mq-lbl" style="--x:34;--y:15.6">utm</span>
+      <span class="mq-lbl" style="--x:66;--y:15.6">lead</span>
+      <span class="mq-lbl mq-lbl-v" style="--x:84.6;--y:36.5">upsell</span>
+      <span class="mq-lbl" style="--x:66;--y:50.6">venda</span>
+      <span class="mq-lbl" style="--x:34;--y:50.6">tag</span>
+      <span class="mq-tok"><i></i></span>
+    </div>
+
+    <div class="mq-card mq-c1">
+      <div class="mq-hd"><span><b>01</b>reel</span><i class="mq-st"></i></div>
+      <div class="mq-bd">
+        <span class="mq-thumb"><svg viewBox="0 0 10 10"><path d="M3.5 2.5v5l4-2.5z"/></svg><i></i><i></i></span>
+        <span class="mq-col">
+          <span class="mq-t">Reel novo</span>
+          <code class="mq-chip">?source=reels</code>
+        </span>
+      </div>
+      <div class="mq-ft"><span>cliques</span><b class="mq-n"><i>3.871</i><i>3.872</i></b></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <div class="mq-card mq-c2">
+      <div class="mq-hd"><span><b>02</b>guia</span><i class="mq-st"></i></div>
+      <div class="mq-bd mq-form">
+        <span class="mq-t">Guia gratuito</span>
+        <span class="mq-field"><span>e-mail</span><em>Baixar</em></span>
+      </div>
+      <div class="mq-ft"><span>downloads</span><b class="mq-n"><i>9.540</i><i>9.541</i></b></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <div class="mq-card mq-c3">
+      <div class="mq-hd"><span><b>03</b>crm</span><i class="mq-st"></i></div>
+      <div class="mq-bd mq-crm">
+        <b class="mq-n mq-big"><i>14.207</i><i>14.208</i></b>
+        <span class="mq-plus">lead +1</span>
+      </div>
+      <div class="mq-ft"><span>origem</span><code>reels</code></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <div class="mq-card mq-c4">
+      <div class="mq-hd"><span><b>04</b>checkout</span><i class="mq-st"></i></div>
+      <div class="mq-bd mq-form">
+        <span class="mq-t">Curso <s>R$ 297</s></span>
+        <span class="mq-ok"><svg viewBox="0 0 24 24"><path d="m6 12.5 4 4 8-9"/></svg>aprovado</span>
+      </div>
+      <div class="mq-ft"><span>vendas</span><b class="mq-n"><i>412</i><i>413</i></b></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <div class="mq-card mq-c5">
+      <div class="mq-hd"><span><b>05</b>nfs-e</span><i class="mq-st"></i></div>
+      <div class="mq-bd">
+        <span class="mq-rcpt"><span class="mq-t">NFS-e emitida</span><i></i><i></i></span>
+      </div>
+      <div class="mq-ft"><span>nº</span><b class="mq-n"><i>000412</i><i>000413</i></b></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <div class="mq-card mq-c6">
+      <div class="mq-hd"><span><b>06</b>acesso</span><i class="mq-st"></i></div>
+      <div class="mq-bd mq-acc">
+        <span class="mq-lock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9.5" rx="2"/><path class="mq-shackle" d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg></span>
+        <span class="mq-t">Acesso liberado</span>
+      </div>
+      <div class="mq-ft"><span>alunos</span><b class="mq-n"><i>412</i><i>413</i></b></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <span class="mq-note">números ilustrativos · nada depende de alguém lembrar</span>
+  </div>
+</div>
+    <figcaption>720px</figcaption>
+  </figure>
+  <figure class="w340">
+    <div class="cover cover--maquina-1porcento" style="--lane: var(--cont)" role="img" aria-label="Ilustração da máquina do 1%: um Reel com link de origem leva ao guia gratuito, o lead entra no CRM, a venda passa pelo checkout, a nota fiscal é emitida e o acesso é liberado, sem etapa manual. Números ilustrativos.">
+  <div class="mq-stage" aria-hidden="true">
+    <div class="mq-rail">
+      <span class="mq-seg mq-s1"><i></i></span>
+      <span class="mq-seg mq-s2"><i></i></span>
+      <span class="mq-seg mq-s3"><i></i></span>
+      <svg class="mq-chev" style="--x:34;--y:19" viewBox="0 0 10 10"><path d="M3.5 2 6.5 5 3.5 8"/></svg>
+      <svg class="mq-chev" style="--x:66;--y:19" viewBox="0 0 10 10"><path d="M3.5 2 6.5 5 3.5 8"/></svg>
+      <svg class="mq-chev mq-down" style="--x:82;--y:36.5" viewBox="0 0 10 10"><path d="M3.5 2 6.5 5 3.5 8"/></svg>
+      <svg class="mq-chev mq-left" style="--x:66;--y:54" viewBox="0 0 10 10"><path d="M3.5 2 6.5 5 3.5 8"/></svg>
+      <svg class="mq-chev mq-left" style="--x:34;--y:54" viewBox="0 0 10 10"><path d="M3.5 2 6.5 5 3.5 8"/></svg>
+      <span class="mq-lbl" style="--x:34;--y:15.6">utm</span>
+      <span class="mq-lbl" style="--x:66;--y:15.6">lead</span>
+      <span class="mq-lbl mq-lbl-v" style="--x:84.6;--y:36.5">upsell</span>
+      <span class="mq-lbl" style="--x:66;--y:50.6">venda</span>
+      <span class="mq-lbl" style="--x:34;--y:50.6">tag</span>
+      <span class="mq-tok"><i></i></span>
+    </div>
+
+    <div class="mq-card mq-c1">
+      <div class="mq-hd"><span><b>01</b>reel</span><i class="mq-st"></i></div>
+      <div class="mq-bd">
+        <span class="mq-thumb"><svg viewBox="0 0 10 10"><path d="M3.5 2.5v5l4-2.5z"/></svg><i></i><i></i></span>
+        <span class="mq-col">
+          <span class="mq-t">Reel novo</span>
+          <code class="mq-chip">?source=reels</code>
+        </span>
+      </div>
+      <div class="mq-ft"><span>cliques</span><b class="mq-n"><i>3.871</i><i>3.872</i></b></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <div class="mq-card mq-c2">
+      <div class="mq-hd"><span><b>02</b>guia</span><i class="mq-st"></i></div>
+      <div class="mq-bd mq-form">
+        <span class="mq-t">Guia gratuito</span>
+        <span class="mq-field"><span>e-mail</span><em>Baixar</em></span>
+      </div>
+      <div class="mq-ft"><span>downloads</span><b class="mq-n"><i>9.540</i><i>9.541</i></b></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <div class="mq-card mq-c3">
+      <div class="mq-hd"><span><b>03</b>crm</span><i class="mq-st"></i></div>
+      <div class="mq-bd mq-crm">
+        <b class="mq-n mq-big"><i>14.207</i><i>14.208</i></b>
+        <span class="mq-plus">lead +1</span>
+      </div>
+      <div class="mq-ft"><span>origem</span><code>reels</code></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <div class="mq-card mq-c4">
+      <div class="mq-hd"><span><b>04</b>checkout</span><i class="mq-st"></i></div>
+      <div class="mq-bd mq-form">
+        <span class="mq-t">Curso <s>R$ 297</s></span>
+        <span class="mq-ok"><svg viewBox="0 0 24 24"><path d="m6 12.5 4 4 8-9"/></svg>aprovado</span>
+      </div>
+      <div class="mq-ft"><span>vendas</span><b class="mq-n"><i>412</i><i>413</i></b></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <div class="mq-card mq-c5">
+      <div class="mq-hd"><span><b>05</b>nfs-e</span><i class="mq-st"></i></div>
+      <div class="mq-bd">
+        <span class="mq-rcpt"><span class="mq-t">NFS-e emitida</span><i></i><i></i></span>
+      </div>
+      <div class="mq-ft"><span>nº</span><b class="mq-n"><i>000412</i><i>000413</i></b></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <div class="mq-card mq-c6">
+      <div class="mq-hd"><span><b>06</b>acesso</span><i class="mq-st"></i></div>
+      <div class="mq-bd mq-acc">
+        <span class="mq-lock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9.5" rx="2"/><path class="mq-shackle" d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg></span>
+        <span class="mq-t">Acesso liberado</span>
+      </div>
+      <div class="mq-ft"><span>alunos</span><b class="mq-n"><i>412</i><i>413</i></b></div>
+      <span class="mq-ring"></span>
+    </div>
+
+    <span class="mq-note">números ilustrativos · nada depende de alguém lembrar</span>
+  </div>
+</div>
+    <figcaption>340px</figcaption>
+  </figure>
+</main>
+<script src="../../assets/vendor/gsap-3.15.0.min.js"></script>
+<script src="../../assets/js/covers/maquina-1porcento.js"></script>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  if (q.has('nojs')) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var covers = Array.prototype.slice.call(document.querySelectorAll('.cover--maquina-1porcento'));
+  function run() {
+    covers.forEach(function (el) {
+      var tl = window.SiteCovers['maquina-1porcento'](el, window.gsap);
+      if (q.has('t')) tl.pause().seek(parseFloat(q.get('t')), false);
+    });
+  }
+  document.querySelector('.replay').addEventListener('click', run);
+  if (reduce && !q.has('t')) return;
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(run);
+})();
+</script>
+</body>
+</html>

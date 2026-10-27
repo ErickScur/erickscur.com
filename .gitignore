@@ -1,0 +1,6 @@
+.DS_Store
+__MACOSX/
+*.zip
+# capturas e vídeo de revisão: pesados e regeráveis
+revisao/shots/
+revisao/*.mp4

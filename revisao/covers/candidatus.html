@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR" class="js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cover — Candidatus</title>
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="../../assets/css/covers/candidatus.css">
+<style>
+  body { background: var(--paper); color: var(--ink); }
+  .demo { padding: 2rem 1rem 4rem; display: grid; gap: 2.5rem; justify-items: start; max-width: 760px; margin-inline: auto; }
+  .demo-row { display: grid; gap: .6rem; width: 100%; }
+  .demo-row > p { font-family: var(--font-mono); font-stretch: 87.5%; font-size: .75rem; color: var(--ink-3); }
+  .w720 { width: min(720px, 100%); }
+  .w340 { width: 340px; max-width: 100%; }
+  .demo button { font-family: var(--font-mono); font-stretch: 87.5%; font-size: .75rem; padding: .5em .9em; border: 1px solid var(--rule-strong); border-radius: var(--radius-s); }
+</style>
+</head>
+<body>
+<main class="demo">
+  <button type="button" id="replay">tocar de novo</button>
+  <div class="demo-row"><p>720px</p><div class="w720">
+<div class="cover cover--candidatus" style="--lane: var(--sh)" role="img" aria-label="Ilustração do motor de recomendação em cinco estágios: vagas de 22 fontes passam por filtros duros, que eliminam duas; cinco similaridades entram numa soma ponderada com pesos 0,45, 0,20, 0,15, 0,10 e 0,10; a diversificação MMR reordena a lista e a primeira vaga traz a explicação: cobre 8 de 10 habilidades, e a nota de 92% aparece decomposta pelos cinco pesos.">
+  <div class="cd" aria-hidden="true">
+    <div class="cd-win">
+      <ol class="cd-stages">
+        <li><b>1</b><span>filtros duros</span></li>
+        <li><b>2</b><span>similaridades</span></li>
+        <li><b>3</b><span>soma ponderada</span></li>
+        <li><b>4</b><span>diversificação</span></li>
+        <li><b>5</b><span>explicação</span><i class="cd-mark"></i></li>
+      </ol>
+      <div class="cd-cols">
+        <section class="cd-in">
+          <h4 class="cd-h">vagas <em>22 fontes</em></h4>
+          <ul class="cd-jobs">
+            <li><i>A</i><span><b>Dev Jr. Backend</b><small>Empresa A · remoto</small></span></li>
+            <li class="is-out"><i>B</i><span><b>Dados Jr.</b><small>Empresa B</small></span><em>presencial</em></li>
+            <li><i>C</i><span><b>Dev Front-end Jr.</b><small>Empresa C · híbrido</small></span></li>
+            <li><i>A</i><span><b>Dev Jr. Node</b><small>Empresa A · remoto</small></span></li>
+            <li class="is-out"><i>E</i><span><b>Dev Pleno</b><small>Empresa E</small></span><em>3+ anos</em></li>
+            <li><i>D</i><span><b>Estágio QA</b><small>Empresa D · remoto</small></span></li>
+          </ul>
+          <p class="cd-foot"><span>filtros duros</span><b>2 de 6 fora</b></p>
+        </section>
+        <section class="cd-w">
+          <h4 class="cd-h">pesos</h4>
+          <ul class="cd-bars">
+            <li style="--w:.45"><span>habilidades</span><b>0,45</b><i></i></li>
+            <li style="--w:.20"><span>nível</span><b>0,20</b><i></i></li>
+            <li style="--w:.15"><span>modalidade</span><b>0,15</b><i></i></li>
+            <li style="--w:.10"><span>salário</span><b>0,10</b><i></i></li>
+            <li style="--w:.10"><span>recência</span><b>0,10</b><i></i></li>
+          </ul>
+          <p class="cd-note">campo vazio na vaga? o peso dele vai para os outros</p>
+          <p class="cd-foot cd-sum"><span>Σ</span><b>1,00</b></p>
+        </section>
+        <section class="cd-out">
+          <h4 class="cd-h">para você <em>MMR</em></h4>
+          <ol class="cd-rank">
+            <li class="is-top"><b class="cd-n">01</b><span class="cd-r"><b>Dev Jr. Backend</b><small>Empresa A · remoto</small></span><strong data-v="92">92%</strong>
+              <i class="cd-skel"></i><span class="cd-why"><svg viewBox="0 0 24 24"><path d="m6.5 12.5 3.5 3.5 7.5-8"/></svg>cobre 8 de 10 habilidades</span></li>
+            <li><b class="cd-n">02</b><span class="cd-r"><b>Dev Front-end Jr.</b><small>Empresa C · híbrido</small></span><strong data-v="86">86%</strong></li>
+            <li><b class="cd-n">03</b><span class="cd-r"><b>Estágio QA</b><small>Empresa D · remoto</small></span><strong data-v="81">81%</strong></li>
+            <li class="is-dup"><b class="cd-n">—</b><span class="cd-r"><b>Dev Jr. Node</b><small class="cd-swap"><span>Empresa A · remoto</span><span>parecida com 01</span></small></span><strong data-v="90">90%</strong></li>
+          </ol>
+          <div class="cd-sumup">
+            <span class="cd-sh">como deu 92%</span>
+            <span class="cd-stack"><i style="--s:.40"></i><i style="--s:.20"></i><i style="--s:.15"></i><i style="--s:.07"></i><i style="--s:.10"></i></span>
+            <span class="cd-eq">0,40+0,20+0,15+0,07+0,10</span>
+          </div>
+          <p class="cd-foot"><span>sync incremental</span><b>6 h</b></p>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+  </div></div>
+  <div class="demo-row"><p>340px</p><div class="w340">
+<div class="cover cover--candidatus" style="--lane: var(--sh)" role="img" aria-label="Ilustração do motor de recomendação em cinco estágios: vagas de 22 fontes passam por filtros duros, que eliminam duas; cinco similaridades entram numa soma ponderada com pesos 0,45, 0,20, 0,15, 0,10 e 0,10; a diversificação MMR reordena a lista e a primeira vaga traz a explicação: cobre 8 de 10 habilidades, e a nota de 92% aparece decomposta pelos cinco pesos.">
+  <div class="cd" aria-hidden="true">
+    <div class="cd-win">
+      <ol class="cd-stages">
+        <li><b>1</b><span>filtros duros</span></li>
+        <li><b>2</b><span>similaridades</span></li>
+        <li><b>3</b><span>soma ponderada</span></li>
+        <li><b>4</b><span>diversificação</span></li>
+        <li><b>5</b><span>explicação</span><i class="cd-mark"></i></li>
+      </ol>
+      <div class="cd-cols">
+        <section class="cd-in">
+          <h4 class="cd-h">vagas <em>22 fontes</em></h4>
+          <ul class="cd-jobs">
+            <li><i>A</i><span><b>Dev Jr. Backend</b><small>Empresa A · remoto</small></span></li>
+            <li class="is-out"><i>B</i><span><b>Dados Jr.</b><small>Empresa B</small></span><em>presencial</em></li>
+            <li><i>C</i><span><b>Dev Front-end Jr.</b><small>Empresa C · híbrido</small></span></li>
+            <li><i>A</i><span><b>Dev Jr. Node</b><small>Empresa A · remoto</small></span></li>
+            <li class="is-out"><i>E</i><span><b>Dev Pleno</b><small>Empresa E</small></span><em>3+ anos</em></li>
+            <li><i>D</i><span><b>Estágio QA</b><small>Empresa D · remoto</small></span></li>
+          </ul>
+          <p class="cd-foot"><span>filtros duros</span><b>2 de 6 fora</b></p>
+        </section>
+        <section class="cd-w">
+          <h4 class="cd-h">pesos</h4>
+          <ul class="cd-bars">
+            <li style="--w:.45"><span>habilidades</span><b>0,45</b><i></i></li>
+            <li style="--w:.20"><span>nível</span><b>0,20</b><i></i></li>
+            <li style="--w:.15"><span>modalidade</span><b>0,15</b><i></i></li>
+            <li style="--w:.10"><span>salário</span><b>0,10</b><i></i></li>
+            <li style="--w:.10"><span>recência</span><b>0,10</b><i></i></li>
+          </ul>
+          <p class="cd-note">campo vazio na vaga? o peso dele vai para os outros</p>
+          <p class="cd-foot cd-sum"><span>Σ</span><b>1,00</b></p>
+        </section>
+        <section class="cd-out">
+          <h4 class="cd-h">para você <em>MMR</em></h4>
+          <ol class="cd-rank">
+            <li class="is-top"><b class="cd-n">01</b><span class="cd-r"><b>Dev Jr. Backend</b><small>Empresa A · remoto</small></span><strong data-v="92">92%</strong>
+              <i class="cd-skel"></i><span class="cd-why"><svg viewBox="0 0 24 24"><path d="m6.5 12.5 3.5 3.5 7.5-8"/></svg>cobre 8 de 10 habilidades</span></li>
+            <li><b class="cd-n">02</b><span class="cd-r"><b>Dev Front-end Jr.</b><small>Empresa C · híbrido</small></span><strong data-v="86">86%</strong></li>
+            <li><b class="cd-n">03</b><span class="cd-r"><b>Estágio QA</b><small>Empresa D · remoto</small></span><strong data-v="81">81%</strong></li>
+            <li class="is-dup"><b class="cd-n">—</b><span class="cd-r"><b>Dev Jr. Node</b><small class="cd-swap"><span>Empresa A · remoto</span><span>parecida com 01</span></small></span><strong data-v="90">90%</strong></li>
+          </ol>
+          <div class="cd-sumup">
+            <span class="cd-sh">como deu 92%</span>
+            <span class="cd-stack"><i style="--s:.40"></i><i style="--s:.20"></i><i style="--s:.15"></i><i style="--s:.07"></i><i style="--s:.10"></i></span>
+            <span class="cd-eq">0,40+0,20+0,15+0,07+0,10</span>
+          </div>
+          <p class="cd-foot"><span>sync incremental</span><b>6 h</b></p>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+  </div></div>
+</main>
+<script src="../../assets/vendor/gsap-3.15.0.min.js"></script>
+<script src="../../assets/js/covers/candidatus.js"></script>
+<script>
+(function () {
+  var els = document.querySelectorAll('.cover--candidatus');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.__tls = [];
+  function play() {
+    if (reduce || !window.gsap || !window.SiteCovers || !window.SiteCovers['candidatus']) return;
+    window.__tls.forEach(function (t) { t.progress(1).kill(); });
+    window.__tls = [].map.call(els, function (el) { return window.SiteCovers['candidatus'](el, window.gsap); });
+  }
+  document.getElementById('replay').addEventListener('click', play);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(play); else play();
+})();
+</script>
+</body>
+</html>

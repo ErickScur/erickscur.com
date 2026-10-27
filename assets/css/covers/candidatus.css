@@ -1,0 +1,86 @@
+/* cover: candidatus — motor de recomendação em 5 estágios, na paleta da marca (azul-petróleo) */
+.cover--candidatus{--night:#0A0A0A;--night-2:#141616;--night-3:#212424;--on-night:#FAFAF9;--on-night-2:#C9CFCE;--on-night-3:#97A09E;--c-hi:#8ED6E4;--c-ink:#0A0A0A;--l1:rgb(242 238 230/.08);--l2:rgb(242 238 230/.14);--s0:color-mix(in srgb,var(--night) 45%,var(--night-2));position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;isolation:isolate;container:cd/inline-size;background:var(--night);color:var(--on-night);border-radius:var(--radius-l);font-family:var(--font-sans)}
+.cover--candidatus .cd{position:absolute;inset:0;font-size:clamp(8px,2cqi,14.4px);line-height:1.3;font-variant-numeric:tabular-nums}
+.cover--candidatus .cd *{margin:0;padding:0;list-style:none;box-sizing:border-box;font-style:normal}
+.cover--candidatus svg{display:block;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.cover--candidatus :where(.cd-stages span,.cd-h,.cd-h em,.cd-jobs small,.cd-jobs em,.cd-bars span,.cd-bars b,.cd-foot,.cd-r small,.cd-n,.cd-why,.cd-sh,.cd-eq){font-family:var(--font-mono);font-stretch:87.5%;font-weight:400;font-size:.72em;letter-spacing:0;color:var(--on-night-3)}
+
+.cover--candidatus .cd-win{position:absolute;inset:6% 4.5% 6%;display:flex;flex-direction:column;background:var(--s0);border:1px solid var(--l1);border-radius:var(--radius-m);overflow:hidden}
+
+/* estágios */
+.cover--candidatus .cd-stages{position:relative;display:grid;grid-template-columns:repeat(5,auto);justify-content:space-between;column-gap:.8em;padding:.95em 1.2em 0;border-bottom:1px solid var(--l1)}
+.cover--candidatus .cd-stages li{position:relative;display:flex;align-items:center;gap:.45em;padding-bottom:.85em;white-space:nowrap}
+.cover--candidatus .cd-stages li b{display:grid;place-items:center;width:1.6em;height:1.6em;border-radius:50%;border:1px solid color-mix(in srgb,var(--c-hi) 55%,transparent);color:var(--c-hi);font-family:var(--font-mono);font-stretch:87.5%;font-weight:500;font-size:.68em}
+.cover--candidatus .cd-stages li:last-of-type b{background:var(--lane);border-color:var(--lane);color:var(--c-ink)}
+.cover--candidatus .cd-stages li:last-of-type span{color:var(--on-night)}
+.cover--candidatus .cd-mark{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--lane);transform-origin:0 50%}
+
+.cover--candidatus .cd-cols{flex:1;min-height:0;display:grid;grid-template-columns:1.1fr .8fr 1.25fr}
+.cover--candidatus .cd-cols>section{min-width:0;padding:1em 1.1em;display:flex;flex-direction:column;gap:.75em}
+.cover--candidatus .cd-cols>section+section{border-left:1px solid var(--l1)}
+.cover--candidatus .cd-h{display:flex;justify-content:space-between;gap:.5em;font-size:.72em;color:var(--on-night-2)}
+.cover--candidatus .cd-h em{font-size:1em;color:var(--on-night-3)}
+
+/* vagas */
+.cover--candidatus .cd-jobs{display:grid;gap:.5em}
+.cover--candidatus .cd-jobs li{position:relative;display:flex;align-items:center;gap:.6em;padding:.5em .6em;background:var(--night-2);border:1px solid var(--l1);border-radius:var(--radius-s);min-width:0}
+.cover--candidatus .cd-jobs li>i{flex:none;display:grid;place-items:center;width:1.9em;height:1.9em;border-radius:var(--radius-s);background:var(--night-3);color:var(--on-night-2);font-size:.8em;font-weight:650;font-stretch:112%}
+.cover--candidatus .cd-jobs span,.cover--candidatus .cd-r{display:grid;min-width:0}
+.cover--candidatus .cd-jobs b,.cover--candidatus .cd-r b{position:relative;justify-self:start;max-width:100%;font-size:.86em;font-weight:560;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cover--candidatus .cd-jobs small,.cover--candidatus .cd-r small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cover--candidatus .cd-jobs .is-out{background:transparent;border-style:dashed}
+.cover--candidatus .is-out>i{opacity:.62}
+.cover--candidatus .is-out span{opacity:.8}
+.cover--candidatus .is-out span small{color:var(--on-night-2)}
+.cover--candidatus .is-out b{--k:1}
+.cover--candidatus .is-out b::after{content:"";position:absolute;left:0;right:0;top:55%;height:1px;background:var(--on-night-2);transform-origin:0 50%;transform:scaleX(var(--k,1))}
+.cover--candidatus .cd-jobs em{flex:none;margin-left:auto;padding:.1em .45em;font-size:.66em;border:1px solid var(--l2);border-radius:99px;color:var(--on-night-2)}
+
+/* pesos */
+.cover--candidatus .cd-bars{flex:1;display:grid;gap:1em;align-content:space-around}
+.cover--candidatus .cd-bars li{--f:1;display:grid;grid-template-columns:1fr auto;row-gap:.35em}
+.cover--candidatus .cd-bars b{color:var(--on-night)}
+.cover--candidatus .cd-bars li:first-child b{color:var(--c-hi)}
+.cover--candidatus .cd-bars i{grid-column:1/-1;height:.42em;border-radius:99px;background:var(--night-3);position:relative;overflow:hidden}
+.cover--candidatus .cd-bars i::after{content:"";position:absolute;inset:0;width:calc(var(--w)*200%);border-radius:inherit;background:var(--lane);transform-origin:0 50%;transform:scaleX(var(--f,1))}
+.cover--candidatus .cd-foot{display:flex;justify-content:space-between;margin-top:auto;padding-top:.75em;border-top:1px solid var(--l1)}
+.cover--candidatus .cd-note{padding:.6em .7em;border:1px dashed var(--l2);border-radius:var(--radius-s);font-size:.78em;line-height:1.35;color:var(--on-night-2);text-wrap:balance}
+.cover--candidatus .cd-foot b{font-weight:500;color:var(--on-night-2)}
+.cover--candidatus .cd-sum b{color:var(--on-night)}
+
+/* ranking */
+.cover--candidatus .cd-rank{display:grid;gap:.5em}
+.cover--candidatus .cd-rank li{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.25em .65em;padding:.55em .65em;background:var(--night-2);border:1px solid var(--l1);border-radius:var(--radius-s)}
+.cover--candidatus .cd-n{width:1.7em;color:var(--on-night-3)}
+.cover--candidatus .cd-rank strong{font-size:1.15em;font-weight:650;font-stretch:112%;letter-spacing:-.02em}
+.cover--candidatus .cd-rank .is-top{border-color:color-mix(in srgb,var(--lane) 70%,transparent);background:color-mix(in srgb,var(--lane) 10%,var(--night-2))}
+.cover--candidatus .is-top .cd-n,.cover--candidatus .is-top strong{color:var(--c-hi)}
+.cover--candidatus .cd-skel{grid-area:2/1/3/-1;justify-self:start;align-self:center;width:62%;height:1.5em;margin-top:.2em;border-radius:99px;background:var(--night-3);opacity:0}
+.cover--candidatus .cd-why{grid-area:2/1/3/-1;justify-self:start;white-space:nowrap;display:flex;align-items:center;gap:.4em;margin-top:.2em;padding:.3em .6em .3em .4em;border-radius:99px;background:color-mix(in srgb,var(--lane) 24%,var(--night-2));color:var(--on-night)}
+.cover--candidatus .cd-why svg{flex:none;width:1.25em;height:1.25em;color:var(--c-hi)}
+.cover--candidatus .cd-rank li{position:relative;z-index:1}
+.cover--candidatus .cd-sumup{display:grid;gap:.5em;margin-top:.35em;padding:.7em .75em;border:1px dashed var(--l2);border-radius:var(--radius-s)}
+.cover--candidatus .cd-stack{display:flex;gap:2px;height:.5em}
+.cover--candidatus .cd-stack i{flex:var(--s) 0 0;border-radius:2px;background:var(--lane);transform-origin:0 50%}
+.cover--candidatus .cd-stack i:nth-child(2){opacity:.75}.cover--candidatus .cd-stack i:nth-child(3){opacity:.58}.cover--candidatus .cd-stack i:nth-child(4){opacity:.44}.cover--candidatus .cd-stack i:nth-child(5){opacity:.32}
+.cover--candidatus .cd-stack::after{content:"";flex:.08 0 0;border-radius:2px;background:var(--night-3)}
+.cover--candidatus .cd-eq{color:var(--on-night-2);white-space:nowrap}
+.cover--candidatus .cd-rank .is-dup{z-index:0;background:var(--s0);border-style:dashed}
+.cover--candidatus .cd-swap{display:grid}
+.cover--candidatus .cd-swap span{grid-area:1/1}
+.cover--candidatus .cd-swap span:first-child{opacity:0}
+.cover--candidatus .is-dup>*{opacity:.78}
+.cover--candidatus .is-dup .cd-n,.cover--candidatus .is-dup small{color:var(--on-night-2)}
+
+@container cd (max-width:500px){
+  .cover--candidatus .cd-win{inset:5% 4% 5%}
+  .cover--candidatus .cd-stages{padding:.8em .9em 0;column-gap:.4em}
+  .cover--candidatus .cd-stages li:not(:last-of-type) span,.cover--candidatus .cd-jobs small,.cover--candidatus .cd-jobs li:nth-child(n+5),.cover--candidatus .cd-r small,.cover--candidatus .cd-jobs em,.cover--candidatus .cd-foot,.cover--candidatus .cd-note,.cover--candidatus .cd-sumup{display:none}
+  .cover--candidatus .cd-cols{grid-template-columns:.95fr .75fr 1.25fr}
+  .cover--candidatus .cd-cols>section{padding:.8em .7em;gap:.6em}
+  .cover--candidatus .cd-jobs li>i{display:none}
+  .cover--candidatus .cd-bars{gap:.6em}
+  .cover--candidatus .cd-bars li{column-gap:.4em}
+  .cover--candidatus .cd-n{width:auto}
+}
+.cover--candidatus .cd-stages span{color:var(--on-night-2)}

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cover — Reels Pipeline</title>
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="../../assets/css/covers/reels-pipeline.css">
+<style>
+  body { padding: 40px 24px 80px; }
+  .demo { display: grid; gap: 48px; justify-items: start; max-width: 760px; margin: 0 auto; }
+  .demo h1 { font-size: var(--step-2); }
+  .demo > p { font: 400 var(--step--1)/1.5 var(--font-mono); font-stretch: 87.5%; color: var(--ink-3); }
+  .demo figure { display: grid; gap: 12px; }
+  .demo figcaption { font: 400 var(--step--2)/1 var(--font-mono); font-stretch: 87.5%; color: var(--ink-3); }
+  .w720 { width: min(720px, 100%); }
+  .w340 { width: 340px; }
+  .replay { font: 500 var(--step--1)/1 var(--font-mono); font-stretch: 87.5%; padding: 10px 14px; border: 1px solid var(--rule-strong); border-radius: var(--radius-s); }
+</style>
+</head>
+<body>
+<main class="demo">
+  <h1>Cover — Reels Pipeline</h1>
+  <p>Demo isolada. A animação roda ao carregar (exceto com movimento reduzido). <code>?t=2.5</code> congela no segundo 2,5; <code>?nojs</code> mostra o estado estático.</p>
+  <button class="replay" type="button">Rodar de novo</button>
+  <figure class="w720">
+    <div class="cover cover--reels-pipeline" style="--lane: var(--cont)" role="img" aria-label="Ilustração do Reels Pipeline: no roteiro, uma linha de comentário pede split screen e zoom na palavra limpa; ao lado, o Reel montado em 9:16 com tela em cima, apresentador embaixo e legenda palavra a palavra; embaixo, a linha do tempo da EDL com os cortes.">
+  <div class="rp-stage" aria-hidden="true">
+
+    <div class="rp-doc">
+      <div class="rp-bar"><span class="rp-file">roteiro-042.md</span><span class="rp-meta">cena 3 / 8</span></div>
+      <ol class="rp-lines">
+        <li class="rp-h"><i>12</i><span><b>##</b> Cena 3 · /clear</span></li>
+        <li><i>13</i><span>Quando a conversa pesa,</span></li>
+        <li><i>14</i><span>eu rodo <code>/clear</code> e a janela</span></li>
+        <li><i>15</i><span>fica limpa.</span></li>
+        <li class="rp-mk"><i>16</i><span><u>&lt;!--</u> <em>edit:</em> modelo=<b>split</b></span></li>
+        <li class="rp-mk"><i>17</i><span>&nbsp;&nbsp;zoom=tela@<b>"limpa"</b> x1.2 <u>--&gt;</u></span></li>
+        <li class="rp-dim"><i>18</i><span><b>##</b> Cena 4 · contexto</span></li>
+      </ol>
+      <span class="rp-hl"></span>
+    </div>
+
+    <div class="rp-edl">
+      <div class="rp-bar"><span class="rp-file">edl.json</span><span class="rp-meta">00:07.2 / 00:10.0</span></div>
+      <div class="rp-tracks">
+        <span class="rp-tl">V1</span>
+        <div class="rp-track rp-v1"><span style="--a:0;--b:22">tela A</span><span style="--a:22;--b:48">tela B</span><span style="--a:48;--b:100">tela A · zoom</span><i class="rp-cut" style="--a:22"></i><i class="rp-cut" style="--a:48"></i></div>
+        <span class="rp-tl">V2</span>
+        <div class="rp-track rp-v2"><span style="--a:0;--b:35">fala</span><span style="--a:35;--b:72">fala · take 2</span><span style="--a:72;--b:100">fala</span><i class="rp-cut" style="--a:35"></i><i class="rp-cut" style="--a:72"></i></div>
+        <span class="rp-tl">A1</span>
+        <div class="rp-track rp-a1">
+          <svg viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5h100"/><path class="rp-wv" d="M2 3.6v2.8M4 2.4v5.2M6 3v4M8 1.6v6.8M10 2.6v4.8M12 3.8v2.4M14 2.2v5.6M16 1.2v7.6M18 3v4M20 4v2M24 4.2v1.6M26 2.4v5.2M28 1.4v7.2M30 2.8v4.4M32 1.8v6.4M34 3.4v3.2M36 2v6M38 1v8M40 2.6v4.8M42 3.6v2.8M44 4.2v1.6M48 3.8v2.4M50 2.2v5.6M52 1.4v7.2M54 2.8v4.4M56 1.8v6.4M58 1.2v7.6M60 2.6v4.8M62 3.4v3.2M64 1.6v6.8M66 2.4v5.2M68 3v4M70 1.8v6.4M72 1v8M74 2.2v5.6M76 3.2v3.6M78 4v2M82 3.6v2.8M84 2.4v5.2M86 1.8v6.4M88 3v4M90 2.2v5.6M92 3.4v3.2M94 4v2M96 4.4v1.2"/></svg>
+          <span class="rp-word" style="--a:18"></span><span class="rp-word" style="--a:33"></span><span class="rp-word" style="--a:52"></span><span class="rp-word rp-key" style="--a:72"><em>@"limpa"</em></span>
+        </div>
+        <div class="rp-ph"><span></span></div>
+      </div>
+    </div>
+
+    <svg class="rp-wire" viewBox="0 0 100 75" preserveAspectRatio="none">
+      <path class="rp-wire-path" d="M51 34.2H58.5"/>
+    </svg>
+    <span class="rp-dot rp-dot-a"></span>
+    <span class="rp-dot rp-dot-b"></span>
+
+    <div class="rp-phone">
+      <div class="rp-half rp-top">
+        <div class="rp-scr">
+          <div class="rp-win">
+            <div class="rp-win-bar"><i></i><i></i><i></i></div>
+            <div class="rp-code">
+              <span class="rp-c rp-c-dim" style="--w:62"></span>
+              <span class="rp-c rp-c-dim" style="--w:44"></span>
+              <span class="rp-cmd"><b>›</b> /clear</span>
+              <span class="rp-out">conversa reiniciada</span>
+              <span class="rp-c" style="--w:70"></span>
+              <span class="rp-c" style="--w:52"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rp-half rp-bot">
+        <span class="rp-light"></span>
+        <svg class="rp-person" viewBox="0 0 100 60" preserveAspectRatio="xMidYMax meet"><path class="rp-rim" d="M44 9.5c5.6 0 9.6 4.9 9.6 11.2 0 4.4-1.9 8.2-4.8 10.2v4.4c11.6 1 21.2 7.6 21.2 24.7H17c0-17.1 9.6-23.7 21.2-24.7v-4.4c-2.9-2-4.8-5.8-4.8-10.2 0-6.3 4-11.2 9.6-11.2z"/><path class="rp-body" d="M44 9.5c5.6 0 9.6 4.9 9.6 11.2 0 4.4-1.9 8.2-4.8 10.2v4.4c11.6 1 21.2 7.6 21.2 24.7H17c0-17.1 9.6-23.7 21.2-24.7v-4.4c-2.9-2-4.8-5.8-4.8-10.2 0-6.3 4-11.2 9.6-11.2z"/><circle class="rp-lav" cx="47.5" cy="41" r="0.9"/></svg>
+      </div>
+      <span class="rp-seam"></span>
+      <div class="rp-cap">
+        <span class="rp-w">a<b>a</b></span> <span class="rp-w">janela<b>janela</b></span><br>
+        <span class="rp-w">fica<b>fica</b></span> <span class="rp-w rp-act">limpa<b>limpa</b></span>
+      </div>
+      <span class="rp-prog"><i></i></span>
+      <span class="rp-badge">1%</span>
+      <span class="rp-fmt">split</span>
+    </div>
+  </div>
+</div>
+    <figcaption>720px</figcaption>
+  </figure>
+  <figure class="w340">
+    <div class="cover cover--reels-pipeline" style="--lane: var(--cont)" role="img" aria-label="Ilustração do Reels Pipeline: no roteiro, uma linha de comentário pede split screen e zoom na palavra limpa; ao lado, o Reel montado em 9:16 com tela em cima, apresentador embaixo e legenda palavra a palavra; embaixo, a linha do tempo da EDL com os cortes.">
+  <div class="rp-stage" aria-hidden="true">
+
+    <div class="rp-doc">
+      <div class="rp-bar"><span class="rp-file">roteiro-042.md</span><span class="rp-meta">cena 3 / 8</span></div>
+      <ol class="rp-lines">
+        <li class="rp-h"><i>12</i><span><b>##</b> Cena 3 · /clear</span></li>
+        <li><i>13</i><span>Quando a conversa pesa,</span></li>
+        <li><i>14</i><span>eu rodo <code>/clear</code> e a janela</span></li>
+        <li><i>15</i><span>fica limpa.</span></li>
+        <li class="rp-mk"><i>16</i><span><u>&lt;!--</u> <em>edit:</em> modelo=<b>split</b></span></li>
+        <li class="rp-mk"><i>17</i><span>&nbsp;&nbsp;zoom=tela@<b>"limpa"</b> x1.2 <u>--&gt;</u></span></li>
+        <li class="rp-dim"><i>18</i><span><b>##</b> Cena 4 · contexto</span></li>
+      </ol>
+      <span class="rp-hl"></span>
+    </div>
+
+    <div class="rp-edl">
+      <div class="rp-bar"><span class="rp-file">edl.json</span><span class="rp-meta">00:07.2 / 00:10.0</span></div>
+      <div class="rp-tracks">
+        <span class="rp-tl">V1</span>
+        <div class="rp-track rp-v1"><span style="--a:0;--b:22">tela A</span><span style="--a:22;--b:48">tela B</span><span style="--a:48;--b:100">tela A · zoom</span><i class="rp-cut" style="--a:22"></i><i class="rp-cut" style="--a:48"></i></div>
+        <span class="rp-tl">V2</span>
+        <div class="rp-track rp-v2"><span style="--a:0;--b:35">fala</span><span style="--a:35;--b:72">fala · take 2</span><span style="--a:72;--b:100">fala</span><i class="rp-cut" style="--a:35"></i><i class="rp-cut" style="--a:72"></i></div>
+        <span class="rp-tl">A1</span>
+        <div class="rp-track rp-a1">
+          <svg viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5h100"/><path class="rp-wv" d="M2 3.6v2.8M4 2.4v5.2M6 3v4M8 1.6v6.8M10 2.6v4.8M12 3.8v2.4M14 2.2v5.6M16 1.2v7.6M18 3v4M20 4v2M24 4.2v1.6M26 2.4v5.2M28 1.4v7.2M30 2.8v4.4M32 1.8v6.4M34 3.4v3.2M36 2v6M38 1v8M40 2.6v4.8M42 3.6v2.8M44 4.2v1.6M48 3.8v2.4M50 2.2v5.6M52 1.4v7.2M54 2.8v4.4M56 1.8v6.4M58 1.2v7.6M60 2.6v4.8M62 3.4v3.2M64 1.6v6.8M66 2.4v5.2M68 3v4M70 1.8v6.4M72 1v8M74 2.2v5.6M76 3.2v3.6M78 4v2M82 3.6v2.8M84 2.4v5.2M86 1.8v6.4M88 3v4M90 2.2v5.6M92 3.4v3.2M94 4v2M96 4.4v1.2"/></svg>
+          <span class="rp-word" style="--a:18"></span><span class="rp-word" style="--a:33"></span><span class="rp-word" style="--a:52"></span><span class="rp-word rp-key" style="--a:72"><em>@"limpa"</em></span>
+        </div>
+        <div class="rp-ph"><span></span></div>
+      </div>
+    </div>
+
+    <svg class="rp-wire" viewBox="0 0 100 75" preserveAspectRatio="none">
+      <path class="rp-wire-path" d="M51 34.2H58.5"/>
+    </svg>
+    <span class="rp-dot rp-dot-a"></span>
+    <span class="rp-dot rp-dot-b"></span>
+
+    <div class="rp-phone">
+      <div class="rp-half rp-top">
+        <div class="rp-scr">
+          <div class="rp-win">
+            <div class="rp-win-bar"><i></i><i></i><i></i></div>
+            <div class="rp-code">
+              <span class="rp-c rp-c-dim" style="--w:62"></span>
+              <span class="rp-c rp-c-dim" style="--w:44"></span>
+              <span class="rp-cmd"><b>›</b> /clear</span>
+              <span class="rp-out">conversa reiniciada</span>
+              <span class="rp-c" style="--w:70"></span>
+              <span class="rp-c" style="--w:52"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rp-half rp-bot">
+        <span class="rp-light"></span>
+        <svg class="rp-person" viewBox="0 0 100 60" preserveAspectRatio="xMidYMax meet"><path class="rp-rim" d="M44 9.5c5.6 0 9.6 4.9 9.6 11.2 0 4.4-1.9 8.2-4.8 10.2v4.4c11.6 1 21.2 7.6 21.2 24.7H17c0-17.1 9.6-23.7 21.2-24.7v-4.4c-2.9-2-4.8-5.8-4.8-10.2 0-6.3 4-11.2 9.6-11.2z"/><path class="rp-body" d="M44 9.5c5.6 0 9.6 4.9 9.6 11.2 0 4.4-1.9 8.2-4.8 10.2v4.4c11.6 1 21.2 7.6 21.2 24.7H17c0-17.1 9.6-23.7 21.2-24.7v-4.4c-2.9-2-4.8-5.8-4.8-10.2 0-6.3 4-11.2 9.6-11.2z"/><circle class="rp-lav" cx="47.5" cy="41" r="0.9"/></svg>
+      </div>
+      <span class="rp-seam"></span>
+      <div class="rp-cap">
+        <span class="rp-w">a<b>a</b></span> <span class="rp-w">janela<b>janela</b></span><br>
+        <span class="rp-w">fica<b>fica</b></span> <span class="rp-w rp-act">limpa<b>limpa</b></span>
+      </div>
+      <span class="rp-prog"><i></i></span>
+      <span class="rp-badge">1%</span>
+      <span class="rp-fmt">split</span>
+    </div>
+  </div>
+</div>
+    <figcaption>340px</figcaption>
+  </figure>
+</main>
+<script src="../../assets/vendor/gsap-3.15.0.min.js"></script>
+<script src="../../assets/js/covers/reels-pipeline.js"></script>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  if (q.has('nojs')) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var covers = Array.prototype.slice.call(document.querySelectorAll('.cover--reels-pipeline'));
+  function run() {
+    covers.forEach(function (el) {
+      var tl = window.SiteCovers['reels-pipeline'](el, window.gsap);
+      if (q.has('t')) tl.pause().seek(parseFloat(q.get('t')), false);
+    });
+  }
+  document.querySelector('.replay').addEventListener('click', run);
+  if (reduce && !q.has('t')) return;
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(run);
+})();
+</script>
+</body>
+</html>

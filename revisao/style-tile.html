@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR" class="js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Style tile — Log de eventos</title>
+<link rel="stylesheet" href="../assets/css/site.css">
+<style>
+  .tile { padding-block: 2rem 4rem; }
+  .tile h1 { font-size: var(--step-5); font-weight: 800; font-stretch: 125%; letter-spacing: -0.05em; line-height: .85; }
+  .row { display: grid; grid-template-columns: repeat(12, minmax(0,1fr)); column-gap: var(--gap); padding-block: 2rem; border-bottom: 1px solid var(--rule); }
+  .row > .label { grid-column: 1 / span 3; }
+  .row > .content { grid-column: 4 / -1; }
+  .spec-type > * + * { margin-top: 1.25rem; }
+  .sw { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--ink); }
+  .sw div { padding: .8rem .8rem 1.2rem 0; border-bottom: 1px solid var(--rule); }
+  .sw i { display: block; height: 3.5rem; border: 1px solid var(--rule); margin-bottom: .6rem; }
+  .themes { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); }
+  .themes > div { padding: 1.5rem; border: 1px solid var(--rule); background: var(--paper); color: var(--ink); }
+  @keyframes commit-demo { 0%, 35% { opacity: .32 } 45%, 100% { opacity: 1 } }
+  @keyframes commit-off { 0%, 35% { color: var(--ink-3) } 45%, 100% { color: var(--signal) } }
+  @keyframes head-move { 0% { transform: translateY(5.5rem) } 40% { transform: translateY(0) } 100% { transform: translateY(-1rem) } }
+  .demo { position: relative; overflow: hidden; border-top: 1px solid var(--ink); }
+  .demo .entry .e-body, .demo .entry .e-when, .demo .entry .e-topic { animation: commit-demo 3.2s var(--ease-commit) infinite alternate; }
+  .demo .entry .e-offset { animation: commit-off 3.2s var(--ease-commit) infinite alternate; }
+</style>
+</head>
+<body>
+<main class="wrap tile">
+  <div class="hero-meta label"><span>style tile · v1</span><span>conceito A — log de eventos</span><span>2026-10-24</span><span>erickscur.com</span></div>
+
+  <div class="row">
+    <p class="label">01 — tipografia</p>
+    <div class="content spec-type">
+      <h1>Erick Scur</h1>
+      <p style="font-size:var(--step-3);font-weight:640;font-stretch:115%;letter-spacing:-.03em;line-height:1.02;max-width:20ch">Eu construo sistemas. E ensino a construir.</p>
+      <p style="max-width:56ch;color:var(--ink-2)">Archivo variável (largura 100–125%, peso 300–850) para display e texto. Display em 125% de largura e peso 800, entrelinha 0,8. Texto em 100%, 17→19px, entrelinha 1,55. Uma família só faz a hierarquia por largura e peso, não por troca de fonte.</p>
+      <p class="label">martian mono · offsets, timestamps, tópicos, legendas · <b>#007</b> · 2023-02 · engenharia · <span class="sig">commit</span></p>
+      <p class="label">escala · 11 · 13 · 17 · 20 · 24 · 30 · 38 · 48 · 60 → 182 (clamp, 360–1440px)</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <p class="label">02 — cor</p>
+    <div class="content">
+      <div class="sw label">
+        <div><i style="background:var(--paper)"></i><b>paper</b> #EEEAE1 / #13120E</div>
+        <div><i style="background:var(--ink)"></i><b>ink</b> #191812 / #EDE9DF · 14.8:1</div>
+        <div><i style="background:var(--ink-3)"></i><b>ink-3</b> meta · 5.4:1</div>
+        <div><i style="background:var(--signal)"></i><b>signal</b> #C2320D / #FF5B35 · 4.7:1</div>
+      </div>
+      <p style="margin-top:1rem;color:var(--ink-2);max-width:56ch">Papel quente e tinta quase-preta. Uma cor só, o vermelho-sinal, e ela tem três usos e mais nenhum: o commit, o foco do teclado e a cabeça de leitura.</p>
+      <div class="themes" style="margin-top:1.25rem">
+        <div data-theme="light"><p class="label">claro</p><p style="font-size:var(--step-2);font-weight:660;font-stretch:112%;letter-spacing:-.025em;margin-top:.5rem">13+ módulos<span style="color:var(--signal)">.</span></p></div>
+        <div data-theme="dark" style="--paper:#13120E;--ink:#EDE9DF;--ink-3:#8F8A7E;--rule:#34322A;--signal:#FF5B35"><p class="label">escuro</p><p style="font-size:var(--step-2);font-weight:660;font-stretch:112%;letter-spacing:-.025em;margin-top:.5rem">13+ módulos<span style="color:var(--signal)">.</span></p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <p class="label">03 — componente: linha de log</p>
+    <div class="content" style="border-top:1px solid var(--ink)">
+      <div class="entry">
+        <span class="e-offset">#006</span>
+        <span class="e-when label">2023-02</span>
+        <span class="e-topic topic"><svg class="lanes-mark" viewBox="0 0 24 14" aria-hidden="true"><line x1="0" y1="2" x2="24" y2="2"/><line class="off" x1="0" y1="7" x2="24" y2="7"/><line class="off" x1="0" y1="12" x2="24" y2="12"/></svg>engenharia</span>
+        <div class="e-body"><h3>Nestlé, via NH Labs</h3><p>Backend sênior na migração de uma plataforma de e-commerce enterprise. Promovido a Staff em 2026.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <p class="label">04 — motion: commit</p>
+    <div class="content">
+      <div class="demo">
+        <div class="entry">
+          <span class="e-offset">#013</span>
+          <span class="e-when label">2026-07</span>
+          <span class="e-topic topic"><svg class="lanes-mark" viewBox="0 0 24 14" aria-hidden="true"><line x1="0" y1="2" x2="24" y2="2"/><line class="off" x1="0" y1="7" x2="24" y2="7"/><line class="off" x1="0" y1="12" x2="24" y2="12"/></svg>engenharia</span>
+          <div class="e-body"><h3>Staff Engineer</h3><p>Pendente (32%) até cruzar a cabeça de leitura; aí faz commit: o offset acende e o texto assenta em 480ms, curva <code>commit</code>.</p></div>
+        </div>
+      </div>
+      <p class="label" style="margin-top:1rem">durações · tap 120 · quick 240 · base 480 · slow 900 · epic 1400 — curvas · publish (expo-out) · commit (in-out) · ack</p>
+    </div>
+  </div>
+</main>
+</body>
+</html>
