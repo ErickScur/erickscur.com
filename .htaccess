@@ -1,4 +1,4 @@
-# erickscur.com — Apache (HostGator, plano compartilhado)
+# erickscur.com.br — Apache (HostGator, plano compartilhado)
 
 Options -Indexes
 DirectoryIndex index.html
@@ -14,7 +14,7 @@ AddDefaultCharset utf-8
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # www → sem www (endereço canônico: https://erickscur.com)
+  # www → sem www (endereço canônico: https://erickscur.com.br)
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
   RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 </IfModule>

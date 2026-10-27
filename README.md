@@ -1,4 +1,4 @@
-# erickscur.com
+# erickscur.com.br
 
 Portfólio pessoal do Erick Scur. HTML, CSS e JavaScript puros: sem framework, sem build, sem servidor de aplicação. **Esta pasta é o site**: o `index.html` da raiz é a home. No ar pela Railway (Caddy num container); o `.htaccess` continua servindo para a HostGator.
 
@@ -132,9 +132,9 @@ Mudou de arquivo raiz (um ícone novo, por exemplo)? Acrescente na linha `COPY` 
 5. Clique com o botão direito no zip → **Extrair** → destino `/public_html`. Confirme a substituição.
 6. Apague o `site.zip` do servidor.
 7. Em "Configurações" do Gerenciador, ative "Mostrar arquivos ocultos" e confira se o `.htaccess` está em `public_html`.
-8. Em **SSL/TLS Status**, confira o certificado de `erickscur.com` e `www`. O `.htaccess` força HTTPS e manda o `www` para o domínio sem `www`.
+8. Em **SSL/TLS Status**, confira o certificado de `erickscur.com.br` e `www`. O `.htaccess` força HTTPS e manda o `www` para o domínio sem `www`.
 9. Teste no celular, em 4G e fora do Wi-Fi:
-   - `https://erickscur.com` abre, e `http://` e `www.` redirecionam;
+   - `https://erickscur.com.br` abre, e `http://` e `www.` redirecionam;
    - um estudo de caso abre a partir da home;
    - `/qualquer-coisa` mostra a 404 desenhada;
    - o tema escuro do sistema é respeitado;

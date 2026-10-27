@@ -1,4 +1,4 @@
-# Design v2 — erickscur.com
+# Design v2 — erickscur.com.br
 
 Briefing do dono após a v1: "só branco, enjoativo; seções muito iguais; sem imagem, ícone, SVG; animações sem graça; foto só no fim; linha do tempo fraca; tire os 'fig.' e a 'cabeça de leitura'". Quer um portfólio que impressione em 3 segundos, para CTO, marca e cliente.
 

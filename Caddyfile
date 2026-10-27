@@ -1,4 +1,4 @@
-# erickscur.com — Caddy na Railway (equivale ao .htaccess da HostGator).
+# erickscur.com.br — Caddy na Railway (equivale ao .htaccess da HostGator).
 # A Railway termina o HTTPS na borda e passa a porta em $PORT.
 {
 	admin off
@@ -9,7 +9,11 @@
 	root * /srv
 	encode zstd gzip
 
-	# www → sem www (endereço canônico: https://erickscur.com)
+	# o domínio antigo (.com) vai para o oficial
+	@antigo host erickscur.com www.erickscur.com
+	redir @antigo https://erickscur.com.br{uri} permanent
+
+	# www → sem www (endereço canônico: https://erickscur.com.br)
 	@www header_regexp host Host ^www\.(.+)$
 	redir @www https://{re.host.1}{uri} permanent
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://erickscur.com/sitemap.xml
+Sitemap: https://erickscur.com.br/sitemap.xml
