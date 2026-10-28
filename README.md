@@ -97,7 +97,7 @@ Fora dos marcadores:
 O `.htaccess` manda o navegador guardar CSS e JS por um ano. Quem garante a atualização é o `?v=` no fim do endereço:
 
 ```html
-<link rel="stylesheet" href="assets/css/site.css?v=2026.10.24">
+<link rel="stylesheet" href="assets/css/site.css?v=2026.10.28">
 ```
 
 Mudou CSS ou JS? Troque `2026.10.24` pela data do dia em **todas** as páginas `.html` (busca e substitui). HTML não fica em cache, então a troca chega na hora. As bibliotecas em `vendor/` e as fontes têm a versão no nome do arquivo: uma versão nova é um arquivo novo.
